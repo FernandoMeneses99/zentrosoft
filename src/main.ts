@@ -514,7 +514,7 @@ app.innerHTML = `
         <ul>
           <li><a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a></li>
           <li><a href="#contacto">Bogotá, Colombia</a></li>
-          <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+          <li><a href="tel:+573009047298">+57 300 904 7298</a></li>
         </ul>
       </div>
     </div>
@@ -527,8 +527,10 @@ app.innerHTML = `
         <li><button type="button" id="cookie-settings" class="footer-legal-button">Configuración de Cookies</button></li>
       </ul>
       <div class="footer-socials">
-        <a href="https://www.linkedin.com/company/zentrosoftco" class="footer-social-link" aria-label="LinkedIn">in</a>
-        <a href="#" class="footer-social-link" aria-label="Twitter">X</a>
+        <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+        <a href="#" class="footer-social-link" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
         <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
       </div>
     </div>
