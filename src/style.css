@@ -1886,50 +1886,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stack-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-md);
 }
 
-.stack-chip {
+.stack-tile {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  padding: 0.85rem 1rem;
+  width: 78px;
+  height: 78px;
   background: rgba(19, 34, 56, 0.7);
   border: 1px solid rgba(148, 163, 184, 0.15);
-  border-radius: var(--radius-full);
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--color-text-on-dark);
-  white-space: nowrap;
-  transition: border-color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast), transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.stack-chip::before {
-  content: '';
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background: var(--color-primary);
+.stack-tile img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }
 
-.stack-chip:nth-child(even)::before {
-  background: var(--color-secondary);
-}
-
-.stack-chip:hover {
+.stack-tile:hover {
   border-color: var(--color-primary-light);
   background: rgba(75, 130, 195, 0.12);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 1024px) {
-  .stack-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
 }
 
 /* --- Product CTA card --- */

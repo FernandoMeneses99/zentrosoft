@@ -220,14 +220,14 @@ app.innerHTML = `
         <h3>Tecnologías que Dominamos</h3>
         <p>Trabajamos con un stack moderno y probado para construir soluciones rápidas, seguras y escalables: desde interfaces atractivas hasta bases de datos robustas que soportan el crecimiento de tu negocio.</p>
         <div class="stack-grid">
-          <span class="stack-chip stack-chip--primary">JavaScript</span>
-          <span class="stack-chip">Next.js</span>
-          <span class="stack-chip stack-chip--primary">Tailwind CSS</span>
-          <span class="stack-chip">Laravel</span>
-          <span class="stack-chip">PHP</span>
-          <span class="stack-chip stack-chip--primary">Bootstrap</span>
-          <span class="stack-chip">MySQL</span>
-          <span class="stack-chip">PostgreSQL</span>
+          <span class="stack-tile" role="img" aria-label="JavaScript" title="JavaScript"><img src="/img/stack/javascript.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="Next.js" title="Next.js"><img src="/img/stack/nextjs.svg" alt="" loading="lazy" width="38" height="38" style="filter: invert(1)" /></span>
+          <span class="stack-tile" role="img" aria-label="Tailwind CSS" title="Tailwind CSS"><img src="/img/stack/tailwindcss.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="Laravel" title="Laravel"><img src="/img/stack/laravel.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="PHP" title="PHP"><img src="/img/stack/php.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="Bootstrap" title="Bootstrap"><img src="/img/stack/bootstrap.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="MySQL" title="MySQL"><img src="/img/stack/mysql.svg" alt="" loading="lazy" width="38" height="38" /></span>
+          <span class="stack-tile" role="img" aria-label="PostgreSQL" title="PostgreSQL"><img src="/img/stack/postgresql.svg" alt="" loading="lazy" width="38" height="38" /></span>
         </div>
       </div>
     </div>
@@ -283,14 +283,16 @@ app.innerHTML = `
       <div class="logo-item"><img src="/img/clients/vitalis.svg" alt="Vitalis Centro Médico - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item"><img src="/img/clients/aurora.svg" alt="Aurora Boutique - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item"><img src="/img/clients/rumbo.svg" alt="Rumbo Logística - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
-      <div class="logo-item"><img src="/img/clients/andina.svg" alt="Andina Consultores - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/Dolphin.png" alt="Dolphi - Cliente de ZentroSoft" loading="lazy" width="50" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/Krokori.webp" alt="Krokori - Cliente de ZentroSoft" loading="lazy" width="120" height="48" /></div>
       <!-- Duplicate set for infinite scroll -->
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/horizonte.svg" alt="" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/origen.svg" alt="" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/vitalis.svg" alt="" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/aurora.svg" alt="" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/rumbo.svg" alt="" loading="lazy" width="150" height="50" /></div>
-      <div class="logo-item" aria-hidden="true"><img src="/img/clients/andina.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/Dolphin.png" alt="" loading="lazy" width="50" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/Krokori.webp" alt="" loading="lazy" width="120" height="48" /></div>
     </div>
   </div>
 </section>
