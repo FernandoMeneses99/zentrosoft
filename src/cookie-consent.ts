@@ -2,8 +2,10 @@ const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent'
 const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
 const CONSENT_VERSION = 1
 
-// ID de analítica: acepta contenedor GTM (GTM-XXXXXXX) o GA4 (G-XXXXXXXXXX)
-const ANALYTICS_ID: string = 'GTM-55JS53W4'
+// ID de analítica activa (GA4 directo).
+// Para migrar a Tag Manager en el futuro, basta con cambiar este valor por el
+// contenedor GTM-XXXXXXX y crear dentro de él la etiqueta GA4 correspondiente.
+const ANALYTICS_ID: string = 'G-PVMG97XCJ8'
 
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '#'
