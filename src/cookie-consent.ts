@@ -175,6 +175,12 @@ function openPreferences(banner: HTMLElement): void {
   preferences.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
 }
 
+export function trackEvent(name: string, params: Record<string, unknown> = {}): void {
+  if (readStoredConsent()?.analitica !== true) return
+  if (typeof window.gtag !== 'function') return
+  window.gtag('event', name, params)
+}
+
 export function initCookieConsent(): void {
   const stored = readStoredConsent()
 

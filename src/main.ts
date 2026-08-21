@@ -1,5 +1,5 @@
 import './style.css'
-import { initCookieConsent } from './cookie-consent'
+import { initCookieConsent, trackEvent } from './cookie-consent'
 import { initContactForm } from './contact-form'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
@@ -854,8 +854,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll()
   initScrollAnimations()
   injectDynamicJSONLD()
-  initCookieConsent()
-  initContactForm()
+/* ============================================
+   EVENTOS DE CONVERSIÓN (GA4)
+   ============================================ */
+function initConversionTracking() {
+  document.querySelectorAll<HTMLAnchorElement>('.whatsapp-btn').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackEvent('contact_whatsapp', { method: 'boton_flotante' })
+    })
+  })
+
+  document.querySelectorAll<HTMLDetailsElement>('.faq-item').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open || item.dataset.faqTracked) return
+      item.dataset.faqTracked = '1'
+      const question = item.querySelector('summary span')?.textContent?.trim() ?? ''
+      trackEvent('faq_open', { question: question.slice(0, 80) })
+    })
+  })
+}
+
+initCookieConsent()
+initContactForm()
+initConversionTracking()
 })
 
 /* ============================================

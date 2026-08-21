@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser'
+import { trackEvent } from './cookie-consent'
 
 // Credenciales de EmailJS de ZentroSoft (las claves públicas son visibles en el bundle por diseño)
 const EMAILJS_PUBLIC_KEY = 'v9Gg4_hoWSHtFF_yI'
@@ -65,6 +66,9 @@ export function initContactForm(): void {
         { publicKey: EMAILJS_PUBLIC_KEY }
       )
       setStatus('¡Gracias por contactarnos! Un experto se pondrá en contacto con usted muy pronto.', 'success')
+      trackEvent('generate_lead', {
+        service: String(data.get('servicio') || 'No especificado')
+      })
       form.reset()
     } catch {
       setStatus(
