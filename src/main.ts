@@ -15,7 +15,7 @@ app.innerHTML = `
 <header class="header" role="banner">
   <div class="container header-inner">
     <a href="#" class="logo" aria-label="ZentroSoft - Inicio">
-      <img src="/img/logo.png" alt="ZentroSoft - Agencia de Desarrollo Web en Bogotá" width="140" height="40" />
+      <img src="/img/logo.avif" alt="ZentroSoft - Agencia de Desarrollo Web en Bogotá" width="140" height="40" />
     </a>
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
@@ -34,10 +34,10 @@ app.innerHTML = `
 <section class="hero" id="inicio" aria-label="Bienvenida a ZentroSoft - Desarrollo Web">
   <div class="hero-slides">
     <div class="hero-slide active">
-      <img src="/img/Hero-1.jpg" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-1.avif" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
     </div>
     <div class="hero-slide">
-      <img src="/img/Hero-2.jpg" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-2.avif" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
     </div>
   </div>
 
@@ -548,7 +548,7 @@ app.innerHTML = `
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <img src="/img/logo.png" alt="ZentroSoft - Agencia de Desarrollo Web" width="140" height="40" />
+          <img src="/img/logo.avif" alt="ZentroSoft - Agencia de Desarrollo Web" width="140" height="40" />
         </a>
         <p>Agencia de desarrollo web en Bogotá. Diseñamos y construimos experiencias digitales que convierten visitantes en clientes.</p>
       </div>
