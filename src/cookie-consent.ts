@@ -1,8 +1,10 @@
 const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent'
 const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
 const CONSENT_VERSION = 1
-// TODO: Reemplazar con el ID del contenedor GTM/GA4 de ZentroSoft cuando esté disponible
-const GTM_ID = ''
+
+// ID de analítica: acepta contenedor GTM (GTM-XXXXXXX) o GA4 (G-XXXXXXXXXX)
+// TODO: Reemplazar con el ID real de ZentroSoft cuando esté disponible
+const ANALYTICS_ID: string = ''
 
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '#'
@@ -44,15 +46,25 @@ function writeStoredConsent(consent: StoredConsent): void {
   document.cookie = `${CONSENT_COOKIE_NAME}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax; Secure`
 }
 
-let gtmLoaded = false
+let analyticsLoaded = false
 
-function loadGTM(): void {
-  if (gtmLoaded || !GTM_ID) return
-  gtmLoaded = true
+function loadAnalytics(): void {
+  if (analyticsLoaded || !ANALYTICS_ID) return
+  analyticsLoaded = true
+
   const script = document.createElement('script')
   script.async = true
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`
+
+  if (ANALYTICS_ID.startsWith('GTM-')) {
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${ANALYTICS_ID}`
+    document.head.appendChild(script)
+    return
+  }
+
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`
   document.head.appendChild(script)
+  window.gtag('js', new Date())
+  window.gtag('config', ANALYTICS_ID)
 }
 
 function updateGoogleConsent(analitica: boolean, marketing: boolean): void {
@@ -78,7 +90,7 @@ function applyDecision(analitica: boolean, marketing: boolean): void {
     marketing
   })
   updateGoogleConsent(analitica, marketing)
-  if (analitica || marketing) loadGTM()
+  if (analitica || marketing) loadAnalytics()
 }
 
 function createBanner(): HTMLElement {
@@ -167,7 +179,7 @@ export function initCookieConsent(): void {
 
   if (stored) {
     updateGoogleConsent(stored.analitica, stored.marketing)
-    if (stored.analitica || stored.marketing) loadGTM()
+    if (stored.analitica || stored.marketing) loadAnalytics()
   }
 
   const banner = createBanner()
