@@ -15,7 +15,7 @@ app.innerHTML = `
       <a href="#servicios">Servicios</a>
       <a href="#productos">Productos</a>
       <a href="#nosotros">Nosotros</a>
-      <a href="#stack">Stack</a>
+      <a href="#clientes">Clientes</a>
       <a href="#contacto" class="nav-cta">Cotiza tu proyecto</a>
     </nav>
     <button class="menu-toggle" aria-label="Abrir menú de navegación">
@@ -28,10 +28,10 @@ app.innerHTML = `
 <section class="hero" id="inicio" aria-label="Bienvenida a ZentroSoft - Desarrollo Web">
   <div class="hero-slides">
     <div class="hero-slide active">
-      <img src="/img/hero-1.svg" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-1.jpg" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
     </div>
     <div class="hero-slide">
-      <img src="/img/hero-2.svg" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-2.jpg" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
     </div>
   </div>
 
@@ -214,11 +214,21 @@ app.innerHTML = `
       </div>
     </div>
 
-    <!-- Aliado estratégico -->
-    <div class="about-partner">
+    <!-- Stack tecnológico -->
+    <div class="about-partner" id="stack">
       <div class="about-partner-content">
-        <h3>Tu Socio Estratégico en Desarrollo Web</h3>
-        <p>Una presencia web profesional ya no es un lujo: es la vitrina principal de cualquier negocio. Combinamos estrategia, diseño y tecnología para que tu marca destaque en internet y convierta visitantes en clientes fieles.</p>
+        <h3>Tecnologías que Dominamos</h3>
+        <p>Trabajamos con un stack moderno y probado para construir soluciones rápidas, seguras y escalables: desde interfaces atractivas hasta bases de datos robustas que soportan el crecimiento de tu negocio.</p>
+        <div class="stack-grid">
+          <span class="stack-chip stack-chip--primary">JavaScript</span>
+          <span class="stack-chip">Next.js</span>
+          <span class="stack-chip stack-chip--primary">Tailwind CSS</span>
+          <span class="stack-chip">Laravel</span>
+          <span class="stack-chip">PHP</span>
+          <span class="stack-chip stack-chip--primary">Bootstrap</span>
+          <span class="stack-chip">MySQL</span>
+          <span class="stack-chip">PostgreSQL</span>
+        </div>
       </div>
     </div>
 
@@ -257,33 +267,30 @@ app.innerHTML = `
   </div>
 </section>
 
-<!-- ===== TECH STACK CAROUSEL ===== -->
-<section class="logos-section" id="stack" aria-label="Stack tecnológico de ZentroSoft">
+<!-- ===== CLIENTS CAROUSEL ===== -->
+<section class="logos-section" id="clientes" aria-label="Clientes de ZentroSoft">
   <div class="container">
     <div class="logos-section-header">
-      <div class="section-label">Stack Tecnológico</div>
-      <h2 class="section-title">Tecnologías que Dominamos</h2>
+      <div class="section-label">Nuestros Clientes</div>
+      <h2 class="section-title">Marcas que Confían en Nosotros</h2>
     </div>
   </div>
   <div class="logos-track-wrapper">
     <div class="logos-track">
-      <div class="logo-item logo-item-text"><span>JavaScript</span></div>
-      <div class="logo-item logo-item-text"><span>Next.js</span></div>
-      <div class="logo-item logo-item-text"><span>Tailwind CSS</span></div>
-      <div class="logo-item logo-item-text"><span>Laravel</span></div>
-      <div class="logo-item logo-item-text"><span>PHP</span></div>
-      <div class="logo-item logo-item-text"><span>Bootstrap</span></div>
-      <div class="logo-item logo-item-text"><span>MySQL</span></div>
-      <div class="logo-item logo-item-text"><span>PostgreSQL</span></div>
+      <!-- Logos de ejemplo: reemplazar con los logos reales de los clientes -->
+      <div class="logo-item"><img src="/img/clients/horizonte.svg" alt="Horizonte Inmobiliaria - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/origen.svg" alt="Origen Café - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/vitalis.svg" alt="Vitalis Centro Médico - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/aurora.svg" alt="Aurora Boutique - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/rumbo.svg" alt="Rumbo Logística - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item"><img src="/img/clients/andina.svg" alt="Andina Consultores - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
       <!-- Duplicate set for infinite scroll -->
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>JavaScript</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>Next.js</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>Tailwind CSS</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>Laravel</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>PHP</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>Bootstrap</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>MySQL</span></div>
-      <div class="logo-item logo-item-text" aria-hidden="true"><span>PostgreSQL</span></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/horizonte.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/origen.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/vitalis.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/aurora.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/rumbo.svg" alt="" loading="lazy" width="150" height="50" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/andina.svg" alt="" loading="lazy" width="150" height="50" /></div>
     </div>
   </div>
 </section>
@@ -494,7 +501,7 @@ app.innerHTML = `
           <li><a href="#nosotros">Sobre Nosotros</a></li>
           <li><a href="#productos">VelarisPOS</a></li>
           <li><a href="#productos">Zentro Inmobiliaria</a></li>
-          <li><a href="#stack">Stack Tecnológico</a></li>
+          <li><a href="#clientes">Nuestros Clientes</a></li>
         </ul>
       </div>
 

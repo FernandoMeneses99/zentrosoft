@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100" fill="none">
+  <rect x="8" y="14" width="72" height="72" rx="36" fill="#4FD290" fill-opacity="0.15"/>
+  <polyline points="22,52 38,52 44,36 54,66 60,52 68,52" stroke="#4FD290" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="50" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2" fill="#64748b">VITALIS</text>
+  <text x="97" y="74" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#94a3b8">CENTRO MÉDICO</text>
+</svg>

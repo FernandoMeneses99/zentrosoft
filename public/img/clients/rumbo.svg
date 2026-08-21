@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100" fill="none">
+  <rect x="8" y="14" width="72" height="72" rx="36" fill="#4B82C3" fill-opacity="0.15"/>
+  <g stroke="#4B82C3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="24" y="34" width="30" height="26" rx="4"/>
+    <path d="M54 42h14l8 10v8h-22"/>
+    <circle cx="36" cy="66" r="5"/>
+    <circle cx="62" cy="66" r="5"/>
+    <path d="M18 34h6"/>
+  </g>
+  <text x="96" y="50" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2" fill="#64748b">RUMBO</text>
+  <text x="97" y="74" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#94a3b8">LOGÍSTICA</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100" fill="none">
+  <rect x="8" y="14" width="72" height="72" rx="16" fill="#4FD290" fill-opacity="0.15"/>
+  <path d="M44 24l20 20-20 20-20-20z" stroke="#4FD290" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M30 58l14 14 14-14" stroke="#4FD290" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <text x="96" y="50" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="2" fill="#64748b">AURORA</text>
+  <text x="97" y="74" font-family="Inter, Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#94a3b8">BOUTIQUE</text>
+</svg>
