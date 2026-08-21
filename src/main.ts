@@ -334,6 +334,7 @@ app.innerHTML = `
           <div class="news-card-body">
             <h3 class="news-card-title">VelarisPOS</h3>
             <p class="news-card-excerpt">Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes de tu negocio desde una sola plataforma. Diseñado para comercios que necesitan velocidad, control y claridad en cada transacción.</p>
+            <a href="https://velarispos.com.co" target="_blank" rel="noopener noreferrer" class="btn-primary news-card-btn" aria-label="Conocer VelarisPOS (se abre en nueva pestaña)">Conocer VelarisPOS</a>
           </div>
         </article>
 
@@ -345,6 +346,7 @@ app.innerHTML = `
           <div class="news-card-body">
             <h3 class="news-card-title">Zentro Inmobiliaria</h3>
             <p class="news-card-excerpt">Plataforma integral para administrar propiedades, contratos y clientes. Optimiza la operación de empresas y agentes inmobiliarios centralizando toda la información del portafolio en un solo lugar.</p>
+            <a href="https://zentro.com.co" target="_blank" rel="noopener noreferrer" class="btn-primary news-card-btn" aria-label="Conocer Zentro Inmobiliaria (se abre en nueva pestaña)">Conocer Zentro Inmobiliaria</a>
           </div>
         </article>
 
@@ -453,7 +455,7 @@ app.innerHTML = `
             </span>
             <div>
               <span class="contact-detail-label">Teléfono</span>
-              <a href="tel:+573000000000">+57 300 000 0000</a>
+              <a href="tel:+573009047298">+57 300 904 7298</a>
             </div>
           </li>
           <li class="contact-detail">
@@ -955,6 +957,7 @@ function injectDynamicJSONLD() {
           "itemOffered": {
             "@type": "SoftwareApplication",
             "name": "VelarisPOS",
+            "url": "https://velarispos.com.co",
             "description": "Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes del negocio."
           }
         },
@@ -963,6 +966,7 @@ function injectDynamicJSONLD() {
           "itemOffered": {
             "@type": "SoftwareApplication",
             "name": "Zentro Inmobiliaria",
+            "url": "https://zentro.com.co",
             "description": "Plataforma integral para administrar propiedades, contratos y clientes inmobiliarios."
           }
         }

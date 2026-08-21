@@ -2166,3 +2166,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: none;
   }
 }
+
+/* --- Boton de producto dentro de tarjetas --- */
+.news-card-body > .news-card-btn {
+  margin-top: var(--space-sm);
+  align-self: flex-start;
+}
