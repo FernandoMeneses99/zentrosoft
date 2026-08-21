@@ -808,7 +808,7 @@ function injectDynamicJSONLD() {
     "provider": {
       "@type": "Organization",
       "name": "ZentroSoft",
-      "url": "https://zentrosoft.com/"
+      "url": "https://zentrosoft.vercel.app/"
     },
     "areaServed": {
       "@type": "Country",

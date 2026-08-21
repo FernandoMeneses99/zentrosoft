@@ -3,4 +3,4 @@ Allow: /
 Disallow: /dist/
 Disallow: /node_modules/
 
-Sitemap: https://zentrosoft.com/sitemap.xml
+Sitemap: https://zentrosoft.vercel.app/sitemap.xml
