@@ -361,6 +361,66 @@ app.innerHTML = `
     </div>
   </div>
 </section>
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq" aria-label="Preguntas frecuentes">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">Preguntas Frecuentes</div>
+      <h2 class="section-title">Resolvemos tus dudas</h2>
+      <p class="section-subtitle">Todo lo que necesitas saber antes de iniciar tu proyecto con nosotros.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span>¿Qué servicios ofrece ZentroSoft?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Ofrecemos creación de landing pages enfocadas en conversión, optimización SEO on-page, consultoría y capacitación en presencia web y WordPress, soporte técnico de dominios, hosting y correos, desarrollo frontend con Bootstrap y JavaScript, y mantenimiento web completo.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Qué tecnologías utiliza ZentroSoft?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Trabajamos con un stack moderno que incluye JavaScript, Next.js, Tailwind CSS, Laravel, PHP, Bootstrap, MySQL y PostgreSQL, además de herramientas como WordPress según las necesidades de cada proyecto.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Cuánto cuesta desarrollar una landing page?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>El valor depende del alcance del proyecto: número de secciones, funcionalidades, integraciones y contenido. Escríbenos por el formulario o WhatsApp y recibirás una propuesta clara adaptada a tus necesidades y presupuesto.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Qué productos propios ofrece ZentroSoft?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Contamos con dos productos propios: VelarisPOS, un sistema de punto de venta para gestionar ventas, inventario y reportes; y Zentro Inmobiliaria, una plataforma integral para administrar propiedades, contratos y clientes.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿En dónde opera ZentroSoft?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Nuestra sede está en Bogotá D.C., Colombia, y acompañamos a pymes y emprendedores de todo el país tanto de forma presencial como remota.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Por qué mi negocio necesita una landing page?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Una landing page profesional concentra la atención del visitante en una sola acción: comprar, cotizar o contactarte. Combinada con buenas prácticas SEO y llamadas a la acción efectivas, convierte más visitas en clientes y le da a tu marca credibilidad inmediata.</p>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ===== CONTACT FORM ===== -->
@@ -725,7 +785,7 @@ function initRotatingWord() {
    ============================================ */
 function initScrollAnimations() {
   const targets = document.querySelectorAll<HTMLElement>(
-    '.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card'
+    '.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card, .faq-item'
   )
   if (!targets.length || PREFERS_REDUCED_MOTION) return
 
@@ -734,7 +794,8 @@ function initScrollAnimations() {
     '.about-mission-grid',
     '.about-values-grid',
     '.about-highlights',
-    '.news-carousel'
+    '.news-carousel',
+    '.faq-list'
   ]
   const delayMap = new Map<HTMLElement, number>()
 
