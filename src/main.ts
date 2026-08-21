@@ -8,15 +8,15 @@ app.innerHTML = `
 <!-- ===== HEADER ===== -->
 <header class="header" role="banner">
   <div class="container header-inner">
-    <a href="#" class="logo">
-      <img src="/img/logo.png" alt="RT - Soluciones de Ciberseguridad y Ciberresiliencia en Colombia" width="140" height="40" />
+    <a href="#" class="logo" aria-label="ZentroSoft - Inicio">
+      <img src="/img/logo.png" alt="ZentroSoft - Agencia de Desarrollo Web en Bogotá" width="140" height="40" />
     </a>
     <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#soluciones">Soluciones</a>
-      <a href="#soluciones">Servicios</a>
-      <a href="#experiencia">Nosotros</a>
-      <a href="#novedades">Novedades</a>
-      <a href="#contacto" class="nav-cta">Contáctenos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#stack">Stack</a>
+      <a href="#contacto" class="nav-cta">Cotiza tu proyecto</a>
     </nav>
     <button class="menu-toggle" aria-label="Abrir menú de navegación">
       <span></span><span></span><span></span>
@@ -25,49 +25,49 @@ app.innerHTML = `
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="inicio" aria-label="Bienvenida a RT - Ciberseguridad">
+<section class="hero" id="inicio" aria-label="Bienvenida a ZentroSoft - Desarrollo Web">
   <div class="hero-slides">
     <div class="hero-slide active">
-      <img src="/img/hero-1.jpg" alt="Infraestructura de ciberseguridad protegida por RT" loading="eager" width="1920" height="1080" />
+      <img src="/img/hero-1.svg" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
     </div>
     <div class="hero-slide">
-      <img src="/img/hero-2.jpg" alt="Equipo de expertos en ciberresiliencia de RT" loading="eager" width="1920" height="1080" />
+      <img src="/img/hero-2.svg" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
     </div>
   </div>
 
   <div class="container hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      +18 años de experiencia en Ciberseguridad
+      Agencia de desarrollo web en Bogotá
     </div>
     <h1>
-      Ciberseguridad y<br/>
-      <span class="highlight">Ciberresiliencia</span>
+      Desarrollo Web y<br/>
+      <span class="highlight">Soluciones Digitales</span>
     </h1>
     <p class="hero-text">
-      Soluciones innovadoras en seguridad digital con tecnología avanzada, inteligencia cibernética y un equipo altamente especializado para proteger su organización.
+      Creamos landing pages que convierten visitas en clientes, optimizamos tu posicionamiento en buscadores y acompañamos la operación de tu sitio con soporte técnico especializado. Tecnología moderna para pymes y emprendedores.
     </p>
     <div class="hero-actions">
-      <a href="#soluciones" class="btn-primary">
-        Explorar Soluciones
+      <a href="#servicios" class="btn-primary">
+        Ver Servicios
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a href="#contacto" class="btn-outline">
-        Hablar con un experto
+        Cotiza tu proyecto
       </a>
     </div>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-number">18<span class="accent">+</span></div>
-        <div class="hero-stat-label">Años de trayectoria</div>
+        <div class="hero-stat-number">2<span class="accent">+</span></div>
+        <div class="hero-stat-label">Años de experiencia</div>
       </div>
       <div>
-        <div class="hero-stat-number">200<span class="accent">+</span></div>
-        <div class="hero-stat-label">Clientes atendidos</div>
+        <div class="hero-stat-number">6</div>
+        <div class="hero-stat-label">Servicios especializados</div>
       </div>
       <div>
-        <div class="hero-stat-number">50<span class="accent">+</span></div>
-        <div class="hero-stat-label">Profesionales expertos</div>
+        <div class="hero-stat-number">2</div>
+        <div class="hero-stat-label">Productos propios</div>
       </div>
     </div>
   </div>
@@ -78,63 +78,79 @@ app.innerHTML = `
   </div>
 </section>
 
-<!-- ===== VALUE PROPOSITION ===== -->
+<!-- ===== SERVICES ===== -->
 <main>
-<section class="value-prop" id="soluciones">
+<section class="value-prop" id="servicios">
   <div class="container">
     <div class="value-prop-header">
-      <div class="section-label">Nuestra Oferta de Valor</div>
-      <h2 class="section-title">Un completo conjunto de soluciones TIC</h2>
+      <div class="section-label">Nuestros Servicios</div>
+      <h2 class="section-title">Todo lo que tu negocio necesita para triunfar en internet</h2>
       <p class="section-subtitle">
-        Productos y servicios que conforman nuestra oferta de valor, diseñados para impulsar la transformación digital de su organización.
+        De la idea al lanzamiento y más allá: cubrimos todo el ciclo de vida de tu sitio web con servicios especializados.
       </p>
     </div>
 
-    <div class="value-grid">
+    <div class="value-grid value-grid--six">
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><circle cx="6.5" cy="6" r="0.5" fill="#4B82C3"/><circle cx="9.5" cy="6" r="0.5" fill="#4B82C3"/><path d="M7 14l2-2-2-2"/><path d="M12 15h4"/></svg>
         </div>
-        <h3>Soluciones</h3>
-        <p>Integración de Soluciones de Tecnologías de Informaciones y Comunicaciones complejas, que incorporan los más actuales desarrollos.</p>
+        <h3>Creación de Landing Pages</h3>
+        <p>Diseño, desarrollo e implementación de páginas de aterrizaje enfocadas en la conversión y CTAs efectivas que transforman visitas en clientes.</p>
       </div>
 
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="8 12 10.5 9.5 13 12 16 8.5"/></svg>
         </div>
-        <h3>Servicios</h3>
-        <p>Amplio conjunto de Servicios Gestionados, que apoyan o sustentan la operación de los recursos TIC de nuestros clientes.</p>
-      </div>
-
-      <div class="value-card">
-        <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h3>SOC</h3>
-        <p>Servicios de SOC de altos estándares y operación integral para la seguridad continua de su infraestructura tecnológica.</p>
+        <h3>Optimización SEO</h3>
+        <p>Implementación de prácticas SEO on-page, etiquetas meta, estructuras de encabezados, optimización de imágenes y contenido para posicionar tu marca.</p>
       </div>
 
       <div class="value-card">
         <div class="value-card-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Consultoría</h3>
-        <p>Servicios de Consultoría TIC en un amplio espectro de aplicaciones que apoyan las operaciones de nuestros clientes.</p>
+        <h3>Consultoría y Capacitación</h3>
+        <p>Asesoramiento para pequeñas empresas y emprendedores sobre presencia web y herramientas como WordPress, para que tomes el control de tu proyecto.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+        </div>
+        <h3>Soporte Técnico</h3>
+        <p>Resolución de problemas en sitios web, configuración de dominios, hosting y correos electrónicos. Tu operación nunca se detiene.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Desarrollo Frontend</h3>
+        <p>Creación de interfaces modernas con Bootstrap e implementación de componentes interactivos con JavaScript que elevan la experiencia de tus usuarios.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Mantenimiento Web</h3>
+        <p>Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins para un sitio siempre al día.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== ABOUT / NUESTRA ORGANIZACIÓN ===== -->
-<section class="about" id="experiencia">
+<section class="about" id="nosotros">
   <div class="container">
 
     <!-- Misión + Propósito -->
     <div class="about-header">
       <div class="about-header-text">
         <div class="section-label">Nuestra Organización</div>
-        <h2 class="section-title">Ciberseguridad y Ciberresiliencia</h2>
+        <h2 class="section-title">Tu aliado tecnológico en Bogotá</h2>
       </div>
     </div>
 
@@ -144,7 +160,7 @@ app.innerHTML = `
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         </div>
         <h3>Nuestra Misión</h3>
-        <p>Ofrecemos soluciones innovadoras en Ciberseguridad y Ciberresiliencia. A través de tecnología avanzada, inteligencia cibernética y un equipo altamente especializado, garantizamos la prevención, detección y respuesta efectiva ante amenazas y aseguramos la continuidad operativa y la confianza digital de nuestros clientes.</p>
+        <p>Empoderamos a pequeñas empresas y emprendedores mediante el diseño y desarrollo de soluciones web modernas, funcionales y accesibles. Combinamos tecnología actualizada, buenas prácticas de desarrollo y un servicio cercano para que cada proyecto se convierta en una herramienta real de crecimiento para su negocio.</p>
       </div>
 
       <div class="about-mission-card">
@@ -152,7 +168,7 @@ app.innerHTML = `
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <h3>Nuestro Propósito</h3>
-        <p>Proporcionamos soluciones estratégicas que fortalezcan las capacidades digitales de las organizaciones. Nos comprometemos a crear un entorno cibernético más seguro, impulsando la innovación, la formación y la colaboración, para mitigar riesgos, fortalecer las capacidades de anticipación frente a amenazas y garantizar la resiliencia de nuestros clientes. Lideramos la transformación de la Ciberseguridad y la Ciberresiliencia en Colombia.</p>
+        <p>Creemos que toda empresa, sin importar su tamaño, merece una presencia web profesional. Por eso acompañamos a nuestros clientes en cada etapa de su transformación digital: los asesoramos, los formamos y les brindamos soporte continuo, para que la tecnología sea una ventaja competitiva y no una barrera.</p>
       </div>
     </div>
 
@@ -163,46 +179,46 @@ app.innerHTML = `
         <div class="about-value-item">
           <div class="about-value-dot"></div>
           <div>
-            <h4>Confianza y Transparencia</h4>
-            <p>Construimos relaciones sólidas basadas en la honestidad y la claridad en cada interacción.</p>
+            <h4>Compromiso con Resultados</h4>
+            <p>Cada proyecto se mide por el impacto real que genera en el negocio de nuestros clientes.</p>
           </div>
         </div>
         <div class="about-value-item">
           <div class="about-value-dot"></div>
           <div>
-            <h4>Resiliencia y Adaptabilidad</h4>
-            <p>Nos adaptamos con agilidad a los cambios del entorno tecnológico y de seguridad.</p>
+            <h4>Transparencia Total</h4>
+            <p>Comunicación clara en cada etapa: alcances, plazos y costos sin sorpresas.</p>
           </div>
         </div>
         <div class="about-value-item">
           <div class="about-value-dot"></div>
           <div>
             <h4>Innovación Continua</h4>
-            <p>Buscamos constantemente nuevas y mejores formas de proteger a nuestros clientes.</p>
+            <p>Adoptamos tecnologías modernas para entregar soluciones actuales, rápidas y escalables.</p>
           </div>
         </div>
         <div class="about-value-item">
           <div class="about-value-dot"></div>
           <div>
-            <h4>Excelencia y Profesionalismo</h4>
-            <p>Entregamos servicios de la más alta calidad con estándares internacionales.</p>
+            <h4>Cercanía y Servicio</h4>
+            <p>Trabajamos codo a codo con pymes y emprendedores, entendiendo sus necesidades reales.</p>
           </div>
         </div>
         <div class="about-value-item">
           <div class="about-value-dot"></div>
           <div>
-            <h4>Responsabilidad y Servicio</h4>
-            <p>Asumimos el compromiso de proteger la operación y los datos de nuestros clientes.</p>
+            <h4>Calidad y Detalle</h4>
+            <p>Código limpio, buen rendimiento y cuidado estético en cada entrega.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Socio de Negocios -->
+    <!-- Aliado estratégico -->
     <div class="about-partner">
       <div class="about-partner-content">
-        <h3>Su Socio de Negocios en Ciberseguridad</h3>
-        <p>Una organización Ciber-Resiliente no solo resiste ataques, sino que se adapta, responde y evoluciona. En un mundo digital en constante cambio, la verdadera fortaleza está en anticiparse y recuperarse más rápido que las amenazas.</p>
+        <h3>Tu Socio Estratégico en Desarrollo Web</h3>
+        <p>Una presencia web profesional ya no es un lujo: es la vitrina principal de cualquier negocio. Combinamos estrategia, diseño y tecnología para que tu marca destaque en internet y convierta visitantes en clientes fieles.</p>
       </div>
     </div>
 
@@ -210,78 +226,82 @@ app.innerHTML = `
     <div class="about-highlights">
       <div class="about-highlight">
         <div class="about-highlight-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
         <h4>Foco en</h4>
-        <span>Ciberseguridad</span>
+        <span>Desarrollo Web</span>
       </div>
       <div class="about-highlight">
         <div class="about-highlight-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h4>Canal Reconocido</h4>
-        <span>por Fabricantes</span>
-      </div>
-      <div class="about-highlight">
-        <div class="about-highlight-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <h4>Certificaciones</h4>
-        <span>Internacionales</span>
-      </div>
-      <div class="about-highlight">
-        <div class="about-highlight-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h4>18 Años de</h4>
+        <h4>+2 Años de</h4>
         <span>Experiencia</span>
+      </div>
+      <div class="about-highlight">
+        <div class="about-highlight-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h4>2 Productos</h4>
+        <span>Propios</span>
+      </div>
+      <div class="about-highlight">
+        <div class="about-highlight-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>Sede en</h4>
+        <span>Bogotá D.C.</span>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ===== CLIENT LOGOS CAROUSEL ===== -->
-<section class="logos-section">
+<!-- ===== TECH STACK CAROUSEL ===== -->
+<section class="logos-section" id="stack" aria-label="Stack tecnológico de ZentroSoft">
   <div class="container">
     <div class="logos-section-header">
-      <div class="section-label">Tecnologías que Dominamos</div>
-      <h2 class="section-title">Nuestros Socios Tecnológicos</h2>
+      <div class="section-label">Stack Tecnológico</div>
+      <h2 class="section-title">Tecnologías que Dominamos</h2>
     </div>
   </div>
   <div class="logos-track-wrapper">
     <div class="logos-track">
-      <div class="logo-item"><img src="/img/FORTINET_LOGO_01.png" alt="Fortinet" /></div>
-      <div class="logo-item"><img src="/img/VEEAM_LOGO_01.png" alt="Veeam" /></div>
-      <div class="logo-item"><img src="/img/SOLARWINDS_LOGO_01-1.png" alt="SolarWinds" /></div>
-      <div class="logo-item"><img src="/img/RIVERBED_LOGO_01-1-2048x444.avif" alt="Riverbed" /></div>
-      <div class="logo-item"><img src="/img/VICARIUS_LOGO_01.png" alt="Vicarius" /></div>
-      <div class="logo-item"><img src="/img/EXAGRID_LOGO_01-1.png" alt="ExaGrid" /></div>
+      <div class="logo-item logo-item-text"><span>JavaScript</span></div>
+      <div class="logo-item logo-item-text"><span>Next.js</span></div>
+      <div class="logo-item logo-item-text"><span>Tailwind CSS</span></div>
+      <div class="logo-item logo-item-text"><span>Laravel</span></div>
+      <div class="logo-item logo-item-text"><span>PHP</span></div>
+      <div class="logo-item logo-item-text"><span>Bootstrap</span></div>
+      <div class="logo-item logo-item-text"><span>MySQL</span></div>
+      <div class="logo-item logo-item-text"><span>PostgreSQL</span></div>
       <!-- Duplicate set for infinite scroll -->
-      <div class="logo-item"><img src="/img/FORTINET_LOGO_01.png" alt="Fortinet" /></div>
-      <div class="logo-item"><img src="/img/VEEAM_LOGO_01.png" alt="Veeam" /></div>
-      <div class="logo-item"><img src="/img/SOLARWINDS_LOGO_01-1.png" alt="SolarWinds" /></div>
-      <div class="logo-item"><img src="/img/RIVERBED_LOGO_01-1-2048x444.avif" alt="Riverbed" /></div>
-      <div class="logo-item"><img src="/img/VICARIUS_LOGO_01.png" alt="Vicarius" /></div>
-      <div class="logo-item"><img src="/img/EXAGRID_LOGO_01-1.png" alt="ExaGrid" /></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>JavaScript</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>Next.js</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>Tailwind CSS</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>Laravel</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>PHP</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>Bootstrap</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>MySQL</span></div>
+      <div class="logo-item logo-item-text" aria-hidden="true"><span>PostgreSQL</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===== LATEST NEWS ===== -->
-<section class="news-section" id="novedades" aria-label="Últimas novedades de ciberseguridad">
+<!-- ===== PRODUCTS ===== -->
+<section class="news-section" id="productos" aria-label="Productos propios de ZentroSoft">
   <div class="container">
     <div class="news-header">
       <div>
-        <div class="section-label">Últimas Novedades</div>
-        <h2 class="section-title">Noticias y Actualidad</h2>
-        <p class="section-subtitle">Manténgase informado sobre las últimas tendencias y novedades del sector tecnológico.</p>
+        <div class="section-label">Nuestros Productos</div>
+        <h2 class="section-title">Soluciones Propias ZentroSoft</h2>
+        <p class="section-subtitle">Productos desarrollados internamente con nuestro stack tecnológico, listos para impulsar la operación de tu negocio.</p>
       </div>
       <div class="news-nav">
-        <button class="news-nav-btn" id="news-prev" aria-label="Noticia anterior">
+        <button class="news-nav-btn" id="news-prev" aria-label="Producto anterior">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <button class="news-nav-btn" id="news-next" aria-label="Siguiente noticia">
+        <button class="news-nav-btn" id="news-next" aria-label="Siguiente producto">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </div>
@@ -291,60 +311,35 @@ app.innerHTML = `
       <div class="news-carousel" id="news-carousel">
         <article class="news-card">
           <div class="news-card-image">
-            <img src="/img/transformacion-digital-low-code-400x200.jpeg" alt="Nuevas amenazas cibernéticas y estrategias de protección en 2026" loading="lazy" width="380" height="220" />
-            <span class="news-card-tag">Seguridad</span>
+            <img src="/img/product-velarispos.svg" alt="VelarisPOS - Sistema de punto de venta de ZentroSoft" loading="lazy" width="380" height="220" />
+            <span class="news-card-tag">Punto de Venta</span>
           </div>
           <div class="news-card-body">
-            <h3 class="news-card-title">Innovación y Transformación Digital</h3>
-            <p class="news-card-excerpt">La Ciber-Resiliencia es clave para la continuidad y el éxito de cualquier organización en un entorno digital lleno de amenazas.
-
-No se limita a la prevención de ataques, sino de asegurar que la organización pueda anticiparlos, detectarlos, responder y recuperarse rápidamente con el menor impacto posible.</p>
+            <h3 class="news-card-title">VelarisPOS</h3>
+            <p class="news-card-excerpt">Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes de tu negocio desde una sola plataforma. Diseñado para comercios que necesitan velocidad, control y claridad en cada transacción.</p>
           </div>
         </article>
 
         <article class="news-card">
           <div class="news-card-image">
-            <img src="/img/gdaae70b6cd506905c7a4d70abd194cd5c88af3448dc746753115b56bc0b8e0bcb62e42635f7745a0efdeb5a0bf0795687517552340263434b7673822cf09e4af_1280-8512976-edited-400x200.jpg" alt="SOC como servicio para seguridad empresarial" loading="lazy" width="380" height="220" />
-            <span class="news-card-tag">SOC</span>
+            <img src="/img/product-zentro-inmobiliaria.svg" alt="Zentro Inmobiliaria - Plataforma de gestión inmobiliaria de ZentroSoft" loading="lazy" width="380" height="220" />
+            <span class="news-card-tag">Gestión Inmobiliaria</span>
           </div>
           <div class="news-card-body">
-            <h3 class="news-card-title">Enfoque Ciber-Resiliente</h3>
-            <p class="news-card-excerpt">Un enfoque Ciber-Resiliente protege no solo la infraestructura tecnológica, sino también la reputación, la confianza del cliente y la estabilidad operativa. Las organizaciones que integran la ciber-resiliencia en su estrategia minimizan riesgos, reducen costos por incidentes y mantienen su ventaja competitiva.
-
-En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la diferencia entre sobrevivir y prosperar.</p>
+            <h3 class="news-card-title">Zentro Inmobiliaria</h3>
+            <p class="news-card-excerpt">Plataforma integral para administrar propiedades, contratos y clientes. Optimiza la operación de empresas y agentes inmobiliarios centralizando toda la información del portafolio en un solo lugar.</p>
           </div>
         </article>
 
-        <article class="news-card">
-          <div class="news-card-image">
-            <img src="/img/pexels-photo-665214-665214-scaled-400x200.jpg" alt="Estrategias de migración al cloud para empresas" loading="lazy" width="380" height="220" />
-            <span class="news-card-tag">Cloud</span>
-          </div>
-          <div class="news-card-body">
-            <h3 class="news-card-title">Seguridad y Resiliencia</h3>
-            <p class="news-card-excerpt">En un mundo cada vez más digitalizado, la ciberseguridad y la ciberresiliencia son pilares fundamentales para la continuidad y estabilidad de las organizaciones.</p>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-card-image">
-            <img src="/img/g80909799196cc523f0e108213f461e2c06b5e27fc89ac154875200ecdf356c384b308b3e520a8405dcacba44794866f9059bd2e0aa4a1f4ae41700dc82dcd4b4_1280-6657322-400x200.jpg" alt="Infraestructura híbrida on-premise y cloud" loading="lazy" width="380" height="220" />
-            <span class="news-card-tag">Infraestructura</span>
-          </div>
-          <div class="news-card-body">
-            <h3 class="news-card-title">Infraestructura híbrida: el equilibrio perfecto entre on-premise y cloud</h3>
-            <p class="news-card-excerpt">Somos respetuosos de los datos personales e información que gestionamos en nuestro ecosistema, de las personas, clientes actuales, pasados y potenciales, aliados comerciales y posibles interesados en los servicios y/o productos de la Compañía; cumpliendo con la regulación internacional y de nuestro país, con completo cumplimiento de las normas y mejores prácticas.</p>
-          </div>
-        </article>
-
-        <article class="news-card">
-          <div class="news-card-image">
-            <img src="/img/dan-nelson-ah-HeguOe9k-unsplash.jpg" alt="Metodologías de transformación digital empresarial" loading="lazy" width="380" height="220" />
-            <span class="news-card-tag">Consultoría</span>
-          </div>
-          <div class="news-card-body">
-            <h3 class="news-card-title">Política de Privacidad y Tratamiento de Datos Personales</h3>
-            <p class="news-card-excerpt">Implemente una estrategia de transformación digital efectiva que impulse el crecimiento y la competitividad.</p>
+        <article class="news-card news-card--cta">
+          <div class="news-card-body news-card-body--cta">
+            <span class="news-card-tag">Proyectos a la Medida</span>
+            <h3 class="news-card-title">¿Tienes un proyecto en mente?</h3>
+            <p class="news-card-excerpt">Aplicamos nuestra experiencia construyendo productos propios para desarrollar la solución digital que tu negocio necesita: sistemas web, plataformas de gestión o tu próxima gran idea.</p>
+            <a href="#contacto" class="btn-primary news-card-btn">
+              Cuéntanos tu idea
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </article>
       </div>
@@ -360,9 +355,9 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
 
       <div class="contact-info">
         <div class="section-label">Contacto</div>
-        <h2 class="section-title">Hablemos de la seguridad de su organización</h2>
+        <h2 class="section-title">Hablemos de tu proyecto</h2>
         <p class="section-subtitle">
-          Complete el formulario y uno de nuestros expertos se pondrá en contacto con usted para entender sus necesidades y diseñar la solución adecuada.
+          Completa el formulario y recibe una propuesta clara y personalizada para tu sitio web o producto digital.
         </p>
 
         <ul class="contact-details">
@@ -372,7 +367,7 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
             </span>
             <div>
               <span class="contact-detail-label">Correo</span>
-              <a href="mailto:info@rt.com.co">info@rt.com.co</a>
+              <a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a>
             </div>
           </li>
           <li class="contact-detail">
@@ -381,7 +376,7 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
             </span>
             <div>
               <span class="contact-detail-label">Teléfono</span>
-              <a href="tel:+5717943337">+57 17943337</a>
+              <a href="tel:+573000000000">+57 300 000 0000</a>
             </div>
           </li>
           <li class="contact-detail">
@@ -409,19 +404,19 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
               <input type="text" id="cf-nombre" name="nombre" required autocomplete="name" placeholder="Su nombre" />
             </div>
             <div class="form-group">
-              <label for="cf-email">Correo corporativo <span aria-hidden="true">*</span></label>
-              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="nombre@empresa.com" />
+              <label for="cf-email">Correo electrónico <span aria-hidden="true">*</span></label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="nombre@tuempresa.com" />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="cf-telefono">Teléfono</label>
+              <label for="cf-telefono">Teléfono / WhatsApp</label>
               <input type="tel" id="cf-telefono" name="telefono" autocomplete="tel" placeholder="+57 300 000 0000" />
             </div>
             <div class="form-group">
               <label for="cf-empresa">Empresa <span aria-hidden="true">*</span></label>
-              <input type="text" id="cf-empresa" name="empresa" required autocomplete="organization" placeholder="Nombre de su empresa" />
+              <input type="text" id="cf-empresa" name="empresa" required autocomplete="organization" placeholder="Nombre de tu empresa o emprendimiento" />
             </div>
           </div>
 
@@ -429,17 +424,21 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
             <label for="cf-servicio">Servicio de interés</label>
             <select id="cf-servicio" name="servicio">
               <option value="">Seleccione una opción (opcional)</option>
-              <option value="Integración de Soluciones TIC">Integración de Soluciones TIC</option>
-              <option value="Servicios Gestionados">Servicios Gestionados</option>
-              <option value="SOC como Servicio">SOC como Servicio</option>
-              <option value="Consultoría TIC">Consultoría TIC</option>
+              <option value="Creación de Landing Pages">Creación de Landing Pages</option>
+              <option value="Optimización SEO">Optimización SEO</option>
+              <option value="Consultoría y Capacitación">Consultoría y Capacitación</option>
+              <option value="Soporte Técnico">Soporte Técnico</option>
+              <option value="Desarrollo Frontend">Desarrollo Frontend</option>
+              <option value="Mantenimiento Web">Mantenimiento Web</option>
+              <option value="VelarisPOS">VelarisPOS (Producto)</option>
+              <option value="Zentro Inmobiliaria">Zentro Inmobiliaria (Producto)</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="cf-mensaje">Mensaje <span aria-hidden="true">*</span></label>
-            <textarea id="cf-mensaje" name="mensaje" rows="5" required placeholder="Cuéntenos sobre su necesidad o proyecto"></textarea>
+            <textarea id="cf-mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto o necesidad"></textarea>
           </div>
 
           <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -448,8 +447,8 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
             <input type="checkbox" id="cf-consent" name="consentimiento" required />
             <label for="cf-consent">
               Autorizo de manera libre, expresa e informada el tratamiento de mis datos personales conforme a la
-              <a href="https://rt.com.co/wp-content/uploads/2025/09/POLITICA-DE-PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" target="_blank" rel="noopener noreferrer">Política de Privacidad y Tratamiento de Datos Personales</a>
-              de RT. <span aria-hidden="true">*</span>
+              <a href="/politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad y Tratamiento de Datos Personales</a>
+              de ZentroSoft. <span aria-hidden="true">*</span>
             </label>
           </div>
 
@@ -472,50 +471,52 @@ En un mundo donde las ciberamenazas son inevitables, la resiliencia marca la dif
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <img src="/img/logo.png" alt="RT - Soluciones de Ciberseguridad y Ciberresiliencia" width="140" height="40" />
+          <img src="/img/logo.png" alt="ZentroSoft - Agencia de Desarrollo Web" width="140" height="40" />
         </a>
-        <p>Soluciones de Ciberseguridad y Ciberresiliencia con más de 18 años de experiencia protegiendo la operación digital de nuestros clientes.</p>
+        <p>Agencia de desarrollo web en Bogotá. Diseñamos y construimos experiencias digitales que convierten visitantes en clientes.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Soluciones</h4>
+        <h4>Servicios</h4>
         <ul>
-          <li><a href="#">Integración TIC</a></li>
-          <li><a href="#">Servicios Gestionados</a></li>
-          <li><a href="#">SOC</a></li>
-          <li><a href="#">Consultoría</a></li>
+          <li><a href="#servicios">Landing Pages</a></li>
+          <li><a href="#servicios">Optimización SEO</a></li>
+          <li><a href="#servicios">Desarrollo Frontend</a></li>
+          <li><a href="#servicios">Soporte Técnico</a></li>
+          <li><a href="#servicios">Mantenimiento Web</a></li>
+          <li><a href="#servicios">Consultoría</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="#experiencia">Sobre Nosotros</a></li>
-          <li><a href="#">Nuestro Equipo</a></li>
-          <li><a href="#">Carreras</a></li>
-          <li><a href="#novedades">Blog</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#productos">VelarisPOS</a></li>
+          <li><a href="#productos">Zentro Inmobiliaria</a></li>
+          <li><a href="#stack">Stack Tecnológico</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Contacto</h4>
         <ul>
-          <li><a href="mailto:info@rt.com.co">info@rt.com.co</a></li>
-          <li><a href="#">Bogotá, Colombia</a></li>
-          <li><a href="tel:+5717943337">+57 17943337</a></li>
+          <li><a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a></li>
+          <li><a href="#contacto">Bogotá, Colombia</a></li>
+          <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; ${new Date().getFullYear()} RT. Todos los derechos reservados.</p>
+      <p>&copy; ${new Date().getFullYear()} ZentroSoft. Todos los derechos reservados.</p>
       <ul class="footer-legal-links">
-        <li><a href="https://rt.com.co/wp-content/uploads/2025/09/POLITICA-DE-PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+        <li><a href="/politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
         <li><a href="#" id="cookie-policy-page-link">Política de Cookies</a></li>
         <li><button type="button" id="cookie-settings" class="footer-legal-button">Configuración de Cookies</button></li>
       </ul>
       <div class="footer-socials">
-        <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+        <a href="https://www.linkedin.com/company/zentrosoftco" class="footer-social-link" aria-label="LinkedIn">in</a>
         <a href="#" class="footer-social-link" aria-label="Twitter">X</a>
         <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
       </div>
@@ -555,7 +556,7 @@ function initHeroCarousel() {
 }
 
 /* ============================================
-   NEWS CAROUSEL - Navigation buttons
+   PRODUCTS CAROUSEL - Navigation buttons
    ============================================ */
 function initNewsCarousel() {
   const carousel = document.getElementById('news-carousel') as HTMLDivElement
@@ -663,11 +664,11 @@ function injectDynamicJSONLD() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Ciberseguridad y Ciberresiliencia",
+    "serviceType": "Desarrollo Web y Soluciones Digitales",
     "provider": {
       "@type": "Organization",
-      "name": "RT",
-      "url": "https://rt.com.co"
+      "name": "ZentroSoft",
+      "url": "https://zentrosoft.com/"
     },
     "areaServed": {
       "@type": "Country",
@@ -675,38 +676,70 @@ function injectDynamicJSONLD() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Soluciones TIC",
+      "name": "Servicios de ZentroSoft",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Integración de Soluciones TIC",
-            "description": "Integración de soluciones de tecnologías de información y comunicaciones complejas con los más actuales desarrollos."
+            "name": "Creación de Landing Pages",
+            "description": "Diseño, desarrollo e implementación de páginas de aterrizaje enfocadas en la conversión y CTAs efectivas."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Servicios Gestionados",
-            "description": "Amplio conjunto de servicios gestionados que apoyan la operación de los recursos TIC de nuestros clientes."
+            "name": "Optimización SEO",
+            "description": "Implementación de prácticas SEO on-page, etiquetas meta, estructuras de encabezados, optimización de imágenes y contenido."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "SOC como Servicio",
-            "description": "Servicios de SOC de altos estándares y operación integral para la seguridad continua de su infraestructura tecnológica."
+            "name": "Consultoría y Capacitación",
+            "description": "Asesoramiento para pequeñas empresas y emprendedores sobre presencia web y herramientas como WordPress."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Consultoría TIC",
-            "description": "Servicios de consultoría TIC en un amplio espectro de aplicaciones que apoyan las operaciones de nuestros clientes."
+            "name": "Soporte Técnico",
+            "description": "Resolución de problemas en sitios web, configuración de dominios, hosting y correos electrónicos."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo Frontend",
+            "description": "Creación de interfaces con Bootstrap e implementación de componentes interactivos con JavaScript."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mantenimiento Web",
+            "description": "Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "VelarisPOS",
+            "description": "Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes del negocio."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Zentro Inmobiliaria",
+            "description": "Plataforma integral para administrar propiedades, contratos y clientes inmobiliarios."
           }
         }
       ]
@@ -719,42 +752,42 @@ function injectDynamicJSONLD() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿Qué servicios de ciberseguridad ofrece RT?",
+        "name": "¿Qué servicios ofrece ZentroSoft?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "RT ofrece integración de soluciones TIC, servicios gestionados, SOC como servicio y consultoría TIC. Contamos con más de 18 años de experiencia protegiendo la operación digital de empresas en Colombia."
+          "text": "Ofrecemos creación de landing pages enfocadas en conversión, optimización SEO on-page, consultoría y capacitación en presencia web y WordPress, soporte técnico de dominios, hosting y correos, desarrollo frontend con Bootstrap y JavaScript, y mantenimiento web."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Cuántos años de experiencia tiene RT en ciberseguridad?",
+        "name": "¿Qué tecnologías utiliza ZentroSoft?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "RT cuenta con más de 18 años de experiencia en el sector de ciberseguridad y ciberresiliencia, atendiendo a más de 200 clientes con un equipo de más de 50 profesionales expertos."
+          "text": "Trabajamos con JavaScript, Next.js, Tailwind CSS, Laravel, PHP, Bootstrap, MySQL y PostgreSQL, además de herramientas como WordPress según las necesidades del proyecto."
         }
       },
       {
         "@type": "Question",
-        "name": "¿En qué ciudades de Colombia opera RT?",
+        "name": "¿Cuánto cuesta desarrollar una landing page?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "RT tiene su sede principal en Bogotá, Colombia, y presta servicios de ciberseguridad a empresas en todo el territorio nacional."
+          "text": "El valor depende del alcance del proyecto: número de secciones, funcionalidades, integraciones y contenido. Contáctanos y recibirás una propuesta clara adaptada a tus necesidades y presupuesto."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Qué es un SOC y por qué es importante?",
+        "name": "¿Qué productos propios ofrece ZentroSoft?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Un SOC (Security Operations Center) es un centro de operaciones de seguridad que monitorea y responde a incidentes de seguridad 24/7. RT ofrece SOC como servicio con altos estándares para la seguridad continua de su infraestructura."
+          "text": "Contamos con VelarisPOS, sistema de punto de venta para gestionar ventas, inventario y reportes; y Zentro Inmobiliaria, plataforma integral para administrar propiedades, contratos y clientes."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Con qué fabricantes de tecnología trabaja RT?",
+        "name": "¿En dónde opera ZentroSoft?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "RT es canal reconocido por los principales fabricantes de tecnología incluyendo Fortinet, Veeam, SolarWinds, Riverbed, Vicarius y ExaGrid, entre otros."
+          "text": "Nuestra sede está en Bogotá D.C., Colombia, y acompañamos a pymes y emprendedores de todo el país tanto de forma presencial como remota."
         }
       }
     ]

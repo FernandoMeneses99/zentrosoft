@@ -1,10 +1,10 @@
-const CONSENT_COOKIE_NAME = 'rt_cookie_consent'
+const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent'
 const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
 const CONSENT_VERSION = 1
-const GTM_ID = 'GTM-KQ65ZZNH'
+// TODO: Reemplazar con el ID del contenedor GTM/GA4 de ZentroSoft cuando esté disponible
+const GTM_ID = ''
 
-const PRIVACY_POLICY_URL =
-  'https://rt.com.co/wp-content/uploads/2025/09/POLITICA-DE-PRIVACIDAD-Y-TRATAMIENTO-DE-DATOS.pdf'
+const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '#'
 
 interface StoredConsent {
@@ -47,7 +47,7 @@ function writeStoredConsent(consent: StoredConsent): void {
 let gtmLoaded = false
 
 function loadGTM(): void {
-  if (gtmLoaded) return
+  if (gtmLoaded || !GTM_ID) return
   gtmLoaded = true
   const script = document.createElement('script')
   script.async = true

@@ -1,16 +1,18 @@
 import emailjs from '@emailjs/browser'
 
-const EMAILJS_PUBLIC_KEY = 'v9Gg4_hoWSHtFF_yI'
-const EMAILJS_SERVICE_ID = 'service_mp1yyv8'
-const EMAILJS_TEMPLATE_ID = 'template_ktu16zv'
+// TODO: Reemplazar con las credenciales reales de la cuenta de EmailJS de ZentroSoft
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const CONTACT_EMAIL = 'contacto@zentrosoft.com'
 
 type StatusType = 'success' | 'error' | 'info'
 
 function isEmailJSConfigured(): boolean {
   return (
-    EMAILJS_PUBLIC_KEY !== 'v9Gg4_hoWSHtFF_yI' &&
-    EMAILJS_SERVICE_ID !== 'service_mp1yyv8' &&
-    EMAILJS_TEMPLATE_ID !== 'template_ktu16zv'
+    EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY' &&
+    EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' &&
+    EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID'
   )
 }
 
@@ -73,7 +75,7 @@ export function initContactForm(): void {
           company: String(data.get('empresa') || ''),
           service: String(data.get('servicio') || 'No especificado'),
           message: String(data.get('mensaje') || ''),
-          to_name: 'RT Ciberseguridad',
+          to_name: 'ZentroSoft',
           reply_to: String(data.get('email') || '')
         },
         { publicKey: EMAILJS_PUBLIC_KEY }
@@ -82,7 +84,7 @@ export function initContactForm(): void {
       form.reset()
     } catch {
       setStatus(
-        'No fue posible enviar su mensaje en este momento. Inténtelo nuevamente o escríbanos a info@rt.com.co.',
+        `No fue posible enviar su mensaje en este momento. Inténtelo nuevamente o escríbanos a ${CONTACT_EMAIL}.`,
         'error'
       )
     } finally {

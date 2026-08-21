@@ -1,16 +1,16 @@
 ---
-version: 1.0
-name: RT.com.co Design System
+version: 2.0
+name: ZentroSoft Design System
 description: |
-  Corporate technology integrator landing page. Deep navy dark theme with blue
-  and green accents. Clean, professional aesthetic for a TIC solutions company
-  with 16+ years of experience in Colombia.
+  Web development agency landing page. Deep navy dark theme with blue
+  and green accents. Clean, professional aesthetic for a digital agency
+  specialized in landing pages, SEO and web support in Bogotá, Colombia.
 ---
 
-# RT.com.co Design System
+# ZentroSoft Design System
 
 ## Brand Identity
-RT is a Colombian Cybersecurity and Cyber Resilience company offering complex IT solutions, managed services, SOC operations, and consulting with 18+ years of experience.
+ZentroSoft is a Colombian web development agency founded in 2025, based in Bogotá D.C., offering landing page creation, SEO optimization, frontend development, consulting, technical support, and web maintenance for small businesses and entrepreneurs. Proprietary products: VelarisPOS and Zentro Inmobiliaria.
 
 ## Visual Language
 

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /dist/
 Disallow: /node_modules/
 
-Sitemap: https://rt.com.co/sitemap.xml
+Sitemap: https://zentrosoft.com/sitemap.xml

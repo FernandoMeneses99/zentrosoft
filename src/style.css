@@ -1,5 +1,5 @@
 /* ============================================
-   RT.com.co - Design System
+   ZentroSoft - Design System
    Landing Page Styles
    ============================================ */
 
@@ -1855,4 +1855,63 @@ h1, h2, h3, h4, h5, h6 {
   .footer-legal-links {
     justify-content: center;
   }
+}
+
+/* ============================================
+   ZENTROSOFT EXTENSIONS
+   Grid de 6 servicios, stack tecnológico
+   y tarjeta CTA de productos
+   ============================================ */
+
+/* --- Services grid (6 cards) --- */
+.value-grid--six {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .value-grid--six {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .value-grid--six {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Tech stack text badges --- */
+.logo-item-text span {
+  font-family: var(--font);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.logo-item-text:hover span {
+  color: var(--color-primary);
+}
+
+/* --- Product CTA card --- */
+.news-card--cta {
+  display: flex;
+}
+
+.news-card-body--cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.news-card--cta .news-card-tag {
+  position: static;
+}
+
+.news-card-btn {
+  margin-top: var(--space-xs);
+  text-decoration: none;
 }

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://real-time-two-psi.vercel.app</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://zentrosoft.com/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://real-time-two-psi.vercel.app/#soluciones</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://zentrosoft.com/#servicios</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zentrosoft.com/#productos</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://real-time-two-psi.vercel.app/#experiencia</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://zentrosoft.com/#nosotros</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://real-time-two-psi.vercel.app/#novedades</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://real-time-two-psi.vercel.app/#contacto</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://zentrosoft.com/politica-privacidad.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
