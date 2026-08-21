@@ -3,8 +3,7 @@ const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
 const CONSENT_VERSION = 1
 
 // ID de analítica: acepta contenedor GTM (GTM-XXXXXXX) o GA4 (G-XXXXXXXXXX)
-// TODO: Reemplazar con el ID real de ZentroSoft cuando esté disponible
-const ANALYTICS_ID: string = ''
+const ANALYTICS_ID: string = 'GTM-55JS53W4'
 
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '#'
