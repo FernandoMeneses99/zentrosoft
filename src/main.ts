@@ -7,7 +7,7 @@ const app = document.querySelector<HTMLDivElement>('#app')!
 const PREFERS_REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 // WhatsApp de contacto (formato internacional sin "+"): 57 + número
-const WHATSAPP_NUMBER = '573000000000'
+const WHATSAPP_NUMBER = '573009047298'
 const WHATSAPP_MESSAGE = 'Hola ZentroSoft, quiero cotizar mi página web.'
 
 app.innerHTML = `

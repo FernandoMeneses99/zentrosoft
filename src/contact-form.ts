@@ -1,20 +1,12 @@
 import emailjs from '@emailjs/browser'
 
-// TODO: Reemplazar con las credenciales reales de la cuenta de EmailJS de ZentroSoft
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+// Credenciales de EmailJS de ZentroSoft (las claves públicas son visibles en el bundle por diseño)
+const EMAILJS_PUBLIC_KEY = 'v9Gg4_hoWSHtFF_yI'
+const EMAILJS_SERVICE_ID = 'service_mp1yyv8'
+const EMAILJS_TEMPLATE_ID = 'template_tp6gkjb'
 const CONTACT_EMAIL = 'contacto@zentrosoft.com'
 
 type StatusType = 'success' | 'error' | 'info'
-
-function isEmailJSConfigured(): boolean {
-  return (
-    EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY' &&
-    EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' &&
-    EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID'
-  )
-}
 
 export function initContactForm(): void {
   const form = document.getElementById('contact-form') as HTMLFormElement | null
@@ -44,14 +36,6 @@ export function initContactForm(): void {
     if (honeypot && honeypot.value.trim() !== '') {
       setStatus('Su mensaje ha sido enviado. Nos pondremos en contacto pronto.', 'success')
       form.reset()
-      return
-    }
-
-    if (!isEmailJSConfigured()) {
-      setStatus(
-        'El formulario aún no está conectado al servicio de envío. Configure las credenciales de EmailJS.',
-        'error'
-      )
       return
     }
 
