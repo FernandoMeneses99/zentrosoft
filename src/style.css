@@ -392,6 +392,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
   transition: all var(--transition-fast);
 }
 
@@ -1936,4 +1938,66 @@ h1, h2, h3, h4, h5, h6 {
 .news-card-btn {
   margin-top: var(--space-xs);
   text-decoration: none;
+}
+
+/* ============================================
+   ZENTROSOFT MOTION
+   Typewriter, shine CTA y reduced-motion
+   ============================================ */
+
+/* --- Caret del efecto typewriter (H1 hero) --- */
+.type-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.95em;
+  margin-left: 5px;
+  background: var(--color-secondary);
+  vertical-align: -0.08em;
+  animation: caret-blink 1.05s steps(2, start) infinite;
+}
+
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* --- Brillo deslizante en botones primarios --- */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after {
+  animation: btn-shine 0.9s ease;
+}
+
+@keyframes btn-shine {
+  to { left: 130%; }
+}
+
+/* --- Accesibilidad: prefiere movimiento reducido --- */
+@media (prefers-reduced-motion: reduce) {
+  .type-caret {
+    animation: none;
+  }
+
+  .btn-primary:hover::after {
+    animation: none;
+  }
+
+  .logos-track {
+    animation-play-state: paused;
+  }
 }

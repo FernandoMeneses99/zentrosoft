@@ -4,6 +4,8 @@ import { initContactForm } from './contact-form'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
+const PREFERS_REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 app.innerHTML = `
 <!-- ===== HEADER ===== -->
 <header class="header" role="banner">
@@ -42,7 +44,7 @@ app.innerHTML = `
     </div>
     <h1>
       Desarrollo Web y<br/>
-      <span class="highlight">Soluciones Digitales</span>
+      <span class="highlight"><span id="rotating-word">Soluciones Digitales</span><span class="type-caret" aria-hidden="true"></span></span>
     </h1>
     <p class="hero-text">
       Creamos landing pages que convierten visitas en clientes, optimizamos tu posicionamiento en buscadores y acompañamos la operación de tu sitio con soporte técnico especializado. Tecnología moderna para pymes y emprendedores.
@@ -58,15 +60,15 @@ app.innerHTML = `
     </div>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-number">2<span class="accent">+</span></div>
+        <div class="hero-stat-number"><span data-count="2">2</span><span class="accent">+</span></div>
         <div class="hero-stat-label">Años de experiencia</div>
       </div>
       <div>
-        <div class="hero-stat-number">6</div>
+        <div class="hero-stat-number"><span data-count="6">6</span></div>
         <div class="hero-stat-label">Servicios especializados</div>
       </div>
       <div>
-        <div class="hero-stat-number">2</div>
+        <div class="hero-stat-number"><span data-count="2">2</span></div>
         <div class="hero-stat-label">Productos propios</div>
       </div>
     </div>
@@ -554,7 +556,9 @@ function initHeroCarousel() {
     goToSlide((currentSlide + 1) % slides.length)
   }
 
-  setInterval(nextSlide, 3000)
+  if (!PREFERS_REDUCED_MOTION) {
+    setInterval(nextSlide, 3000)
+  }
 
   indicators.forEach((indicator) => {
     indicator.addEventListener('click', () => {
@@ -619,25 +623,132 @@ function initSmoothScroll() {
 }
 
 /* ============================================
-   SCROLL ANIMATIONS - Intersection Observer
+   COUNT-UP - Hero stats animate when visible
    ============================================ */
-function initScrollAnimations() {
+function initCountUp() {
+  const counters = document.querySelectorAll<HTMLElement>('[data-count]')
+  if (!counters.length || PREFERS_REDUCED_MOTION) return
+
+  const animateCounter = (el: HTMLElement) => {
+    const target = parseInt(el.dataset.count || '0', 10)
+    const duration = 1200
+    let startTime: number | null = null
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      el.textContent = String(Math.round(target * eased))
+      if (progress < 1) requestAnimationFrame(step)
+    }
+
+    requestAnimationFrame(step)
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-          observer.unobserve(entry.target)
-        }
+        if (!entry.isIntersecting) return
+        animateCounter(entry.target as HTMLElement)
+        observer.unobserve(entry.target)
+      })
+    },
+    { threshold: 0.4 }
+  )
+
+  counters.forEach((el) => {
+    el.textContent = '0'
+    observer.observe(el)
+  })
+}
+
+/* ============================================
+   ROTATING WORD - Typewriter in hero title
+   ============================================ */
+function initRotatingWord() {
+  const wordEl = document.getElementById('rotating-word')
+  if (!wordEl || PREFERS_REDUCED_MOTION) return
+
+  const words = ['Soluciones Digitales', 'Landing Pages', 'Optimización SEO', 'Soporte Especializado']
+  let wordIndex = 0
+  let charIndex = words[0].length
+  let isDeleting = false
+
+  const tick = () => {
+    const currentWord = words[wordIndex]
+
+    if (!isDeleting) {
+      charIndex++
+      wordEl.textContent = currentWord.slice(0, charIndex)
+      if (charIndex === currentWord.length) {
+        isDeleting = true
+        setTimeout(tick, 2400)
+        return
+      }
+      setTimeout(tick, 75)
+    } else {
+      charIndex--
+      wordEl.textContent = currentWord.slice(0, charIndex)
+      if (charIndex === 0) {
+        isDeleting = false
+        wordIndex = (wordIndex + 1) % words.length
+        setTimeout(tick, 350)
+        return
+      }
+      setTimeout(tick, 38)
+    }
+  }
+
+  setTimeout(tick, 2400)
+}
+
+/* ============================================
+   SCROLL ANIMATIONS - Intersection Observer + Stagger
+   ============================================ */
+function initScrollAnimations() {
+  const targets = document.querySelectorAll<HTMLElement>(
+    '.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card'
+  )
+  if (!targets.length || PREFERS_REDUCED_MOTION) return
+
+  const staggerContainers = [
+    '.value-grid',
+    '.about-mission-grid',
+    '.about-values-grid',
+    '.about-highlights',
+    '.news-carousel'
+  ]
+  const delayMap = new Map<HTMLElement, number>()
+
+  staggerContainers.forEach((selector) => {
+    const container = document.querySelector(selector)
+    if (!container) return
+    Array.from(container.children).forEach((child, index) => {
+      delayMap.set(child as HTMLElement, Math.min(index * 90, 450))
+    })
+  })
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        const el = entry.target as HTMLElement
+        el.classList.add('visible')
+        const delay = delayMap.get(el) ?? 0
+        window.setTimeout(() => {
+          el.style.transitionDelay = '0ms'
+        }, delay + 650)
+        observer.unobserve(el)
       })
     },
     { threshold: 0.1 }
   )
 
-  document.querySelectorAll<HTMLElement>('.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card').forEach((el) => {
+  targets.forEach((el) => {
+    const delay = delayMap.get(el) ?? 0
     el.style.opacity = '0'
     el.style.transform = 'translateY(24px)'
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
+    el.style.transition = `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`
     observer.observe(el)
   })
 }
@@ -657,6 +768,8 @@ document.head.appendChild(style)
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel()
+  initCountUp()
+  initRotatingWord()
   initNewsCarousel()
   initHeaderScroll()
   initSmoothScroll()
