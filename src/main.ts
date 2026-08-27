@@ -334,7 +334,7 @@ app.innerHTML = `
           <div class="news-card-body">
             <h3 class="news-card-title">VelarisPOS</h3>
             <p class="news-card-excerpt">Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes de tu negocio desde una sola plataforma. Diseñado para comercios que necesitan velocidad, control y claridad en cada transacción.</p>
-            <a href="https://velarispos.com.co" target="_blank" rel="noopener noreferrer" class="btn-primary news-card-btn" aria-label="Conocer VelarisPOS (se abre en nueva pestaña)">Conocer VelarisPOS</a>
+            <a href="/velarispos.html" target="_blank" rel="noopener noreferrer" class="btn-primary news-card-btn" aria-label="Conocer VelarisPOS (se abre en nueva pestaña)">Conocer VelarisPOS</a>
           </div>
         </article>
 
@@ -957,7 +957,7 @@ function injectDynamicJSONLD() {
           "itemOffered": {
             "@type": "SoftwareApplication",
             "name": "VelarisPOS",
-            "url": "https://velarispos.com.co",
+            "url": "https://zentrosoft.vercel.app/velarispos.html",
             "description": "Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes del negocio."
           }
         },

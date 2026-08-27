@@ -2172,3 +2172,458 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: var(--space-sm);
   align-self: flex-start;
 }
+
+/* ============================================
+   VELARISPOS LANDING
+   Vista de producto (velarispos.html)
+   ============================================ */
+
+/* --- Logo marca VelarisPOS (header/footer) --- */
+.vp-logo-mark {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+.vp-logo-accent {
+  color: var(--color-secondary);
+}
+
+.vp-logo-mark--dark {
+  color: var(--color-white);
+}
+
+/* --- Hero VelarisPOS --- */
+.vp-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-dark);
+  padding: 120px 0 0;
+}
+
+.vp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(79, 210, 144, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 15% 90%, rgba(75, 130, 195, 0.18) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.vp-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.vp-hero-content .hero-text {
+  max-width: 560px;
+}
+
+/* --- Visual POS (hero decorativo) --- */
+.vp-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) 0;
+}
+
+.vp-visual-card {
+  position: relative;
+  width: 340px;
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.vp-visual-top {
+  display: flex;
+  gap: 6px;
+  margin-bottom: var(--space-lg);
+}
+
+.vp-visual-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.6;
+}
+
+.vp-visual-dot:first-child {
+  background: var(--color-secondary);
+}
+
+.vp-visual-total {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.vp-visual-amount {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin: var(--space-xs) 0 var(--space-lg);
+}
+
+.vp-visual-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--space-lg);
+}
+
+.vp-visual-lines span {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+.vp-visual-lines span:nth-child(1) { width: 100%; }
+.vp-visual-lines span:nth-child(2) { width: 88%; }
+.vp-visual-lines span:nth-child(3) { width: 94%; }
+.vp-visual-lines span:nth-child(4) { width: 72%; }
+
+.vp-visual-foo {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vp-visual-foo-chip {
+  padding: 5px 12px;
+  background: rgba(75, 130, 195, 0.15);
+  border: 1px solid rgba(75, 130, 195, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+}
+
+.vp-visual-chip {
+  position: absolute;
+  padding: 12px 20px;
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.vp-visual-chip strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--color-white);
+}
+
+.vp-visual-chip--1 {
+  top: 6%;
+  right: 2%;
+}
+
+.vp-visual-chip--2 {
+  bottom: 8%;
+  left: 0;
+}
+
+/* --- Pilares --- */
+.vp-pillars {
+  background: var(--color-dark);
+}
+
+.vp-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.vp-pillar {
+  padding: var(--space-2xl);
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.vp-pillar:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 210, 144, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.vp-pillar-emoji {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+}
+
+.vp-pillar h3 {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.vp-pillar p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}
+
+/* --- Funcionalidades --- */
+.vp-features {
+  padding: var(--space-5xl) 0;
+  background: var(--color-white);
+}
+
+.vp-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.vp-feature {
+  padding: var(--space-2xl);
+  background: var(--color-light);
+  border: 1px solid #e8ecf1;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.vp-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.vp-feature h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-secondary);
+  display: inline-block;
+}
+
+.vp-feature ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.vp-feature li {
+  position: relative;
+  padding-left: var(--space-lg);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.vp-feature li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 50%;
+}
+
+/* --- Industrias --- */
+.vp-industries {
+  padding: var(--space-5xl) 0;
+  background: var(--color-dark);
+}
+
+.vp-industry-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.vp-industry-chip {
+  padding: 12px 22px;
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: var(--color-text-on-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.vp-industry-chip:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+/* --- Tecnología --- */
+.vp-tech {
+  padding: var(--space-5xl) 0;
+  background: var(--color-light);
+}
+
+.vp-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.vp-tech-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.vp-tech-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.vp-tech-copy p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+}
+
+.vp-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.vp-tech-item {
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid #e8ecf1;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.vp-tech-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.vp-tech-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.vp-tech-item span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* --- CTA banner VelarisPOS --- */
+.vp-cta {
+  padding: var(--space-4xl) 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+}
+
+.vp-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.vp-cta-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.vp-cta-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+}
+
+.vp-cta .btn-primary {
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
+.vp-cta .btn-primary:hover {
+  background: var(--color-light);
+  transform: translateY(-2px);
+}
+
+.vp-back-btn {
+  margin-top: var(--space-2xl);
+  padding: 10px 22px;
+  font-size: 0.85rem;
+}
+
+/* --- Responsive VelarisPOS --- */
+@media (max-width: 1024px) {
+  .vp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .vp-hero-visual {
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .vp-pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vp-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vp-tech-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .vp-hero {
+    padding: 120px 0 var(--space-4xl);
+  }
+
+  .vp-hero-visual {
+    max-width: 340px;
+  }
+
+  .vp-pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vp-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vp-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
