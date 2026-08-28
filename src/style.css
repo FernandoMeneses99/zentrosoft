@@ -2133,6 +2133,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* --- Estado visible para animaciones de scroll (ambas páginas) --- */
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* ============================================
    WHATSAPP FLOATING BUTTON
    ============================================ */
@@ -2496,9 +2502,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.vp-pillar-emoji {
-  font-size: 2rem;
-  margin-bottom: var(--space-md);
+.vp-pillar-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin-bottom: var(--space-lg);
 }
 
 .vp-pillar h3 {
@@ -2548,6 +2558,15 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
+.vp-feature-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-lg);
+}
+
 .vp-feature ul {
   display: flex;
   flex-direction: column;
@@ -2586,6 +2605,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .vp-industry-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 22px;
   background: var(--color-dark-surface);
   border: 1px solid rgba(255, 255, 255, 0.12);
