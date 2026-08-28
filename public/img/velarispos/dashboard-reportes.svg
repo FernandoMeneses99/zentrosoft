@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" fill="none">
+  <defs>
+    <linearGradient id="dbg" x1="760" y1="0" x2="0" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a1628"/>
+      <stop offset="1" stop-color="#13223a"/>
+    </linearGradient>
+    <radialGradient id="dglow" cx="0.2" cy="0.3" r="0.6">
+      <stop offset="0" stop-color="#4b82c3" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#4b82c3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="daccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fd290"/>
+      <stop offset="1" stop-color="#4b82c3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="440" fill="url(#dbg)"/>
+  <rect width="760" height="440" fill="url(#dglow)"/>
+
+  <!-- Sidebar -->
+  <rect x="30" y="40" width="150" height="360" rx="18" fill="#101f37" stroke="#4b82c3" stroke-opacity="0.25" stroke-width="1.5"/>
+  <rect x="50" y="62" width="60" height="16" rx="8" fill="#4fd290"/>
+  <g fill="#4b82c3" fill-opacity="0.45">
+    <rect x="50" y="104" width="110" height="12" rx="6"/>
+    <rect x="50" y="128" width="110" height="12" rx="6"/>
+    <rect x="50" y="152" width="110" height="12" rx="6"/>
+    <rect x="50" y="176" width="110" height="12" rx="6"/>
+    <rect x="50" y="200" width="110" height="12" rx="6"/>
+  </g>
+  <rect x="50" y="128" width="110" height="12" rx="6" fill="#4fd290" fill-opacity="0.8"/>
+
+  <!-- KPI cards -->
+  <g fill="#101f37" stroke="#4b82c3" stroke-opacity="0.3" stroke-width="1.5">
+    <rect x="210" y="40" width="160" height="80" rx="14"/>
+    <rect x="385" y="40" width="160" height="80" rx="14"/>
+    <rect x="560" y="40" width="170" height="80" rx="14"/>
+  </g>
+  <g fill="#94a3b8" fill-opacity="0.5">
+    <rect x="230" y="56" width="70" height="8" rx="4"/>
+    <rect x="405" y="56" width="80" height="8" rx="4"/>
+    <rect x="580" y="56" width="90" height="8" rx="4"/>
+  </g>
+  <text x="230" y="104" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#4fd290">$12.8M</text>
+  <text x="405" y="104" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">1,240</text>
+  <text x="580" y="104" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#4b82c3">98%</text>
+
+  <!-- Line / area chart -->
+  <rect x="210" y="140" width="340" height="250" rx="14" fill="#101f37" stroke="#4b82c3" stroke-opacity="0.3" stroke-width="1.5"/>
+  <g stroke="#4b82c3" stroke-opacity="0.12">
+    <line x1="230" y1="200" x2="530" y2="200"/>
+    <line x1="230" y1="250" x2="530" y2="250"/>
+    <line x1="230" y1="300" x2="530" y2="300"/>
+    <line x1="230" y1="350" x2="530" y2="350"/>
+  </g>
+  <path d="M230,340 L250,300 L270,318 L290,258 L310,290 L330,222 L350,250 L370,196 L390,232 L410,178 L430,208 L450,160 L470,186 L490,150 L510,172 L530,150 Z" fill="#4fd290" fill-opacity="0.1" stroke="none"/>
+  <polyline points="230,340 250,300 270,318 290,258 310,290 330,222 350,250 370,196 390,232 410,178 430,208 450,160 470,186 490,150 510,172 530,150" stroke="#4fd290" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="410" cy="178" r="5" fill="#4fd290"/>
+
+  <!-- Donut chart -->
+  <rect x="565" y="140" width="165" height="250" rx="14" fill="#101f37" stroke="#4b82c3" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="647" cy="220" r="56" stroke="#132238" stroke-width="18" fill="none"/>
+  <path d="M647 164 a56 56 0 0 1 0 112 a56 56 0 0 1 -56 -56" stroke="#4fd290" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M647 164 a56 56 0 0 0 0 112" stroke="#4b82c3" stroke-width="18" fill="none" stroke-linecap="round" stroke-dasharray="90 30" stroke-dashoffset="-45"/>
+  <text x="647" y="228" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">$12.8M</text>
+  <g fill="#94a3b8" fill-opacity="0.55">
+    <rect x="590" y="300" width="32" height="10" rx="5" fill="#4fd290"/>
+    <rect x="680" y="300" width="32" height="10" rx="5" fill="#4b82c3"/>
+    <rect x="590" y="320" width="90" height="8" rx="4"/>
+    <rect x="590" y="338" width="84" height="8" rx="4"/>
+  </g>
+
+  <!-- Brand -->
+  <text x="30" y="424" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#94a3b8">Reportes e Inteligencia de Negocio</text>
+  <circle cx="745" cy="418" r="4" fill="#4fd290"/>
+</svg>

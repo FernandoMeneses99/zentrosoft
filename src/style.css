@@ -1900,6 +1900,96 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* --- Reportes / inteligencia de negocio --- */
+.vp-reports {
+  padding: var(--space-5xl) 0;
+  background: var(--color-dark);
+}
+
+.vp-reports-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.vp-reports-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-lg);
+}
+
+.vp-reports-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.vp-reports-copy .section-label {
+  color: var(--color-secondary);
+}
+
+.vp-reports-copy .section-label::before {
+  background: var(--color-secondary);
+}
+
+.vp-reports-copy p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+}
+
+.vp-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.vp-reports-list li {
+  padding: var(--space-lg);
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.vp-reports-list li:hover {
+  border-color: rgba(79, 210, 144, 0.4);
+  transform: translateX(4px);
+}
+
+.vp-reports-list strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.vp-reports-list span {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.55;
+}
+
+/* --- Iconos ilustrados (tiles) dentro de value-card --- */
+.value-card-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* --- Responsive Reportes --- */
+@media (max-width: 1024px) {
+  .vp-reports-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
 /* ============================================
    ZENTROSOFT EXTENSIONS
    Grid de 6 servicios, stack tecnológico

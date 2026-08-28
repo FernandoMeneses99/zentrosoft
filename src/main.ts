@@ -591,7 +591,8 @@ app.innerHTML = `
       <p>&copy; ${new Date().getFullYear()} ZentroSoft. Todos los derechos reservados.</p>
       <ul class="footer-legal-links">
         <li><a href="/politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-        <li><a href="#" id="cookie-policy-page-link">Política de Cookies</a></li>
+        <li><a href="/politica-cookies.html" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+        <li><a href="/terminos-servicio.html" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
         <li><button type="button" id="cookie-settings" class="footer-legal-button">Configuración de Cookies</button></li>
       </ul>
       <div class="footer-socials">

@@ -18,6 +18,7 @@ app.innerHTML = `
       <a href="#inicio">Inicio</a>
       <a href="#funcionalidades">Funcionalidades</a>
       <a href="#pilares">Cómo funciona</a>
+      <a href="#reportes">Reportes</a>
       <a href="#tecnologia">Tecnología</a>
       <a href="#contacto" class="nav-cta">Solicita tu demo</a>
     </nav>
@@ -111,21 +112,21 @@ app.innerHTML = `
     <div class="value-grid value-grid--six">
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="21"/><line x1="18" y1="3" x2="18" y2="21"/><line x1="11" y1="3" x2="11" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+          <img src="/img/velarispos/prob-inventario.svg" alt="La caja no habla con el inventario" loading="lazy" width="56" height="56" />
         </div>
         <h3>La caja no habla con el inventario</h3>
         <p>Vendes sin saber si hay stock real, provocando ventas fallidas y clientes inconformes.</p>
       </div>
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <img src="/img/velarispos/prob-tiempo.svg" alt="Sin visión en tiempo real" loading="lazy" width="56" height="56" />
         </div>
         <h3>Sin visión en tiempo real</h3>
         <p>Los reportes llegan tarde y mal. Decides con información desactualizada o inexistente.</p>
       </div>
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <img src="/img/velarispos/prob-perdidas.svg" alt="Productos perdidos" loading="lazy" width="56" height="56" />
         </div>
         <h3>Productos perdidos</h3>
         <p>Falta de alertas de stock, vencimientos y stock muerto: dinero que se pierde sin darte cuenta.</p>
@@ -133,21 +134,21 @@ app.innerHTML = `
 
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><circle cx="12" cy="10" r="3"/><path d="M12 13v4"/></svg>
+          <img src="/img/velarispos/sol-sistema.svg" alt="Un solo sistema" loading="lazy" width="56" height="56" />
         </div>
         <h3>Un solo sistema</h3>
         <p>Reemplaza 4 a 5 programas (POS, inventario, facturación, CRM, contabilidad) por uno solo.</p>
       </div>
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <img src="/img/velarispos/sol-datos.svg" alt="Datos al instante" loading="lazy" width="56" height="56" />
         </div>
         <h3>Datos al instante</h3>
         <p>Tienda, almacén, online y administración compartiendo la misma información en tiempo real.</p>
       </div>
       <div class="value-card">
         <div class="value-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <img src="/img/velarispos/sol-decisiones.svg" alt="Decisiones informadas" loading="lazy" width="56" height="56" />
         </div>
         <h3>Decisiones informadas</h3>
         <p>Más de 60 reportes, panel de indicadores e inteligencia de negocios para crecer con claridad.</p>
@@ -340,6 +341,51 @@ app.innerHTML = `
   </div>
 </section>
 
+<!-- ===== REPORTES / INTELLIGENCE ===== -->
+<section class="vp-reports" id="reportes">
+  <div class="container">
+    <div class="vp-reports-grid">
+      <div class="vp-reports-visual">
+        <img src="/img/velarispos/dashboard-reportes.svg" alt="Panel de reportes y métricas en tiempo real de VelarisPOS" loading="lazy" width="760" height="440" />
+      </div>
+      <div class="vp-reports-copy">
+        <div class="section-label">Reportes e inteligencia de negocio</div>
+        <h2 class="vp-tech-title">Toda tu operación en un solo panel</h2>
+        <p>
+          VelarisPOS convierte los datos de cada venta, producto y cliente en reportes claros y
+          en tiempo real. Deja de decidir &laquo;a ojo&raquo; y toma el control con indicadores accionables.
+        </p>
+        <ul class="vp-reports-list">
+          <li>
+            <strong>Ventas</strong>
+            <span>Ingresos, ticket promedio, comparativos por día, mes y tienda.</span>
+          </li>
+          <li>
+            <strong>Inventario</strong>
+            <span>Stock disponible, alertas, valorización y productos de lento movimiento.</span>
+          </li>
+          <li>
+            <strong>Finanzas</strong>
+            <span>Flujo de caja, cuentas por cobrar/pagar y estado de resultados.</span>
+          </li>
+          <li>
+            <strong>Clientes y equipo</strong>
+            <span>Tendencia de compras, fidelización, comisiones y desempeño por vendedor.</span>
+          </li>
+          <li>
+            <strong>Inteligencia con IA</strong>
+            <span>Resúmenes automáticos y predicciones para anticiparte a tu demanda.</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="btn-primary">
+          Ver reportes en tu demo
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CTA BANNER ===== -->
 <section class="vp-cta">
   <div class="container vp-cta-inner">
@@ -522,6 +568,7 @@ app.innerHTML = `
           <li><a href="#funcionalidades">Inventario</a></li>
           <li><a href="#funcionalidades">Tienda en línea</a></li>
           <li><a href="#funcionalidades">Contabilidad</a></li>
+          <li><a href="#reportes">Reportes</a></li>
           <li><a href="#tecnologia">Tecnología</a></li>
         </ul>
       </div>
@@ -546,6 +593,8 @@ app.innerHTML = `
       <p>&copy; ${new Date().getFullYear()} VelarisPOS · Desarrollado por ZentroSoft. Todos los derechos reservados.</p>
       <ul class="footer-legal-links">
         <li><a href="https://zentrosoft.vercel.app/politica-privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+        <li><a href="https://zentrosoft.vercel.app/politica-cookies.html" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+        <li><a href="https://zentrosoft.vercel.app/terminos-servicio.html" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
       </ul>
     </div>
   </div>
@@ -640,7 +689,7 @@ function initCountUp() {
    ============================================ */
 function initScrollAnimations() {
   const targets = document.querySelectorAll<HTMLElement>(
-    '.value-card, .vp-pillar, .vp-feature, .vp-tech-item, .vp-industry-chip'
+    '.value-card, .vp-pillar, .vp-feature, .vp-tech-item, .vp-industry-chip, .vp-reports-list li'
   )
   if (!targets.length || PREFERS_REDUCED_MOTION) return
 
@@ -649,7 +698,8 @@ function initScrollAnimations() {
     '.vp-pillar-grid',
     '.vp-feature-grid',
     '.vp-tech-list',
-    '.vp-industry-chips'
+    '.vp-industry-chips',
+    '.vp-reports-list'
   ]
   const delayMap = new Map<HTMLElement, number>()
 

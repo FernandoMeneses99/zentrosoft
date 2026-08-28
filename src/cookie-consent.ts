@@ -8,7 +8,7 @@ const CONSENT_VERSION = 1
 const ANALYTICS_ID: string = 'G-PVMG97XCJ8'
 
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
-const COOKIES_POLICY_URL = '#'
+const COOKIES_POLICY_URL = '/politica-cookies.html'
 
 interface StoredConsent {
   version: number
