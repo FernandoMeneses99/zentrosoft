@@ -847,6 +847,29 @@ style.textContent = `
 document.head.appendChild(style)
 
 /* ============================================
+   MOBILE MENU
+   ============================================ */
+function initMobileMenu() {
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')
+  const nav = document.querySelector<HTMLDivElement>('.nav-links')
+  if (!toggle || !nav) return
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open')
+    toggle.classList.toggle('menu-open', isOpen)
+    toggle.setAttribute('aria-expanded', String(isOpen))
+  })
+
+  nav.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).tagName === 'A') {
+      nav.classList.remove('nav-open')
+      toggle.classList.remove('menu-open')
+      toggle.setAttribute('aria-expanded', 'false')
+    }
+  })
+}
+
+/* ============================================
    INIT
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -857,6 +880,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll()
   initSmoothScroll()
   initScrollAnimations()
+  initMobileMenu()
   injectDynamicJSONLD()
 /* ============================================
    EVENTOS DE CONVERSIÓN (GA4)

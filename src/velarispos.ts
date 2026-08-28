@@ -169,22 +169,30 @@ app.innerHTML = `
 
     <div class="vp-pillar-grid">
       <div class="vp-pillar">
-        <div class="vp-pillar-emoji">🛒</div>
+        <div class="vp-pillar-ico">
+          <img src="/img/velarispos/pilar-vender.svg" alt="Vender" loading="lazy" width="88" height="88" />
+        </div>
         <h3>Vender</h3>
         <p>Punto de venta táctil, facturación, cotizaciones, pedidos, devoluciones y gift cards desde la caja.</p>
       </div>
       <div class="vp-pillar">
-        <div class="vp-pillar-emoji">📦</div>
+        <div class="vp-pillar-ico">
+          <img src="/img/velarispos/pilar-controlar.svg" alt="Controlar" loading="lazy" width="88" height="88" />
+        </div>
         <h3>Controlar</h3>
         <p>Inventario multi-almacén, lotes, números de serie, caducidades, traslados y alertas de stock.</p>
       </div>
       <div class="vp-pillar">
-        <div class="vp-pillar-emoji">🌐</div>
+        <div class="vp-pillar-ico">
+          <img src="/img/velarispos/pilar-vender-online.svg" alt="Vender online" loading="lazy" width="88" height="88" />
+        </div>
         <h3>Vender online</h3>
         <p>Tienda en línea propia con tu marca, integrada con WooCommerce y Shopify y pasarelas de pago.</p>
       </div>
       <div class="vp-pillar">
-        <div class="vp-pillar-emoji">📊</div>
+        <div class="vp-pillar-ico">
+          <img src="/img/velarispos/pilar-decidir.svg" alt="Decidir" loading="lazy" width="88" height="88" />
+        </div>
         <h3>Decidir</h3>
         <p>Más de 60 reportes, panel 3D, inteligencia de negocios e informes con IA para decidir bien.</p>
       </div>
@@ -203,6 +211,9 @@ app.innerHTML = `
 
     <div class="vp-feature-grid">
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-pos.svg" alt="Punto de Venta" loading="lazy" width="56" height="56" />
+        </div>
         <h3>Punto de Venta (POS)</h3>
         <ul>
           <li>Pantalla táctil rápida para cajeros</li>
@@ -212,6 +223,9 @@ app.innerHTML = `
         </ul>
       </div>
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-inventario.svg" alt="Inventario" loading="lazy" width="56" height="56" />
+        </div>
         <h3>Inventario</h3>
         <ul>
           <li>Multi-almacén y traslados entre sucursales</li>
@@ -221,6 +235,9 @@ app.innerHTML = `
         </ul>
       </div>
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-tienda.svg" alt="Tienda en línea" loading="lazy" width="56" height="56" />
+        </div>
         <h3>Tienda en línea</h3>
         <ul>
           <li>Tienda web con tu marca (color, logo, banners)</li>
@@ -230,6 +247,9 @@ app.innerHTML = `
         </ul>
       </div>
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-finanzas.svg" alt="Finanzas y contabilidad" loading="lazy" width="56" height="56" />
+        </div>
         <h3>Finanzas y contabilidad</h3>
         <ul>
           <li>Plan de cuentas, balance y P&amp;L</li>
@@ -239,6 +259,9 @@ app.innerHTML = `
         </ul>
       </div>
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-rrhh.svg" alt="Equipo, RR.HH. y nómina" loading="lazy" width="56" height="56" />
+        </div>
         <h3>Equipo, RR.HH. y nómina</h3>
         <ul>
           <li>Empleados, departamentos y asistencia</li>
@@ -248,6 +271,9 @@ app.innerHTML = `
         </ul>
       </div>
       <div class="vp-feature">
+        <div class="vp-feature-ico">
+          <img src="/img/velarispos/func-crm.svg" alt="CRM, marketing y fidelización" loading="lazy" width="56" height="56" />
+        </div>
         <h3>CRM, marketing y fidelización</h3>
         <ul>
           <li>Ficha de cliente con historial completo</li>
@@ -271,16 +297,16 @@ app.innerHTML = `
       </div>
     </div>
     <div class="vp-industry-chips">
-      <span class="vp-industry-chip">Hospital / Clínica</span>
-      <span class="vp-industry-chip">Escuela / Colegio</span>
-      <span class="vp-industry-chip">Farmacia</span>
-      <span class="vp-industry-chip">Restaurante</span>
-      <span class="vp-industry-chip">Inmobiliaria</span>
-      <span class="vp-industry-chip">Flota / Vehículos</span>
-      <span class="vp-industry-chip">Manufactura / MRP</span>
-      <span class="vp-industry-chip">Servicio técnico</span>
-      <span class="vp-industry-chip">Retail</span>
-      <span class="vp-industry-chip">Proyectos</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-hospital.svg" alt="" loading="lazy" width="24" height="24" />Hospital / Clínica</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-escuela.svg" alt="" loading="lazy" width="24" height="24" />Escuela / Colegio</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-farmacia.svg" alt="" loading="lazy" width="24" height="24" />Farmacia</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-restaurante.svg" alt="" loading="lazy" width="24" height="24" />Restaurante</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-inmobiliaria.svg" alt="" loading="lazy" width="24" height="24" />Inmobiliaria</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-flota.svg" alt="" loading="lazy" width="24" height="24" />Flota / Vehículos</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-manufactura.svg" alt="" loading="lazy" width="24" height="24" />Manufactura / MRP</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-servicio-tecnico.svg" alt="" loading="lazy" width="24" height="24" />Servicio técnico</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-retail.svg" alt="" loading="lazy" width="24" height="24" />Retail</span>
+      <span class="vp-industry-chip"><img src="/img/velarispos/ind-proyectos.svg" alt="" loading="lazy" width="24" height="24" />Proyectos</span>
     </div>
   </div>
 </section>
@@ -657,6 +683,29 @@ function initScrollAnimations() {
 }
 
 /* ============================================
+   MOBILE MENU
+   ============================================ */
+function initMobileMenu() {
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')
+  const nav = document.querySelector<HTMLDivElement>('.nav-links')
+  if (!toggle || !nav) return
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open')
+    toggle.classList.toggle('menu-open', isOpen)
+    toggle.setAttribute('aria-expanded', String(isOpen))
+  })
+
+  nav.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).tagName === 'A') {
+      nav.classList.remove('nav-open')
+      toggle.classList.remove('menu-open')
+      toggle.setAttribute('aria-expanded', 'false')
+    }
+  })
+}
+
+/* ============================================
    BACK LINK - navegar a la home de ZentroSoft
    ============================================ */
 function initBackLink() {
@@ -711,6 +760,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll()
   initCountUp()
   initScrollAnimations()
+  initMobileMenu()
   initBackLink()
   initForm()
 })

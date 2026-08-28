@@ -267,6 +267,47 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition-fast);
 }
 
+/* Mobile menu open state */
+.menu-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-open {
+  display: flex !important;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xl);
+  background: rgba(10, 22, 40, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  animation: fadeIn 0.25s ease;
+}
+
+.nav-open a {
+  font-size: 1.2rem;
+  color: var(--color-white);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
