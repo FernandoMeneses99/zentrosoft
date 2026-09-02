@@ -292,6 +292,7 @@ app.innerHTML = `
       <div class="logo-item"><img src="/img/clients/Dolphin.avif" alt="Dolphi - Cliente de ZentroSoft" loading="lazy" width="50" height="50" /></div>
       <div class="logo-item"><img src="/img/clients/Krokori.webp" alt="Krokori - Cliente de ZentroSoft" loading="lazy" width="120" height="48" /></div>
       <div class="logo-item"><img src="/img/clients/RealTime.avif" alt="RealTime - Cliente de ZentroSoft" loading="lazy" width="146" height="40" /></div>
+      <div class="logo-item"><img src="/img/clients/PsicoStephania.svg" alt="PsicoStephania - Cliente de ZentroSoft" loading="lazy" width="150" height="50" /></div>
       <!-- Duplicate set for infinite scroll -->
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/horizonte.svg" alt="" loading="lazy" width="150" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/origen.svg" alt="" loading="lazy" width="150" height="50" /></div>
@@ -301,6 +302,7 @@ app.innerHTML = `
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/Dolphin.avif" alt="" loading="lazy" width="50" height="50" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/Krokori.webp" alt="" loading="lazy" width="120" height="48" /></div>
       <div class="logo-item" aria-hidden="true"><img src="/img/clients/RealTime.avif" alt="" loading="lazy" width="146" height="40" /></div>
+      <div class="logo-item" aria-hidden="true"><img src="/img/clients/PsicoStephania.svg" alt="" loading="lazy" width="150" height="50" /></div>
     </div>
   </div>
 </section>
