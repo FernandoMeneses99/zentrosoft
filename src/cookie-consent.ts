@@ -5,6 +5,8 @@ const CONSENT_VERSION = 1
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '/politica-cookies.html'
 
+const GTM_ID = 'GTM-55JS53W4'
+
 interface StoredConsent {
   version: number
   timestamp: string
@@ -16,6 +18,35 @@ declare global {
   interface Window {
     dataLayer: unknown[]
     gtag: (...args: unknown[]) => void
+  }
+}
+
+let gtmInjected = false
+
+function injectGtm(): void {
+  if (gtmInjected) return
+  gtmInjected = true
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+  const script = document.createElement('script')
+  script.async = true
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`
+  document.head.appendChild(script)
+}
+
+function deferIdle(callback: () => void): void {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback, { timeout: 2000 })
+  } else {
+    setTimeout(callback, 0)
+  }
+}
+
+function scheduleGtm(): void {
+  if (document.readyState === 'complete') {
+    deferIdle(injectGtm)
+  } else {
+    window.addEventListener('load', () => deferIdle(injectGtm), { once: true })
   }
 }
 
@@ -64,6 +95,7 @@ function applyDecision(analitica: boolean, marketing: boolean): void {
     analitica,
     marketing
   })
+  if (analitica || marketing) injectGtm()
   updateGoogleConsent(analitica, marketing)
 }
 
@@ -158,6 +190,7 @@ export function initCookieConsent(): void {
   const stored = readStoredConsent()
 
   if (stored) {
+    if (stored.analitica || stored.marketing) scheduleGtm()
     updateGoogleConsent(stored.analitica, stored.marketing)
   }
 
