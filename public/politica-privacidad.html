@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Privacidad y Tratamiento de Datos Personales | ZentroSoft</title>
-  <meta name="description" content="Política de Privacidad y Tratamiento de Datos Personales de ZentroSoft, agencia de desarrollo web en Bogotá, Colombia." />
+  <meta name="description" content="Política de Privacidad y Tratamiento de Datos Personales de ZentroSoft (Ley 1581 de 2012). Conoce qué datos recopilamos, para qué los usamos, tus derechos como titular y cómo ejercerlos." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zentrosoft.vercel.app/politica-privacidad.html" />
   <link rel="icon" type="image/png" href="/img/logo.png" />
@@ -19,8 +19,10 @@
       --secondary: #4FD290;
       --text: #1e293b;
       --text-muted: #64748b;
+      --border: #e2e8f0;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       color: var(--text);
@@ -43,20 +45,64 @@
     }
     header .brand span { color: var(--secondary); }
     h1 { color: #ffffff; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; }
-    main { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
-    .meta-line { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem; }
-    h2 {
-      font-size: 1.25rem;
+    main { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .meta-line { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 0 0 1.5rem;
+    }
+    .toc h2 {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
       font-weight: 700;
-      margin: 2.25rem 0 0.75rem;
+    }
+    .toc ol { padding-left: 1.25rem; }
+    .toc li { margin-bottom: 0.3rem; font-size: 0.92rem; }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.9rem;
       padding-left: 0.75rem;
       border-left: 4px solid var(--primary);
     }
-    p, li { font-size: 0.98rem; color: #334155; }
-    ul { padding-left: 1.5rem; margin: 0.5rem 0; }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 1.6rem 0 0.5rem;
+      color: var(--text);
+    }
+    p, li { font-size: 0.97rem; color: #334155; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
     li { margin-bottom: 0.4rem; }
     strong { color: var(--text); }
     a { color: var(--primary); }
+    dl { margin: 0.5rem 0; }
+    dt { font-weight: 700; color: var(--text); margin-top: 0.8rem; }
+    dd { margin: 0.15rem 0 0 1.25rem; font-size: 0.95rem; color: #334155; }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0 1.25rem;
+    }
+    .contact-box p { margin: 0.15rem 0; }
+    .note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+      color: #14532d;
+    }
     footer {
       background: var(--canvas-dark);
       color: #94a3b8;
@@ -65,6 +111,9 @@
       font-size: 0.85rem;
     }
     footer a { color: var(--secondary); }
+    @media (max-width: 640px) {
+      .toc { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -74,49 +123,236 @@
   </header>
 
   <main>
-    <p class="meta-line">Última actualización: agosto de 2026</p>
+    <p class="meta-line">Última actualización: septiembre de 2026</p>
 
-    <p>ZentroSoft, agencia de desarrollo web con sede en Bogotá D.C., Colombia (en adelante, <strong>&laquo;ZentroSoft&raquo;</strong>), en cumplimiento de la <strong>Ley Estatutaria 1581 de 2012</strong>, el Decreto 1377 de 2013 y demás normativa aplicable sobre protección de datos personales, adopta la presente política para informar a los titulares sobre el tratamiento de sus datos personales.</p>
+    <p>ZentroSoft, agencia de desarrollo de software y desarrollo web con sede en Bogotá D.C., Colombia (en adelante, <strong>&laquo;ZentroSoft&raquo;</strong> o la <strong>&laquo;Compañía&raquo;</strong>), es respetuosa de los datos personales de los visitantes de su sitio web, sus clientes actuales, pasados y potenciales, usuarios de sus productos, aliados comerciales, proveedores y cualquier persona interesada en sus servicios. En la presente Política de Privacidad y Tratamiento de Datos Personales (en adelante, la <strong>&laquo;Política&raquo;</strong>) se establecen las finalidades, el alcance, las medidas y los procedimientos del tratamiento de nuestras bases de datos, así como los mecanismos con que los titulares cuentan para conocer, actualizar, rectificar o suprimir los datos suministrados o revocar la autorización que se otorga con la aceptación de la presente Política.</p>
 
-    <h2>1. Responsable del tratamiento</h2>
-    <p><strong>Razón social:</strong> ZentroSoft<br />
-    <strong>Domicilio:</strong> Bogotá D.C., Colombia<br />
-    <strong>Correo electrónico de contacto:</strong> contacto@zentrosoft.com</p>
+    <p>En cumplimiento de la <strong>Ley Estatutaria 1581 de 2012</strong>, el Decreto 1377 de 2013, el Decreto 886 de 2014, el Decreto Único Reglamentario 1074 de 2015 y demás normativa aplicable sobre protección de datos personales, la adquisición de los productos y servicios ofrecidos en nuestro sitio web y aplicaciones, y/o la aceptación expresa e inequívoca de la presente Política, implica la aceptación por parte de los titulares y su autorización para los usos y demás tratamientos que aquí se describen.</p>
 
-    <h2>2. Datos que recopilamos</h2>
+    <nav class="toc" aria-label="Tabla de contenido">
+      <h2>Contenido</h2>
+      <ol>
+        <li><a href="#responsable">Responsable del tratamiento</a></li>
+        <li><a href="#definiciones">Definiciones</a></li>
+        <li><a href="#principios">Principios del tratamiento</a></li>
+        <li><a href="#alcance">Alcance de la Política</a></li>
+        <li><a href="#finalidades">Finalidades del tratamiento</a></li>
+        <li><a href="#datos">Datos personales que recopilamos</a></li>
+        <li><a href="#sensibles">Datos sensibles y de menores de edad</a></li>
+        <li><a href="#autorizacion">Autorización</a></li>
+        <li><a href="#uso">Usos autorizados de la información</a></li>
+        <li><a href="#terceros">Tratamiento por terceros</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#derechos">Derechos de los titulares</a></li>
+        <li><a href="#procedimiento">Procedimiento para ejercer sus derechos</a></li>
+        <li><a href="#seguridad">Medidas de seguridad</a></li>
+        <li><a href="#vigencia">Vigencia y cambios</a></li>
+        <li><a href="#legislacion">Legislación y contacto</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="responsable">1. Responsable del tratamiento</h2>
+    <div class="contact-box">
+      <p><strong>Razón social:</strong> ZentroSoft</p>
+      <p><strong>Dominio de aplicación:</strong> https://zentrosoft.vercel.app y productos asociados</p>
+      <p><strong>Domicilio:</strong> Bogotá D.C., Colombia</p>
+      <p><strong>Teléfono de contacto:</strong> 300 9047298</p>
+      <p><strong>Correo electrónico:</strong> <a href="mailto:fernandomenesesda@gmail.com">fernandomenesesda@gmail.com</a></p>
+    </div>
+    <p>ZentroSoft actúa como <strong>responsable del tratamiento</strong> de los datos personales registrados en sus bases de datos, en los términos del artículo 3 de la Ley 1581 de 2012.</p>
+
+    <h2 id="definiciones">2. Definiciones</h2>
+    <p>Los siguientes conceptos tendrán el significado que a continuación se detalla, sea que su uso se presente de manera singular o plural a lo largo del texto de la Política:</p>
+    <dl>
+      <dt>Aviso de privacidad</dt>
+      <dd>Comunicación verbal o escrita que brinda la ley para darle a conocer a los titulares la existencia y las formas de acceder a las políticas de tratamiento de la información y el objetivo de su recolección y uso.</dd>
+      <dt>Autorización</dt>
+      <dd>Consentimiento previo, expreso e informado del titular para que ZentroSoft realice el tratamiento de sus datos personales.</dd>
+      <dt>Base de Datos</dt>
+      <dd>Conjunto organizado de datos personales que son objeto de tratamiento.</dd>
+      <dt>Dato personal</dt>
+      <dd>Cualquier información vinculada o que pueda asociarse a una persona determinada o determinable, como su nombre, número de identificación, correo electrónico o teléfono.</dd>
+      <dt>Dato público</dt>
+      <dd>Dato que, por su naturaleza, puede estar contenido en registros públicos, documentos públicos, gacetas y boletines oficiales o sentencias ejecutoriadas que no estén sometidas a reserva (por ejemplo, el estado civil, la profesión u oficio o la calidad de comerciante).</dd>
+      <dt>Dato semiprivado</dt>
+      <dd>Dato que no tiene naturaleza íntima, reservada ni pública y cuyo conocimiento puede interesar no solo al titular sino a cierto sector o a la sociedad (por ejemplo, los datos financieros y crediticios).</dd>
+      <dt>Dato privado</dt>
+      <dd>Dato que, por su naturaleza íntima o reservada, solo es relevante para el titular.</dd>
+      <dt>Datos sensibles</dt>
+      <dd>Datos que afectan la intimidad del titular o cuyo uso indebido puede generar discriminación, tales como los que revelan el origen racial o étnico, la orientación política, las convicciones religiosas o filosóficas, la pertenencia a sindicatos u organizaciones, los datos de salud, la vida sexual y los datos biométricos.</dd>
+      <dt>Encargado del tratamiento</dt>
+      <dd>Persona natural o jurídica, pública o privada, que realiza el tratamiento de datos personales por cuenta del responsable, en virtud de una delegación.</dd>
+      <dt>Responsable del tratamiento</dt>
+      <dd>Persona natural o jurídica, pública o privada, que decide sobre la finalidad de las bases de datos y/o el tratamiento de los datos.</dd>
+      <dt>Titulares</dt>
+      <dd>Personas naturales o jurídicas cuyos datos personales son objeto de tratamiento.</dd>
+      <dt>Transferencia</dt>
+      <dd>Operación mediante la cual se envía información a un receptor que, a su vez, se convierte en responsable del tratamiento.</dd>
+      <dt>Transmisión</dt>
+      <dd>Comunicación de datos personales al encargado del tratamiento para que realice el tratamiento por cuenta del responsable.</dd>
+      <dt>Tratamiento</dt>
+      <dd>Cualquier operación o conjunto de operaciones sobre datos personales, tales como la recolección, almacenamiento, uso, circulación o supresión.</dd>
+    </dl>
+
+    <h2 id="principios">3. Principios del tratamiento</h2>
+    <p>El tratamiento de datos personales realizado por ZentroSoft estará orientado por los principios dispuestos en el artículo 4 de la Ley 1581 de 2012:</p>
     <ul>
-      <li><strong>Datos suministrados directamente:</strong> nombre completo, correo electrónico, número de teléfono, nombre de la empresa y contenido del mensaje enviados a través del formulario de contacto.</li>
-      <li><strong>Datos de navegación:</strong> información técnica recopilada mediante cookies y herramientas de analítica web, conforme a nuestra Política de Cookies.</li>
+      <li><strong>Legalidad:</strong> el tratamiento se sujeta a la ley y demás disposiciones aplicables.</li>
+      <li><strong>Finalidad:</strong> el tratamiento obedece a una finalidad legítima, informada al titular.</li>
+      <li><strong>Libertad:</strong> el tratamiento solo puede ejercerse con la autorización previa, expresa e informada del titular, salvo las excepciones legales.</li>
+      <li><strong>Veracidad o calidad:</strong> la información debe ser veraz, completa, exacta, actualizada, comprobable y comprensible.</li>
+      <li><strong>Transparencia:</strong> el titular podrá obtener información sobre la existencia de datos que le conciernan en cualquier momento y sin restricciones.</li>
+      <li><strong>Acceso y circulación restringida:</strong> los datos solo podrán ser tratados para las finalidades autorizadas, salvo las excepciones legales.</li>
+      <li><strong>Seguridad:</strong> se adoptan medidas técnicas, humanas y administrativas para proteger los datos contra adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.</li>
+      <li><strong>Confidencialidad:</strong> todas las personas que intervengan en el tratamiento están obligadas a garantizar la reserva de la información.</li>
     </ul>
 
-    <h2>3. Finalidad del tratamiento</h2>
+    <h2 id="alcance">4. Alcance de la Política</h2>
+    <p>Esta Política aplica para toda la información personal registrada en las bases de datos de ZentroSoft, quien actúa en calidad de responsable del tratamiento. En esa calidad, ZentroSoft busca proteger los datos de los titulares en aras de impedir su adulteración, pérdida, usos y accesos no autorizados, mediante la implementación de medidas de protección humanas, administrativas y técnicas que razonablemente estén a su alcance. La Política aplica al sitio web de la Compañía, a los canales de contacto y a las plataformas, aplicaciones y productos propios, entre ellos <strong>VelarisPOS</strong> y <strong>Zentro Inmobiliaria</strong> (en adelante, las &laquo;Plataformas&raquo;).</p>
+
+    <h2 id="finalidades">5. Finalidades del tratamiento</h2>
+
+    <h3>5.1. En relación con visitantes del sitio web y clientes potenciales</h3>
     <ul>
-      <li>Atender solicitudes, cotizaciones y consultas realizadas a través de los canales de contacto.</li>
-      <li>Prestar los servicios de desarrollo web, diseño de landing pages, optimización SEO, soporte técnico, mantenimiento y capacitación.</li>
-      <li>Enviar información comercial relacionada con nuestros servicios y productos, previa autorización del titular.</li>
-      <li>Realizar mediciones analíticas para mejorar la experiencia del sitio web.</li>
+      <li>Atender solicitudes, cotizaciones, presupuestos y consultas realizadas a través de los canales de contacto.</li>
+      <li>Realizar actividades de mercadeo y actos de promoción de nuestros productos y servicios, previa autorización del titular.</li>
+      <li>Realizar análisis estadísticos, comerciales y técnicos para mejorar la experiencia del sitio web.</li>
+      <li>La comunicación con los titulares para efectos comerciales e informativos.</li>
     </ul>
 
-    <h2>4. Tratamiento de datos por terceros</h2>
-    <p>El envío de mensajes del formulario de contacto se realiza mediante el servicio de terceros <strong>EmailJS</strong>. Los datos proporcionados se transmiten de forma segura y son tratados únicamente para atender su solicitud. Asimismo, podremos utilizar servicios de analítica (como Google Analytics/Tag Manager) bajo el framework de Google Consent Mode v2, que solo activa estas herramientas cuando usted otorga su consentimiento.</p>
-
-    <h2>5. Uso de cookies</h2>
-    <p>Utilizamos cookies propias y de terceros estrictamente necesarias para el funcionamiento del sitio y, previo consentimiento, cookies de analítica y marketing. Puede gestionar sus preferencias en cualquier momento desde el enlace <strong>&laquo;Configuración de Cookies&raquo;</strong> ubicado en el pie de página.</p>
-
-    <h2>6. Derechos de los titulares</h2>
-    <p>Conforme a la normatividad vigente, usted como titular puede ejercer los siguientes derechos:</p>
+    <h3>5.2. En relación con clientes de la agencia</h3>
     <ul>
-      <li>Acceder a los datos personales que reposan en nuestras bases de datos.</li>
-      <li>Solicitar la actualización y rectificación de sus datos.</li>
-      <li>Solicitar la supresión de sus datos personales.</li>
-      <li>Revocar la autorización otorgada y solicitar la suspensión del tratamiento.</li>
+      <li>El cumplimiento del objeto social de la Compañía y el desarrollo, ejecución y cumplimiento de la relación contractual con el cliente.</li>
+      <li>Prestar los servicios de desarrollo de software, desarrollo web, diseño de landing pages, optimización SEO, consultoría y capacitación, soporte técnico, desarrollo frontend y mantenimiento web.</li>
+      <li>La gestión de facturación, cobros, derechos de autor y demás obligaciones legales, contables, comerciales y regulatorias.</li>
+      <li>El control y la preservación de la seguridad de la información, garantizando la confidencialidad de los proyectos.</li>
+      <li>La comunicación con los titulares para efectos contractuales, informativos y comerciales.</li>
+      <li>La realización de análisis estadísticos, comerciales, estratégicos y técnicos para mejorar la oferta de servicios.</li>
     </ul>
 
-    <h2>7. Ejercicio de derechos</h2>
-    <p>Para ejercer sus derechos o realizar consultas, reclamos o solicitudes relacionadas con el tratamiento de sus datos personales, puede escribir al correo <a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a>. Las solicitudes serán atendidas dentro de los términos legales establecidos (máximo quince (15) días hábiles contados desde el día siguiente a la recepción).</p>
+    <h3>5.3. En relación con usuarios de las Plataformas (VelarisPOS y Zentro Inmobiliaria)</h3>
+    <ul>
+      <li>Crear, autenticar y administrar la cuenta de usuario y su perfil.</li>
+      <li>Prestar las funcionalidades de las Plataformas, incluyendo el acceso a los datos que el usuario registre en ellas.</li>
+      <li>Gestionar la facturación, los cobros y los medios transaccionales únicamente para efectos del pago de los servicios contratados.</li>
+      <li>Proveer soporte técnico y atender incidencias, consultas y reclamos.</li>
+      <li>Realizar análisis de uso, estadísticos y técnicos para el mantenimiento y la mejora de las Plataformas.</li>
+      <li>La comunicación con los titulares para efectos contractuales, informativos y comerciales.</li>
+    </ul>
 
-    <h2>8. Vigencia</h2>
-    <p>La presente política entra en vigencia a partir de su publicación y podrá ser modificada para dar cumplimiento a nuevas disposiciones legales o cambios internos. Cualquier modificación será publicada en esta misma página.</p>
+    <h3>5.4. En relación con proveedores y aliados comerciales</h3>
+    <ul>
+      <li>El cumplimiento del objeto social de la Compañía y de la relación comercial o contractual.</li>
+      <li>La gestión de pagos, facturación y obligaciones legales, contables y regulatorias.</li>
+      <li>La comunicación con los titulares para efectos contractuales, informativos y comerciales.</li>
+      <li>La realización de análisis estadísticos, comerciales, estratégicos y técnicos.</li>
+    </ul>
+
+    <h2 id="datos">6. Datos personales que recopilamos</h2>
+    <p>ZentroSoft podrá solicitar a los titulares, o recolectar de su comportamiento en el sitio web y las Plataformas, los datos que sean necesarios para cumplir las finalidades descritas, dentro de los cuales se encuentran, entre otros:</p>
+
+    <h3>6.1. Datos suministrados directamente</h3>
+    <ul>
+      <li><strong>Formularios de contacto y cotización:</strong> nombre y apellidos, correo electrónico, número de teléfono, nombre de la empresa, ciudad y el contenido del mensaje.</li>
+      <li><strong>Clientes de la agencia:</strong> nombre y apellidos, número de identificación, fecha de nacimiento, dirección de correspondencia, teléfono, correo electrónico, razón o denominación social de la empresa, identificación tributaria, descripción del proyecto, historial de proyectos y servicios contratados, historial de casos abiertos de soporte y la documentación requerida para la ejecución de los proyectos.</li>
+      <li><strong>Usuarios de las Plataformas:</strong> datos de la cuenta (nombre, correo, teléfono, empresa), datos necesarios para el funcionamiento de cada Plataforma (tales como información de ventas, inventario, propiedades, contratos o clientes registrados por el propio usuario), datos de facturación y medios transaccionales únicamente para efectos de los cobros por los servicios contratados.</li>
+      <li><strong>Proveedores y aliados:</strong> nombre y apellidos, número de identificación, razón o denominación social, identificación tributaria, dirección, teléfono, correo electrónico y datos bancarios para efectos de pagos.</li>
+    </ul>
+
+    <h3>6.2. Datos recopilados automáticamente</h3>
+    <ul>
+      <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador y dispositivo, páginas visitadas, tiempo de permanencia, origen de la visita y demás información técnica recopilada mediante cookies y herramientas de analítica web, conforme a lo señalado en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</li>
+      <li>Datos de uso de las Plataformas necesarios para su correcto funcionamiento, diagnóstico técnico y mejora continua.</li>
+    </ul>
+    <p>ZentroSoft no solicitará más datos de los estrictamente necesarios para cumplir las finalidades descritas en esta Política.</p>
+
+    <h2 id="sensibles">7. Datos sensibles y de menores de edad</h2>
+    <p>De acuerdo con la Ley 1581 de 2012, son datos sensibles aquellos que afectan la intimidad del titular o cuyo uso indebido puede generar discriminación, tales como los de origen racial o étnico, orientación política, convicciones religiosas o filosóficas, pertenencia a sindicatos u organizaciones sociales, datos de salud, vida sexual y datos biométricos.</p>
+    <ul>
+      <li><strong>Carácter facultativo:</strong> los titulares <strong>no están obligados</strong> a suministrar datos sensibles. Si alguna circunstancia excepcional lo requiere, ZentroSoft garantizará que su tratamiento se realice conforme a la ley, informando previamente al titular su carácter facultativo y la finalidad específica del tratamiento.</li>
+      <li><strong>Datos de los niños, niñas y adolescentes:</strong> el tratamiento de datos de menores de edad se realizará únicamente cuando se requiera para garantizar su bienestar y con la autorización previa de sus representantes legales, respetando su interés superior y sus derechos fundamentales. En caso de no contar con la autorización correspondiente, ZentroSoft procederá con la supresión de tales datos. Los titulares no están obligados a autorizar el tratamiento de datos de menores de edad.</li>
+    </ul>
+
+    <h2 id="autorizacion">8. Autorización</h2>
+    <p>Mediante el suministro voluntario de sus datos personales en los formularios del sitio web o de las Plataformas, la aceptación de esta Política, o el registro o creación de una cuenta o perfil, el titular autoriza expresa e inequívocamente a ZentroSoft para recolectar y tratar sus datos personales y cualquier otra información que suministre, de conformidad con esta Política y la ley. Los titulares declaran que:</p>
+    <ul>
+      <li>Fueron informados de las finalidades del tratamiento y, tratándose de datos sensibles, de su carácter facultativo y de su derecho a no responder preguntas o entregar dichos datos.</li>
+      <li>Comprenden las medidas de seguridad que ZentroSoft implementa para proteger sus datos personales y las aceptan.</li>
+      <li>Autorizan el tratamiento de sus datos para las finalidades descritas en esta Política.</li>
+    </ul>
+
+    <h2 id="uso">9. Usos autorizados de la información</h2>
+    <p>ZentroSoft solo tratará los datos personales para las finalidades descritas y los usos autorizados en esta Política o en las leyes vigentes. Entre otros, el titular autoriza expresamente:</p>
+    <ul>
+      <li>Establecer comunicación con el titular para cualquier propósito relacionado con las finalidades descritas, mediante llamadas, mensajes de texto, correos electrónicos u otros medios.</li>
+      <li>Prestar, mantener y mejorar los servicios y productos, cumplir la propuesta de valor y el nivel de servicio ofrecido, y dar cumplimiento a las obligaciones adquiridas.</li>
+      <li>Auditar, estudiar y analizar la información de las bases de datos para diseñar estrategias administrativas, técnicas y comerciales, y mejorar los productos y servicios.</li>
+      <li>Realizar actividades de mercadeo y actos de promoción de los servicios y productos ofrecidos, previa autorización del titular.</li>
+      <li>Consultar, almacenar y usar información financiera obtenida de terceros administradores de bases de datos, previa autorización del titular para dicha consulta y de conformidad con la Ley 1266 de 2008 (Habeas Data financiero) y normas concordantes.</li>
+      <li>Enviar notificaciones y alertas relacionadas con los servicios contratados, actualizaciones de los productos, cambios en los términos y asuntos de seguridad.</li>
+      <li>Compartir la información con encargados del tratamiento (tales como proveedores de infraestructura, analítica, mensajería o soporte) para cumplir las finalidades descritas.</li>
+      <li>Revelar la información cuando sea requerido para cumplir leyes, regulaciones o procesos legales, prevenir fraudes o ataques de seguridad, o proteger los derechos de ZentroSoft o de terceros.</li>
+      <li>Cualquier otro uso que se enmarque en las finalidades ya expuestas y que se relacione con el objeto social de la Compañía y su actividad.</li>
+    </ul>
+    <p class="note"><strong>Nota:</strong> ZentroSoft <strong>no vende ni comercializa</strong> los datos personales de los titulares a terceros.</p>
+
+    <h2 id="terceros">10. Tratamiento por terceros (encargados y transferencias)</h2>
+    <p>ZentroSoft podrá transmitir datos personales a encargados del tratamiento que prestan servicios de soporte tecnológico o complementario, siempre bajo las instrucciones de la Compañía y con las medidas de seguridad y confidencialidad exigidas por la ley. En particular:</p>
+    <ul>
+      <li><strong>EmailJS:</strong> el envío de los mensajes de los formularios de contacto se realiza mediante este servicio de terceros. Los datos proporcionados se transmiten de forma segura y son tratados únicamente para atender su solicitud.</li>
+      <li><strong>Google Analytics y Google Tag Manager:</strong> se utilizan herramientas de analítica bajo el framework de <strong>Google Consent Mode v2</strong>, de modo que solo se activan cuando usted otorga su consentimiento.</li>
+      <li><strong>Proveedores de infraestructura y hospedaje:</strong> los datos pueden ser almacenados en servidores de terceros que cumplen estándares de seguridad de la información.</li>
+      <li><strong>Pasarelas y proveedores de pago:</strong> los datos transaccionales de las Plataformas son procesados por proveedores de pago autorizados, sin que ZentroSoft almacene las contraseñas o datos completos de tarjetas de crédito.</li>
+      <li><strong>Obligaciones legales:</strong> la información podrá ser suministrada a autoridades competentes cuando la ley o una orden judicial lo exija.</li>
+    </ul>
+    <p>En caso de transferencias internacionales de datos personales a países que no ofrezcan un nivel adecuado de protección, ZentroSoft adoptará las garantías previstas en la normativa colombiana, incluyendo las disposiciones del Decreto 1074 de 2015 y el Decreto 886 de 2014.</p>
+
+    <h2 id="cookies">11. Cookies</h2>
+    <p>Utilizamos cookies propias y de terceros estrictamente necesarias para el funcionamiento del sitio y, previo consentimiento, cookies de analítica y marketing. Puede gestionar sus preferencias en cualquier momento desde el enlace <strong>&laquo;Configuración de Cookies&raquo;</strong> ubicado en el pie de página. Para más información, consulte nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+
+    <h2 id="derechos">12. Derechos de los titulares</h2>
+    <p>Conforme al artículo 8 de la Ley 1581 de 2012, usted como titular de los datos personales tiene los siguientes derechos:</p>
+    <ul>
+      <li>Conocer, actualizar y rectificar sus datos personales frente a ZentroSoft.</li>
+      <li>Solicitar prueba de la autorización otorgada.</li>
+      <li>Ser informado, previa solicitud, respecto del uso que se le ha dado a sus datos personales.</li>
+      <li>Presentar ante la Superintendencia de Industria y Comercio (SIC) quejas por infracciones a lo dispuesto en la ley.</li>
+      <li>Revocar la autorización y/o solicitar la supresión del dato cuando no exista un deber contractual o legal de conservarlos.</li>
+      <li>Acceder en forma gratuita a sus datos personales que hayan sido objeto de tratamiento.</li>
+      <li>Abstenerse de responder las preguntas sobre datos sensibles o sobre datos de niños, niñas y adolescentes.</li>
+    </ul>
+
+    <h2 id="procedimiento">13. Procedimiento para ejercer sus derechos</h2>
+    <p>El área encargada de atender las peticiones, consultas y reclamos para ejercer estos derechos es la <strong>área de atención al cliente y protección de datos</strong>, a través del correo electrónico <a href="mailto:fernandomenesesda@gmail.com">fernandomenesesda@gmail.com</a> o el teléfono <strong>300 9047298</strong>.</p>
+
+    <h3>13.1. Consultas</h3>
+    <p>Cuando el titular desee consultar la información que reposa en la base de datos, ZentroSoft responderá la solicitud en un plazo máximo de <strong>diez (10) días hábiles</strong>. Cuando no fuere posible atender la consulta dentro de dicho término, se informará al titular los motivos de la demora y la fecha en que se atenderá, la cual no podrá superar los <strong>cinco (5) días hábiles</strong> siguientes al vencimiento del primer término.</p>
+
+    <h3>13.2. Reclamos</h3>
+    <p>Cuando el titular considere que la información debe ser objeto de corrección, actualización o supresión, o advierta el presunto incumplimiento de cualquiera de los deberes contenidos en la Ley 1581 de 2012, podrá presentar un reclamo ante ZentroSoft, el cual será tramitado bajo las siguientes reglas:</p>
+    <ul>
+      <li>El reclamo se formulará mediante solicitud dirigida a la Compañía con la identificación del titular, la descripción de los hechos, la dirección de contacto y los documentos que se quieran hacer valer.</li>
+      <li>Si el reclamo resulta incompleto, ZentroSoft podrá requerir al interesado dentro de los <strong>cinco (5) días</strong> siguientes a la recepción para que subsane las fallas. Transcurridos <strong>dos (2) meses</strong> desde el requerimiento sin que el solicitante presente la información, se entenderá que ha desistido del reclamo.</li>
+      <li>Si ZentroSoft no es competente para resolver el reclamo, dará traslado a quien corresponda en un término máximo de <strong>dos (2) días hábiles</strong> e informará la situación al titular.</li>
+      <li>Una vez recibido el reclamo completo, se incluirá en la base de datos una leyenda de <em>&laquo;reclamo en trámite&raquo;</em> con el motivo del mismo, en un término no mayor a <strong>dos (2) días hábiles</strong>, la cual se mantendrá hasta que el reclamo sea decidido.</li>
+      <li>El término máximo para atender el reclamo será de <strong>quince (15) días hábiles</strong> contados a partir del día siguiente a la fecha de su recibo. Cuando no fuere posible atenderlo en dicho término, se informará al titular los motivos de la demora y la fecha en que se atenderá, la cual no podrá superar los <strong>ocho (8) días hábiles</strong> siguientes al vencimiento del primer término.</li>
+      <li>La supresión de datos no procederá cuando exista un deber contractual o legal de permanecer en la base de datos.</li>
+    </ul>
+
+    <h2 id="seguridad">14. Medidas de seguridad</h2>
+    <p>ZentroSoft implementa medidas de protección humanas, administrativas y técnicas para proteger los datos de los titulares en aras de impedir su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento, de conformidad con las pautas del Decreto 1074 de 2015. Estas medidas incluyen, entre otras, el acceso restringido y autenticado a las bases de datos, la transmisión cifrada de la información (HTTPS), la minimización en la recolección de datos y cláusulas de confidencialidad con nuestros encargados. El titular acepta expresamente esta forma de protección y declara que la considera conveniente y suficiente para todos los propósitos.</p>
+
+    <h2 id="vigencia">15. Vigencia y cambios</h2>
+    <p>Los datos personales incorporados en las bases de datos estarán vigentes durante el plazo necesario para cumplir las finalidades descritas en esta Política. La presente Política entra en vigencia a partir de la fecha de su publicación y podrá ser modificada para dar cumplimiento a nuevas disposiciones legales, jurisprudenciales o cambios internos. Cualquier cambio sustancial será publicado en esta misma página y, cuando la normativa lo exija, se informará oportunamente a los titulares.</p>
+
+    <h2 id="legislacion">16. Legislación y contacto</h2>
+    <p>La normativa vigente en materia de protección de datos personales en Colombia está contenida principalmente en la <strong>Ley 1581 de 2012</strong>, el <strong>Decreto 1377 de 2013</strong>, el <strong>Decreto 886 de 2014</strong>, el <strong>Decreto Único Reglamentario 1074 de 2015</strong> y la <strong>Ley 1266 de 2008</strong> (Habeas Data financiero). La autoridad de control es la <strong>Superintendencia de Industria y Comercio (SIC)</strong>, ante la cual los titulares pueden presentar sus quejas por el tratamiento indebido de sus datos personales.</p>
+    <p>Cualquier duda, consulta o información adicional sobre esta Política será recibida y tramitada mediante comunicación a:</p>
+    <div class="contact-box">
+      <p><strong>ZentroSoft</strong> &mdash; Bogotá D.C., Colombia</p>
+      <p><strong>Teléfono:</strong> <a href="tel:3009047298">300 9047298</a></p>
+      <p><strong>Correo:</strong> <a href="mailto:fernandomenesesda@gmail.com">fernandomenesesda@gmail.com</a></p>
+    </div>
   </main>
 
   <footer>
