@@ -2,11 +2,6 @@ const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent'
 const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
 const CONSENT_VERSION = 1
 
-// ID de analítica activa (GA4 directo).
-// Para migrar a Tag Manager en el futuro, basta con cambiar este valor por el
-// contenedor GTM-XXXXXXX y crear dentro de él la etiqueta GA4 correspondiente.
-const ANALYTICS_ID: string = 'G-PVMG97XCJ8'
-
 const PRIVACY_POLICY_URL = '/politica-privacidad.html'
 const COOKIES_POLICY_URL = '/politica-cookies.html'
 
@@ -47,27 +42,6 @@ function writeStoredConsent(consent: StoredConsent): void {
   document.cookie = `${CONSENT_COOKIE_NAME}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax; Secure`
 }
 
-let analyticsLoaded = false
-
-function loadAnalytics(): void {
-  if (analyticsLoaded || !ANALYTICS_ID) return
-  analyticsLoaded = true
-
-  const script = document.createElement('script')
-  script.async = true
-
-  if (ANALYTICS_ID.startsWith('GTM-')) {
-    script.src = `https://www.googletagmanager.com/gtm.js?id=${ANALYTICS_ID}`
-    document.head.appendChild(script)
-    return
-  }
-
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`
-  document.head.appendChild(script)
-  window.gtag('js', new Date())
-  window.gtag('config', ANALYTICS_ID)
-}
-
 function updateGoogleConsent(analitica: boolean, marketing: boolean): void {
   window.dataLayer = window.dataLayer || []
   if (typeof window.gtag !== 'function') {
@@ -91,7 +65,6 @@ function applyDecision(analitica: boolean, marketing: boolean): void {
     marketing
   })
   updateGoogleConsent(analitica, marketing)
-  if (analitica || marketing) loadAnalytics()
 }
 
 function createBanner(): HTMLElement {
@@ -186,7 +159,6 @@ export function initCookieConsent(): void {
 
   if (stored) {
     updateGoogleConsent(stored.analitica, stored.marketing)
-    if (stored.analitica || stored.marketing) loadAnalytics()
   }
 
   const banner = createBanner()
