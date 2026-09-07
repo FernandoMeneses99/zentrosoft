@@ -63,15 +63,15 @@ app.innerHTML = `
       </a>
     </div>
     <div class="hero-stats">
-      <div>
+      <div class="hero-stat">
         <div class="hero-stat-number"><span data-count="2">2</span><span class="accent">+</span></div>
         <div class="hero-stat-label">Años de experiencia</div>
       </div>
-      <div>
+      <div class="hero-stat">
         <div class="hero-stat-number"><span data-count="6">6</span></div>
         <div class="hero-stat-label">Servicios especializados</div>
       </div>
-      <div>
+      <div class="hero-stat">
         <div class="hero-stat-number"><span data-count="2">2</span></div>
         <div class="hero-stat-label">Productos propios</div>
       </div>
