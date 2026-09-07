@@ -38,7 +38,33 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Google Fonts (carga no bloqueante: la hoja se descarga sin bloquear el render;
+         display=swap evita el invisible FOIT mientras la fuente se aplica) -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+    </noscript>
+
+    <!-- Preload del LCP (slide del hero) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/img/Hero-1.avif"
+      imagesrcset="/img/Hero-1-960.avif 960w, /img/Hero-1-1440.avif 1440w, /img/Hero-1.avif 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <!--
       Analítica (GA4 / GTM): NO declarar scripts aquí.

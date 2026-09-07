@@ -32,12 +32,12 @@ app.innerHTML = `
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="inicio" aria-label="Bienvenida a ZentroSoft - Desarrollo Web">
-  <div class="hero-slides">
+    <div class="hero-slides">
     <div class="hero-slide active">
-      <img src="/img/Hero-1.avif" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-1.avif" srcset="/img/Hero-1-960.avif 960w, /img/Hero-1-1440.avif 1440w, /img/Hero-1.avif 1920w" sizes="100vw" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" fetchpriority="high" width="1920" height="1080" />
     </div>
     <div class="hero-slide">
-      <img src="/img/Hero-2.avif" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-2.avif" srcset="/img/Hero-2-960.avif 960w, /img/Hero-2-1440.avif 1440w, /img/Hero-2.avif 1920w" sizes="100vw" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
     </div>
   </div>
 

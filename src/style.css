@@ -2097,7 +2097,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   top: 0;
-  left: -80%;
+  left: 0;
   width: 60%;
   height: 100%;
   background: linear-gradient(
@@ -2106,7 +2106,7 @@ h1, h2, h3, h4, h5, h6 {
     rgba(255, 255, 255, 0.35) 50%,
     transparent 80%
   );
-  transform: skewX(-20deg);
+  transform: translateX(-140%) skewX(-20deg);
   pointer-events: none;
 }
 
@@ -2115,7 +2115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes btn-shine {
-  to { left: 130%; }
+  to { transform: translateX(240%) skewX(-20deg); }
 }
 
 /* --- Accesibilidad: prefiere movimiento reducido --- */
