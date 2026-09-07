@@ -47,11 +47,11 @@ app.innerHTML = `
       Agencia de desarrollo web en Bogotá
     </div>
     <h1>
-      Desarrollo Web y<br/>
-      <span class="highlight"><span id="rotating-word">Soluciones Digitales</span><span class="type-caret" aria-hidden="true"></span></span>
+      Desarrollo de Software y<br/>
+      <span class="highlight"><span id="rotating-word">Desarrollo Web a Medida</span><span class="type-caret" aria-hidden="true"></span></span>
     </h1>
     <p class="hero-text">
-      Creamos landing pages que convierten visitas en clientes, optimizamos tu posicionamiento en buscadores y acompañamos la operación de tu sitio con soporte técnico especializado. Tecnología moderna para pymes y emprendedores.
+      Somos una empresa de desarrollo de software y agencia de desarrollo web en Bogotá. Creamos software a medida, desarrollo de aplicaciones web, plataformas digitales, landing pages y optimización SEO que convierten visitas en clientes, y acompañamos toda tu transformación digital con soporte técnico especializado. Tecnología moderna para pymes y emprendedores.
     </p>
     <div class="hero-actions">
       <a href="#servicios" class="btn-primary">
@@ -92,7 +92,7 @@ app.innerHTML = `
       <div class="section-label">Nuestros Servicios</div>
       <h2 class="section-title">Todo lo que tu negocio necesita para triunfar en internet</h2>
       <p class="section-subtitle">
-        De la idea al lanzamiento y más allá: cubrimos todo el ciclo de vida de tu sitio web con servicios especializados.
+        De la idea al lanzamiento y más allá: somos tu empresa tecnológica de confianza. Cubrimos el desarrollo de software a medida, desarrollo de aplicaciones web, desarrollo SaaS, creación de páginas web y toda tu transformación digital con servicios especializados.
       </p>
     </div>
 
@@ -144,6 +144,30 @@ app.innerHTML = `
         <h3>Mantenimiento Web</h3>
         <p>Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins para un sitio siempre al día.</p>
       </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6L13 12L8 18"/><path d="M13 6L18 12L13 18"/></svg>
+        </div>
+        <h3>Software a Medida</h3>
+        <p>Desarrollo de software personalizado y sistemas web adaptados 100% a tu operación. Creación de plataformas digitales y aplicaciones empresariales que automatizan procesos y hacen crecer tu negocio.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4FD290" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Desarrollo de Aplicaciones Web</h3>
+        <p>Creamos aplicaciones web escalables y seguras como plataforma SaaS, software empresarial y sistemas en la nube. Soluciones de automatización de procesos listas para operar en cualquier dispositivo.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Desarrollo SaaS y Plataformas</h3>
+        <p>Construimos soluciones SaaS y plataformas digitales multi-usuario para transformar digitalmente tu empresa. Aplicaciones empresariales a medida con tecnología moderna y modelo de suscripción.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -166,7 +190,7 @@ app.innerHTML = `
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4B82C3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         </div>
         <h3>Nuestra Misión</h3>
-        <p>Empoderamos a pequeñas empresas y emprendedores mediante el diseño y desarrollo de soluciones web modernas, funcionales y accesibles. Combinamos tecnología actualizada, buenas prácticas de desarrollo y un servicio cercano para que cada proyecto se convierta en una herramienta real de crecimiento para su negocio.</p>
+        <p>Empoderamos a pequeñas empresas y emprendedores mediante el desarrollo de software y soluciones web modernas, funcionales y accesibles. Combinamos tecnología actualizada, buenas prácticas de desarrollo y un servicio cercano para que cada proyecto, desde una landing page hasta una plataforma SaaS, se convierta en una herramienta real de crecimiento para su negocio.</p>
       </div>
 
       <div class="about-mission-card">
@@ -224,7 +248,7 @@ app.innerHTML = `
     <div class="about-partner" id="stack">
       <div class="about-partner-content">
         <h3>Tecnologías que Dominamos</h3>
-        <p>Trabajamos con un stack moderno y probado para construir soluciones rápidas, seguras y escalables: desde interfaces atractivas hasta bases de datos robustas que soportan el crecimiento de tu negocio.</p>
+        <p>Trabajamos con un stack moderno y probado para construir desarrollo de software y soluciones web rápidas, seguras y escalables: desde interfaces atractivas hasta bases de datos robustas que soportan el crecimiento de tu negocio y tu automatización de procesos.</p>
         <div class="stack-grid">
           <span class="stack-tile" role="img" aria-label="JavaScript" title="JavaScript"><img src="/img/stack/javascript.svg" alt="" loading="lazy" width="38" height="38" /></span>
           <span class="stack-tile" role="img" aria-label="Next.js" title="Next.js"><img src="/img/stack/nextjs.svg" alt="" loading="lazy" width="38" height="38" style="filter: invert(1)" /></span>
@@ -356,7 +380,7 @@ app.innerHTML = `
           <div class="news-card-body news-card-body--cta">
             <span class="news-card-tag">Proyectos a la Medida</span>
             <h3 class="news-card-title">¿Tienes un proyecto en mente?</h3>
-            <p class="news-card-excerpt">Aplicamos nuestra experiencia construyendo productos propios para desarrollar la solución digital que tu negocio necesita: sistemas web, plataformas de gestión o tu próxima gran idea.</p>
+            <p class="news-card-excerpt">Aplicamos nuestra experiencia construyendo productos propios para desarrollar la solución digital que tu negocio necesita: software a medida, desarrollo de aplicaciones web, desarrollo SaaS, plataformas de gestión o tu próxima gran idea.</p>
             <a href="#contacto" class="btn-primary news-card-btn">
               Cuéntanos tu idea
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -382,7 +406,7 @@ app.innerHTML = `
           <span>¿Qué servicios ofrece ZentroSoft?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <p>Ofrecemos creación de landing pages enfocadas en conversión, optimización SEO on-page, consultoría y capacitación en presencia web y WordPress, soporte técnico de dominios, hosting y correos, desarrollo frontend con Bootstrap y JavaScript, y mantenimiento web completo.</p>
+        <p>Ofrecemos desarrollo de software a medida, desarrollo de aplicaciones web y desarrollo SaaS, además de creación de landing pages enfocadas en conversión, optimización SEO on-page, consultoría y capacitación en presencia web y WordPress, soporte técnico de dominios, hosting y correos, desarrollo frontend con Bootstrap y JavaScript, y mantenimiento web completo.</p>
       </details>
 
       <details class="faq-item">
@@ -407,6 +431,22 @@ app.innerHTML = `
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <p>Contamos con dos productos propios: VelarisPOS, un sistema de punto de venta para gestionar ventas, inventario y reportes; y Zentro Inmobiliaria, una plataforma integral para administrar propiedades, contratos y clientes.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Qué es el desarrollo de software a medida?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>Es el desarrollo de software y sistemas web creados específicamente para la operación de tu empresa. A diferencia de un producto genérico, el software a medida se adapta a tus procesos, automatiza tareas y crece contigo. En ZentroSoft desarrollamos aplicaciones empresariales, plataformas digitales y soluciones SaaS desde cero para pymes y emprendedores en Colombia.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>¿Cómo ayuda la transformación digital a mi negocio?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <p>La transformación digital te permite automatizar procesos, centralizar la información y vender más. Como empresa tecnológica y agencia de desarrollo web, te acompañamos en todo el proceso: desde la creación de tu página web hasta desarrollo de aplicaciones web, software a medida y soluciones tecnológicas que hacen crecer tu negocio en Bogotá y Colombia.</p>
       </details>
 
       <details class="faq-item">
@@ -552,20 +592,20 @@ app.innerHTML = `
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <img src="/img/logo.avif" alt="ZentroSoft - Agencia de Desarrollo Web" width="140" height="40" />
+          <img src="/img/logo.avif" alt="ZentroSoft - Agencia de Desarrollo Web y Software" width="140" height="40" />
         </a>
-        <p>Agencia de desarrollo web en Bogotá. Diseñamos y construimos experiencias digitales que convierten visitantes en clientes.</p>
+        <p>Empresa de desarrollo de software y agencia de desarrollo web en Bogotá. Creamos software a medida, aplicaciones web y experiencias digitales que convierten visitantes en clientes.</p>
       </div>
 
       <div class="footer-col">
         <h4>Servicios</h4>
         <ul>
-          <li><a href="#servicios">Landing Pages</a></li>
+          <li><a href="#servicios">Desarrollo de Software a Medida</a></li>
+          <li><a href="#servicios">Desarrollo de Aplicaciones Web</a></li>
+          <li><a href="#servicios">Desarrollo SaaS</a></li>
+          <li><a href="#servicios">Creación de Páginas Web</a></li>
           <li><a href="#servicios">Optimización SEO</a></li>
-          <li><a href="#servicios">Desarrollo Frontend</a></li>
           <li><a href="#servicios">Soporte Técnico</a></li>
-          <li><a href="#servicios">Mantenimiento Web</a></li>
-          <li><a href="#servicios">Consultoría</a></li>
         </ul>
       </div>
 
@@ -754,7 +794,7 @@ function initRotatingWord() {
   const wordEl = document.getElementById('rotating-word')
   if (!wordEl || PREFERS_REDUCED_MOTION) return
 
-  const words = ['Soluciones Digitales', 'Landing Pages', 'Optimización SEO', 'Soporte Especializado']
+  const words = ['Desarrollo Web a Medida', 'Software a Medida', 'Aplicaciones Web', 'Soluciones SaaS', 'Plataformas Digitales', 'Optimización SEO']
   let wordIndex = 0
   let charIndex = words[0].length
   let isDeleting = false
@@ -917,7 +957,7 @@ function injectDynamicJSONLD() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Desarrollo Web y Soluciones Digitales",
+    "serviceType": "Desarrollo de Software y Desarrollo Web a Medida",
     "provider": {
       "@type": "Organization",
       "name": "ZentroSoft",
@@ -977,6 +1017,30 @@ function injectDynamicJSONLD() {
             "@type": "Service",
             "name": "Mantenimiento Web",
             "description": "Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo de Software a Medida",
+            "description": "Desarrollo de software personalizado y sistemas web adaptados a la operación del cliente, con automatización de procesos."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo de Aplicaciones Web",
+            "description": "Creación de aplicaciones web escalables, aplicaciones empresariales y plataformas digitales seguras."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo SaaS y Plataformas Digitales",
+            "description": "Construcción de soluciones SaaS multi-usuario y software empresarial en la nube para transformación digital."
           }
         },
         {
