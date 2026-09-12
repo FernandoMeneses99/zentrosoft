@@ -64,16 +64,16 @@ app.innerHTML = `
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="hero-stat-number"><span data-count="2">2</span><span class="accent">+</span></div>
-        <div class="hero-stat-label">Años de experiencia</div>
+        <div class="hero-stat-number"><span data-count="15">15</span><span class="accent">+</span></div>
+        <div class="hero-stat-label">Proyectos entregados</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-number"><span data-count="6">6</span></div>
-        <div class="hero-stat-label">Servicios especializados</div>
+        <div class="hero-stat-number"><span data-count="8">8</span></div>
+        <div class="hero-stat-label">Sectores atendidos</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-number"><span data-count="2">2</span></div>
-        <div class="hero-stat-label">Productos propios</div>
+        <div class="hero-stat-number">&lt;<span data-count="24">24</span><span class="accent">h</span></div>
+        <div class="hero-stat-label">Respuesta garantizada</div>
       </div>
     </div>
   </div>
@@ -391,6 +391,59 @@ app.innerHTML = `
     </div>
   </div>
 </section>
+<!-- ===== HOW WE WORK / PROCESS ===== -->
+<section class="process-section" id="proceso" aria-label="Cómo trabajamos">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">Cómo Trabajamos</div>
+      <h2 class="section-title">De la idea al lanzamiento en 4 pasos</h2>
+      <p class="section-subtitle">
+        Un proceso claro y transparente para que sepas exactamente qué esperar en cada etapa de tu proyecto.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-step">1</div>
+        <h3>Diagnóstico gratuito</h3>
+        <p>Cuéntanos tu necesidad y analizamos tu situación actual sin costo ni compromiso. Recibirás una recomendación honesta, aunque no trabajes con nosotros.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">2</div>
+        <h3>Propuesta clara</h3>
+        <p>Definimos alcance, plazos y precio cerrado por escrito. Sin sorpresas ni costos ocultos: sabes exactamente qué recibes y cuándo.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">3</div>
+        <h3>Desarrollo con avances</h3>
+        <p>Desarrollamos tu solución con entregas parciales para que veas el progreso y ajustemos juntos lo que necesites antes del lanzamiento.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-step">4</div>
+        <h3>Lanzamiento y soporte</h3>
+        <p>Publicamos tu proyecto, te capacitamos para usarlo y te acompañamos con soporte continuo para que nunca te quedes solo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIAGNOSTIC CTA BAND ===== -->
+<section class="cta-band" aria-label="Diagnóstico web gratuito">
+  <div class="container">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <span class="cta-band-tag">Sin costo · Sin compromiso</span>
+        <h2>Descubre qué está frenando tu sitio web hoy</h2>
+        <p>Solicita tu <strong>diagnóstico web gratuito</strong>: revisamos tu presencia digital y te enviamos un informe con oportunidades concretas para atraer más clientes.</p>
+      </div>
+      <a href="#contacto" class="btn-primary cta-band-btn js-diagnostic-cta" data-servicio="Diagnóstico Web Gratuito">
+        Solicitar diagnóstico gratuito
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FAQ ===== -->
 <section class="faq-section" id="faq" aria-label="Preguntas frecuentes">
   <div class="container">
@@ -553,6 +606,7 @@ app.innerHTML = `
               <option value="Mantenimiento Web">Mantenimiento Web</option>
               <option value="VelarisPOS">VelarisPOS (Producto)</option>
               <option value="Zentro Inmobiliaria">Zentro Inmobiliaria (Producto)</option>
+              <option value="Diagnóstico Web Gratuito">Diagnóstico Web Gratuito</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
@@ -929,11 +983,80 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll()
   initScrollAnimations()
   initMobileMenu()
+  initDiagnosticCTA()
   injectDynamicJSONLD()
+/* ============================================
+   DIAGNOSTIC CTA - Preselects form service
+   ============================================ */
+function initDiagnosticCTA() {
+  const ctaBandBtn = document.querySelector<HTMLAnchorElement>('.js-diagnostic-cta')
+  if (!ctaBandBtn) return
+
+  ctaBandBtn.addEventListener('click', () => {
+    const select = document.getElementById('cf-servicio') as HTMLSelectElement | null
+    if (select) {
+      select.value = ctaBandBtn.dataset.servicio || ''
+    }
+    trackEvent('cta_diagnostico', { location: 'banda_proceso' })
+  })
+}
+
 /* ============================================
    EVENTOS DE CONVERSIÓN (GA4)
    ============================================ */
 function initConversionTracking() {
+  // Clicks en CTAs internos (hero, nav, tarjetas) - sin duplicar whatsapp/diagnostico
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href')
+      if (!href || href === '#' || link.classList.contains('js-diagnostic-cta')) return
+      if (link.closest('.whatsapp-btn')) return
+      const destino = href.replace('#', '') || 'inicio'
+      trackEvent('cta_click', { destino: destino, ubicacion: (link.className || 'desconocida').slice(0, 60) })
+    })
+  })
+
+  // Clicks en telefono y correo
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="tel:"]').forEach((link) => {
+    link.addEventListener('click', () => trackEvent('contact_phone_click', { metodo: 'telefono' }))
+  })
+
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener('click', () => trackEvent('contact_email_click', { metodo: 'correo' }))
+  })
+
+  // Profundidad de scroll: 25 / 50 / 75 / 100
+  const scrollThresholds = [25, 50, 75, 100]
+  const reachedScroll = new Set<number>()
+  let scrollTrackingTimer: number | undefined
+
+  window.addEventListener('scroll', () => {
+    if (scrollTrackingTimer) window.clearTimeout(scrollTrackingTimer)
+    scrollTrackingTimer = window.setTimeout(() => {
+      const scrollTop = window.scrollY
+      const docHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1)
+      const percent = Math.min(Math.round((scrollTop / docHeight) * 100), 100)
+      scrollThresholds.forEach((threshold) => {
+        if (percent >= threshold && !reachedScroll.has(threshold)) {
+          reachedScroll.add(threshold)
+          trackEvent('scroll_depth', { porcentaje: String(threshold) })
+        }
+      })
+    }, 200)
+  }, { passive: true })
+
+  // Inicio de llenado del formulario (una sola vez)
+  const contactForm = document.getElementById('contact-form') as HTMLFormElement | null
+  if (contactForm && !contactForm.dataset.formStartTracked) {
+    contactForm.dataset.formStartTracked = '1'
+    contactForm.addEventListener('focus', (e) => {
+      const target = e.target as HTMLElement
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) {
+        trackEvent('form_start', { campo: target.getAttribute('name') || 'desconocido' })
+      }
+    }, { once: true, capture: true })
+  }
+
   document.querySelectorAll<HTMLAnchorElement>('.whatsapp-btn').forEach((link) => {
     link.addEventListener('click', () => {
       trackEvent('contact_whatsapp', { method: 'boton_flotante' })
