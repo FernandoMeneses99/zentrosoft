@@ -1,0 +1,28 @@
+---
+import { solucionCards } from '../data/velaris';
+---
+
+<section class="value-prop" id="inicio-solucion">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">El problema que resolvemos</div>
+      <h2 class="section-title">¿Tu negocio opera con sistemas desconectados?</h2>
+      <p class="section-subtitle">
+        Muchos comercios manejan la caja, el inventario, las ventas online y la contabilidad por separado. Eso
+        genera pérdidas, errores al cobrar y decisiones tomadas "a ojo".
+      </p>
+    </div>
+
+    <div class="value-grid value-grid--six">
+      {solucionCards.map((card) => (
+        <div class="value-card">
+          <div class="value-card-icon">
+            <img src={card.img} alt={card.alt} loading="lazy" width="56" height="56" />
+          </div>
+          <h3>{card.title}</h3>
+          <p>{card.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

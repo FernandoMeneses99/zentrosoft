@@ -1,91 +1,91 @@
-const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent'
-const CONSENT_MAX_AGE = 180 * 24 * 60 * 60
-const CONSENT_VERSION = 1
+const CONSENT_COOKIE_NAME = 'zentrosoft_cookie_consent';
+const CONSENT_MAX_AGE = 180 * 24 * 60 * 60;
+const CONSENT_VERSION = 1;
 
-const PRIVACY_POLICY_URL = '/politica-privacidad.html'
-const COOKIES_POLICY_URL = '/politica-cookies.html'
+const PRIVACY_POLICY_URL = '/politica-privacidad.html';
+const COOKIES_POLICY_URL = '/politica-cookies.html';
 
-const GTM_ID = 'GTM-55JS53W4'
+const GTM_ID = 'GTM-55JS53W4';
 
 interface StoredConsent {
-  version: number
-  timestamp: string
-  analitica: boolean
-  marketing: boolean
+  version: number;
+  timestamp: string;
+  analitica: boolean;
+  marketing: boolean;
 }
 
 declare global {
   interface Window {
-    dataLayer: unknown[]
-    gtag: (...args: unknown[]) => void
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
-let gtmInjected = false
+let gtmInjected = false;
 
 function injectGtm(): void {
-  if (gtmInjected) return
-  gtmInjected = true
-  window.dataLayer = window.dataLayer || []
-  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-  const script = document.createElement('script')
-  script.async = true
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`
-  document.head.appendChild(script)
+  if (gtmInjected) return;
+  gtmInjected = true;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+  document.head.appendChild(script);
 }
 
 function deferIdle(callback: () => void): void {
   if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(callback, { timeout: 2000 })
+    window.requestIdleCallback(callback, { timeout: 2000 });
   } else {
-    setTimeout(callback, 0)
+    setTimeout(callback, 0);
   }
 }
 
 function scheduleGtm(): void {
   if (document.readyState === 'complete') {
-    deferIdle(injectGtm)
+    deferIdle(injectGtm);
   } else {
-    window.addEventListener('load', () => deferIdle(injectGtm), { once: true })
+    window.addEventListener('load', () => deferIdle(injectGtm), { once: true });
   }
 }
 
 function readStoredConsent(): StoredConsent | null {
-  const match = document.cookie.match(new RegExp('(?:^|; )' + CONSENT_COOKIE_NAME + '=([^;]*)'))
-  if (!match) return null
+  const match = document.cookie.match(new RegExp('(?:^|; )' + CONSENT_COOKIE_NAME + '=([^;]*)'));
+  if (!match) return null;
   try {
-    const parsed = JSON.parse(decodeURIComponent(match[1])) as Partial<StoredConsent>
+    const parsed = JSON.parse(decodeURIComponent(match[1])) as Partial<StoredConsent>;
     if (
       parsed.version !== CONSENT_VERSION ||
       typeof parsed.analitica !== 'boolean' ||
       typeof parsed.marketing !== 'boolean'
     ) {
-      return null
+      return null;
     }
-    return parsed as StoredConsent
+    return parsed as StoredConsent;
   } catch {
-    return null
+    return null;
   }
 }
 
 function writeStoredConsent(consent: StoredConsent): void {
-  const value = encodeURIComponent(JSON.stringify(consent))
-  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax; Secure`
+  const value = encodeURIComponent(JSON.stringify(consent));
+  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax; Secure`;
 }
 
 function updateGoogleConsent(analitica: boolean, marketing: boolean): void {
-  window.dataLayer = window.dataLayer || []
+  window.dataLayer = window.dataLayer || [];
   if (typeof window.gtag !== 'function') {
     window.gtag = function gtag(...args: unknown[]) {
-      window.dataLayer.push(args)
-    }
+      window.dataLayer.push(args);
+    };
   }
   window.gtag('consent', 'update', {
     analytics_storage: analitica ? 'granted' : 'denied',
     ad_storage: marketing ? 'granted' : 'denied',
     ad_user_data: marketing ? 'granted' : 'denied',
-    ad_personalization: marketing ? 'granted' : 'denied'
-  })
+    ad_personalization: marketing ? 'granted' : 'denied',
+  });
 }
 
 function applyDecision(analitica: boolean, marketing: boolean): void {
@@ -93,19 +93,19 @@ function applyDecision(analitica: boolean, marketing: boolean): void {
     version: CONSENT_VERSION,
     timestamp: new Date().toISOString(),
     analitica,
-    marketing
-  })
-  if (analitica || marketing) injectGtm()
-  updateGoogleConsent(analitica, marketing)
+    marketing,
+  });
+  if (analitica || marketing) injectGtm();
+  updateGoogleConsent(analitica, marketing);
 }
 
 function createBanner(): HTMLElement {
-  const banner = document.createElement('div')
-  banner.className = 'cookie-banner'
-  banner.id = 'cookie-banner'
-  banner.setAttribute('role', 'dialog')
-  banner.setAttribute('aria-modal', 'false')
-  banner.setAttribute('aria-label', 'Aviso de uso de cookies')
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.id = 'cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-modal', 'false');
+  banner.setAttribute('aria-label', 'Aviso de uso de cookies');
 
   banner.innerHTML = `
     <div class="cookie-banner-inner">
@@ -162,94 +162,92 @@ function createBanner(): HTMLElement {
         <button type="button" class="cookie-btn cookie-btn-primary" data-cookie-action="save">Guardar preferencias</button>
       </div>
     </div>
-  `
-  return banner
+  `;
+  return banner;
 }
 
 function openPreferences(banner: HTMLElement): void {
-  const stored = readStoredConsent()
-  const preferences = banner.querySelector<HTMLDivElement>('#cookie-preferences')
-  if (!preferences) return
+  const stored = readStoredConsent();
+  const preferences = banner.querySelector<HTMLDivElement>('#cookie-preferences');
+  if (!preferences) return;
   if (stored) {
-    const analiticaInput = banner.querySelector<HTMLInputElement>('#cookie-analitica')
-    const marketingInput = banner.querySelector<HTMLInputElement>('#cookie-marketing')
-    if (analiticaInput) analiticaInput.checked = stored.analitica
-    if (marketingInput) marketingInput.checked = stored.marketing
+    const analiticaInput = banner.querySelector<HTMLInputElement>('#cookie-analitica');
+    const marketingInput = banner.querySelector<HTMLInputElement>('#cookie-marketing');
+    if (analiticaInput) analiticaInput.checked = stored.analitica;
+    if (marketingInput) marketingInput.checked = stored.marketing;
   }
-  preferences.hidden = false
-  preferences.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  preferences.hidden = false;
+  preferences.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 export function trackEvent(name: string, params: Record<string, unknown> = {}): void {
-  if (readStoredConsent()?.analitica !== true) return
-  if (typeof window.gtag !== 'function') return
-  window.gtag('event', name, params)
+  if (readStoredConsent()?.analitica !== true) return;
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', name, params);
 }
 
 export function initCookieConsent(): void {
-  const stored = readStoredConsent()
+  const stored = readStoredConsent();
 
   if (stored) {
-    if (stored.analitica || stored.marketing) scheduleGtm()
-    updateGoogleConsent(stored.analitica, stored.marketing)
+    if (stored.analitica || stored.marketing) scheduleGtm();
+    updateGoogleConsent(stored.analitica, stored.marketing);
   }
 
-  const banner = createBanner()
-  document.body.appendChild(banner)
+  const banner = createBanner();
+  document.body.appendChild(banner);
 
   if (stored) {
-    banner.classList.add('cookie-banner-hidden')
-    return
+    banner.classList.add('cookie-banner-hidden');
+    return;
   }
 
-  requestAnimationFrame(() => banner.classList.add('cookie-banner-visible'))
+  requestAnimationFrame(() => banner.classList.add('cookie-banner-visible'));
 
-  const acceptBtn = banner.querySelector<HTMLButtonElement>('[data-cookie-action="accept"]')
-  acceptBtn?.focus({ preventScroll: true })
+  const acceptBtn = banner.querySelector<HTMLButtonElement>('[data-cookie-action="accept"]');
+  acceptBtn?.focus({ preventScroll: true });
 
   banner.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement
-    const action = target.closest<HTMLElement>('[data-cookie-action]')?.dataset.cookieAction
-    if (!action) return
+    const target = event.target as HTMLElement;
+    const action = target.closest<HTMLElement>('[data-cookie-action]')?.dataset.cookieAction;
+    if (!action) return;
 
     switch (action) {
       case 'accept':
-        applyDecision(true, true)
-        dismissBanner(banner)
-        break
+        applyDecision(true, true);
+        dismissBanner(banner);
+        break;
       case 'reject':
-        applyDecision(false, false)
-        dismissBanner(banner)
-        break
+        applyDecision(false, false);
+        dismissBanner(banner);
+        break;
       case 'configure':
-        openPreferences(banner)
-        break
+        openPreferences(banner);
+        break;
       case 'save': {
-        const analitica = banner.querySelector<HTMLInputElement>('#cookie-analitica')?.checked ?? false
-        const marketing = banner.querySelector<HTMLInputElement>('#cookie-marketing')?.checked ?? false
-        applyDecision(analitica, marketing)
-        dismissBanner(banner)
-        break
+        const analitica = banner.querySelector<HTMLInputElement>('#cookie-analitica')?.checked ?? false;
+        const marketing = banner.querySelector<HTMLInputElement>('#cookie-marketing')?.checked ?? false;
+        applyDecision(analitica, marketing);
+        dismissBanner(banner);
+        break;
       }
     }
-  })
+  });
 
   document.addEventListener('click', (event) => {
-    const trigger = (event.target as HTMLElement).closest('#cookie-settings')
+    const trigger = (event.target as HTMLElement).closest('#cookie-settings');
     if (trigger) {
-      event.preventDefault()
-      banner.classList.remove('cookie-banner-hidden')
-      banner.classList.add('cookie-banner-visible')
-      openPreferences(banner)
+      event.preventDefault();
+      banner.classList.remove('cookie-banner-hidden');
+      banner.classList.add('cookie-banner-visible');
+      openPreferences(banner);
     }
-  })
+  });
 }
 
 function dismissBanner(banner: HTMLElement): void {
-  banner.classList.remove('cookie-banner-visible')
-  banner.addEventListener(
-    'transitionend',
-    () => banner.classList.add('cookie-banner-hidden'),
-    { once: true }
-  )
+  banner.classList.remove('cookie-banner-visible');
+  banner.addEventListener('transitionend', () => banner.classList.add('cookie-banner-hidden'), {
+    once: true,
+  });
 }

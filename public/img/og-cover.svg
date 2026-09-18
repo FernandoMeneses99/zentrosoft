@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glowBlue" cx="18%" cy="88%" r="55%">
+      <stop offset="0%" stop-color="#4B82C3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4B82C3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGreen" cx="85%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#4FD290" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#4FD290" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4B82C3"/>
+      <stop offset="100%" stop-color="#4FD290"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0A1628"/>
+  <rect width="1200" height="630" fill="url(#glowBlue)"/>
+  <rect width="1200" height="630" fill="url(#glowGreen)"/>
+  <!-- línea de acento superior -->
+  <rect x="120" y="118" width="96" height="6" rx="3" fill="url(#accentLine)"/>
+  <!-- Marca -->
+  <text x="120" y="240" font-family="Inter, Arial, Helvetica, sans-serif" font-size="104" font-weight="800" fill="#FFFFFF" letter-spacing="-2">Zentro<tspan fill="#4FD290">Soft</tspan></text>
+  <!-- Eslogan -->
+  <text x="122" y="330" font-family="Inter, Arial, Helvetica, sans-serif" font-size="44" font-weight="600" fill="#4FD290">Centraliza. Automatiza. Crece.</text>
+  <!-- Descriptor -->
+  <text x="122" y="398" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="400" fill="#E2E8F0">Empresa de desarrollo de software · Bogotá</text>
+  <text x="122" y="448" font-family="Inter, Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#94A3B8">Software a medida · Aplicaciones web · SaaS · SEO</text>
+  <!-- Pastilla -->
+  <rect x="120" y="492" width="330" height="56" rx="28" fill="none" stroke="#4FD290" stroke-width="2" opacity="0.8"/>
+  <circle cx="158" cy="520" r="7" fill="#4FD290"/>
+  <text x="176" y="530" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#E2E8F0">zentrosoft.vercel.app</text>
+</svg>

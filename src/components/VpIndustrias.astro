@@ -1,0 +1,25 @@
+---
+import { industries } from '../data/velaris';
+---
+
+<section class="vp-industries" id="industrias">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <div class="section-label">Para cada industria</div>
+        <h2 class="section-title">Módulos verticales listos para usar</h2>
+        <p class="section-subtitle">
+          VelarisPOS se adapta al sector de tu negocio con módulos especializados.
+        </p>
+      </div>
+    </div>
+    <div class="vp-industry-chips">
+      {industries.map((industry) => (
+        <span class="vp-industry-chip">
+          <img src={industry.img} alt="" loading="lazy" width="24" height="24" />
+          {industry.label}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

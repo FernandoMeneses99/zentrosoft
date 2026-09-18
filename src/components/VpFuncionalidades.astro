@@ -1,0 +1,29 @@
+---
+import { features } from '../data/velaris';
+---
+
+<section class="vp-features" id="funcionalidades">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">Funcionalidades</div>
+      <h2 class="section-title">45+ módulos que trabajan juntos</h2>
+      <p class="section-subtitle">Una plataforma que crece con tu negocio, sin importar la industria.</p>
+    </div>
+
+    <div class="vp-feature-grid">
+      {features.map((feature) => (
+        <div class="vp-feature">
+          <div class="vp-feature-ico">
+            <img src={feature.img} alt={feature.alt} loading="lazy" width="56" height="56" />
+          </div>
+          <h3>{feature.title}</h3>
+          <ul>
+            {feature.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

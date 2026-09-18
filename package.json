@@ -4,13 +4,28 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "playwright test",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.1",
+    "astro": "^7.3.3",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.9.8",
+    "prettier-plugin-astro": "^1.0.1",
+    "sharp": "^0.35.4",
     "typescript": "~6.0.2",
-    "vite": "^8.2.0"
+    "typescript-eslint": "^8.70.0"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1"

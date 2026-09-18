@@ -1,0 +1,9 @@
+dist
+.astro
+node_modules
+coverage
+test-results
+playwright-report
+.opencode/
+DESIGN.md
+public/*.html

@@ -1,0 +1,8 @@
+/* ZentroSoft - entrada principal de estilos (orden = cascada original) */
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './sections.css';
+@import './responsive.css';
+@import './components.css';
+@import './velarispos.css';

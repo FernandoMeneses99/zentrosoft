@@ -1,0 +1,32 @@
+---
+import { vpStackTiles, vpTechItems } from '../data/velaris';
+---
+
+<section class="vp-tech" id="tecnologia">
+  <div class="container vp-tech-grid">
+    <div class="about-partner-content vp-tech-copy">
+      <div class="section-label">Tecnología y seguridad</div>
+      <h2 class="vp-tech-title">Construido con tecnología moderna y segura</h2>
+      <p>
+        VelarisPOS usa un stack probado en la industria para garantizar robustez, seguridad y escalabilidad.
+        Con permisos granulares, auditoría, backups con un clic y soporte multilingüe y multi-moneda, está
+        listo para crecer tan rápido como tu negocio.
+      </p>
+      <div class="stack-grid">
+        {vpStackTiles.map((tile) => (
+          <span class="stack-tile" role="img" aria-label={tile.label} title={tile.label}>
+            <img src={tile.img} alt="" loading="lazy" width="38" height="38" />
+          </span>
+        ))}
+      </div>
+    </div>
+    <div class="vp-tech-list">
+      {vpTechItems.map((item) => (
+        <div class="vp-tech-item">
+          <strong>{item.strong}</strong>
+          <span>{item.span}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

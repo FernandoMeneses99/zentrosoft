@@ -1,0 +1,26 @@
+---
+import { services } from '../data/services';
+---
+
+<section class="value-prop" id="servicios">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">Nuestros Servicios</div>
+      <h2 class="section-title">Software y web para operar, vender y crecer</h2>
+      <p class="section-subtitle">
+        Desarrollo de software a medida, aplicaciones web, plataformas SaaS y sitios optimizados para
+        conversión. Un solo equipo para todo tu ciclo digital.
+      </p>
+    </div>
+
+    <div class="value-grid value-grid--six">
+      {services.map((service) => (
+        <div class="value-card">
+          <div class="value-card-icon" set:html={service.icon} />
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

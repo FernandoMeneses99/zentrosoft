@@ -1,0 +1,26 @@
+---
+import { clients } from '../data/clients';
+---
+
+<section class="logos-section" id="clientes" aria-label="Clientes de ZentroSoft">
+  <div class="container">
+    <div class="logos-section-header">
+      <div class="section-label">Nuestros Clientes</div>
+      <h2 class="section-title">Marcas que Confían en Nosotros</h2>
+    </div>
+  </div>
+  <div class="logos-track-wrapper">
+    <div class="logos-track">
+      {clients.map((client) => (
+        <div class="logo-item">
+          <img src={client.src} alt={client.alt} loading="lazy" width={client.width} height={client.height} />
+        </div>
+      ))}
+      {clients.map((client) => (
+        <div class="logo-item" aria-hidden="true">
+          <img src={client.src} alt="" loading="lazy" width={client.width} height={client.height} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

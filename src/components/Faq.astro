@@ -1,0 +1,56 @@
+---
+import type { Faq } from '../data/faq';
+
+interface Props {
+  faqs: Faq[];
+  sectionLabel?: string;
+  title?: string;
+  subtitle?: string;
+  ariaLabel?: string;
+  id?: string;
+}
+
+const {
+  faqs,
+  sectionLabel = 'Preguntas Frecuentes',
+  title = 'Resolvemos tus dudas',
+  subtitle = 'Todo lo que necesitas saber antes de iniciar tu proyecto con nosotros.',
+  ariaLabel = 'Preguntas frecuentes',
+  id = 'faq',
+} = Astro.props;
+---
+
+<section class="faq-section" id={id} aria-label={ariaLabel}>
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">{sectionLabel}</div>
+      <h2 class="section-title">{title}</h2>
+      <p class="section-subtitle">{subtitle}</p>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>
+            <span>{faq.question}</span>
+            <svg
+              class="faq-chevron"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

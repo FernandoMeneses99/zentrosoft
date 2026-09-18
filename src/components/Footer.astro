@@ -1,0 +1,254 @@
+---
+interface Props {
+  variant?: 'home' | 'velarispos';
+}
+
+const { variant = 'home' } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+{variant === 'home' ? (
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img
+              src="/img/logo-280w.avif"
+              srcset="/img/logo-140w.avif 140w, /img/logo-280w.avif 280w"
+              sizes="110px"
+              alt="ZentroSoft - Agencia de Desarrollo Web y Software"
+              width="140"
+              height="40"
+            />
+          </a>
+          <p>
+            Empresa de desarrollo de software y agencia de desarrollo web en Bogotá. Creamos software a
+            medida, aplicaciones web y experiencias digitales que convierten visitantes en clientes.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li>
+              <a href="#servicios">Desarrollo de Software a Medida</a>
+            </li>
+            <li>
+              <a href="#servicios">Desarrollo de Aplicaciones Web</a>
+            </li>
+            <li>
+              <a href="#servicios">Desarrollo SaaS</a>
+            </li>
+            <li>
+              <a href="#servicios">Creación de Páginas Web</a>
+            </li>
+            <li>
+              <a href="#servicios">Optimización SEO</a>
+            </li>
+            <li>
+              <a href="#servicios">Soporte Técnico</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li>
+              <a href="#nosotros">Sobre Nosotros</a>
+            </li>
+            <li>
+              <a href="#productos">VelarisPOS</a>
+            </li>
+            <li>
+              <a href="#productos">Zentro Inmobiliaria</a>
+            </li>
+            <li>
+              <a href="#clientes">Nuestros Clientes</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a>
+            </li>
+            <li>
+              <a href="#contacto">Bogotá, Colombia</a>
+            </li>
+            <li>
+              <a href="tel:+573009047298">+57 300 904 7298</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; {year} ZentroSoft. Todos los derechos reservados.</p>
+        <ul class="footer-legal-links">
+          <li>
+            <a href="/politica-privacidad.html" target="_blank" rel="noopener noreferrer">
+              Política de Privacidad
+            </a>
+          </li>
+          <li>
+            <a href="/politica-cookies.html" target="_blank" rel="noopener noreferrer">
+              Política de Cookies
+            </a>
+          </li>
+          <li>
+            <a href="/terminos-servicio.html" target="_blank" rel="noopener noreferrer">
+              Términos de Servicio
+            </a>
+          </li>
+          <li>
+            <button type="button" id="cookie-settings" class="footer-legal-button">
+              Configuración de Cookies
+            </button>
+          </li>
+        </ul>
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/company/zentrosoftco/"
+            class="footer-social-link"
+            aria-label="LinkedIn"
+          >
+            in
+          </a>
+          <a href="https://instagram.com/zentrosoftco" class="footer-social-link" aria-label="Instagram">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4.5" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/zentrosoftco/" class="footer-social-link" aria-label="Facebook">
+            f
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+) : (
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="vp-logo-mark vp-logo-mark--dark">
+            Velaris<span class="vp-logo-accent">POS</span>
+          </span>
+          <p>
+            Sistema de punto de venta y gestión empresarial (ERP) todo-en-uno. Desarrollado por ZentroSoft.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <ul>
+            <li>
+              <a href="#funcionalidades">Punto de Venta</a>
+            </li>
+            <li>
+              <a href="#funcionalidades">Inventario</a>
+            </li>
+            <li>
+              <a href="#funcionalidades">Tienda en línea</a>
+            </li>
+            <li>
+              <a href="#funcionalidades">Contabilidad</a>
+            </li>
+            <li>
+              <a href="#reportes">Reportes</a>
+            </li>
+            <li>
+              <a href="#tecnologia">Tecnología</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ZentroSoft</h4>
+          <ul>
+            <li>
+              <a href="https://zentrosoft.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Ir a ZentroSoft
+              </a>
+            </li>
+            <li>
+              <a href="https://zentrosoft.vercel.app/#productos" target="_blank" rel="noopener noreferrer">
+                Nuestros productos
+              </a>
+            </li>
+            <li>
+              <a href="https://zentrosoft.vercel.app/#contacto" target="_blank" rel="noopener noreferrer">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/573009047298?text=Hola%20ZentroSoft%2C%20quiero%20una%20demo%20de%20VelarisPOS%20para%20mi%20negocio."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +57 300 904 7298
+              </a>
+            </li>
+            <li>
+              <a href="#contacto">Bogotá, Colombia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {year} VelarisPOS · Desarrollado por ZentroSoft. Todos los derechos reservados.</p>
+        <ul class="footer-legal-links">
+          <li>
+            <a
+              href="https://zentrosoft.vercel.app/politica-privacidad.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Política de Privacidad
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://zentrosoft.vercel.app/politica-cookies.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Política de Cookies
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://zentrosoft.vercel.app/terminos-servicio.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Términos de Servicio
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+)}

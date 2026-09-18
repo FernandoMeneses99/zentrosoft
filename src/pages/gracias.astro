@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Floating from '../components/Floating.astro';
+import { whatsappLink } from '../data/site';
+
+const title = '¡Gracias por escribirnos! | ZentroSoft';
+const description =
+  'Recibimos tu mensaje. Un experto de ZentroSoft se pondrá en contacto contigo en menos de 24 horas hábiles.';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="https://zentrosoft.vercel.app/gracias.html"
+  ogUrl="https://zentrosoft.vercel.app/gracias.html"
+  robots="noindex, nofollow"
+>
+  <Header />
+  <main id="contenido">
+    <section class="cta-band" aria-label="Confirmación de mensaje recibido">
+      <div class="container">
+        <div class="cta-band-inner">
+          <div class="cta-band-text">
+            <span class="cta-band-tag">Mensaje recibido</span>
+            <h2>¡Gracias por escribirnos!</h2>
+            <p>
+              Recibimos tu mensaje correctamente. Un experto de <strong>ZentroSoft</strong> se pondrá en
+              contacto contigo en <strong>menos de 24 horas hábiles</strong> con una propuesta clara para tu
+              proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-prop" aria-label="Próximos pasos">
+      <div class="container">
+        <div class="value-prop-header">
+          <div class="section-label">Próximos pasos</div>
+          <h2 class="section-title">¿Qué sigue ahora?</h2>
+        </div>
+        <div class="value-grid value-grid--six">
+          <div class="value-card">
+            <div class="process-step">1</div>
+            <h3>Revisamos tu caso</h3>
+            <p>
+              Un experto analiza tu mensaje y tu presencia digital actual para preparar una respuesta útil.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="process-step">2</div>
+            <h3>Te contactamos</h3>
+            <p>Te escribimos o llamamos en menos de 24 horas hábiles para entender tu objetivo en detalle.</p>
+          </div>
+          <div class="value-card">
+            <div class="process-step">3</div>
+            <h3>Recibes tu propuesta</h3>
+            <p>Te enviamos alcance, plazos y precio cerrado por escrito. Sin sorpresas ni costos ocultos.</p>
+          </div>
+        </div>
+        <div class="hero-actions hero-actions--center">
+          <a href="/" class="btn-primary">
+            Volver al inicio
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M6 12l4-4-4-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            href={whatsappLink('Hola ZentroSoft, acabo de enviar el formulario de contacto.')}
+            class="btn-outline btn-outline--light"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <Floating />
+
+  <script>
+    import { initHeaderScroll, initSmoothScroll, initMobileMenu, initToTop } from '../scripts/ui';
+
+    initHeaderScroll();
+    initSmoothScroll();
+    initMobileMenu();
+    initToTop();
+  </script>
+</BaseLayout>

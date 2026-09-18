@@ -1,0 +1,187 @@
+---
+import { whatsappLink, VP_WHATSAPP_MESSAGE } from '../data/site';
+
+const vpWhatsapp = whatsappLink(VP_WHATSAPP_MESSAGE);
+---
+
+<section class="contact" id="contacto" aria-label="Solicitar demo de VelarisPOS">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Solicita tu demo</div>
+        <h2 class="section-title">Agenda una demostración en vivo</h2>
+        <p class="section-subtitle">
+          Cuéntanos sobre tu negocio y te mostraremos cómo VelarisPOS puede centralizar toda tu operación.
+        </p>
+        <ul class="contact-details">
+          <li class="contact-detail">
+            <span class="contact-detail-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#4FD290"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <div>
+              <span class="contact-detail-label">Correo</span>
+              <a href="mailto:contacto@zentrosoft.com">contacto@zentrosoft.com</a>
+            </div>
+          </li>
+          <li class="contact-detail">
+            <span class="contact-detail-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#4FD290"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <div>
+              <span class="contact-detail-label">WhatsApp</span>
+              <a href={vpWhatsapp}>+57 300 904 7298</a>
+            </div>
+          </li>
+          <li class="contact-detail">
+            <span class="contact-detail-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#4FD290"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <div>
+              <span class="contact-detail-label">Ubicación</span>
+              <span>Bogotá D.C., Colombia</span>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="btn-outline vp-back-btn" id="vp-back-home">
+          &larr; Volver a ZentroSoft
+        </a>
+      </div>
+
+      <div class="contact-form-card">
+        <form id="vp-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vp-nombre">
+                Nombre completo <span aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="vp-nombre"
+                name="nombre"
+                required
+                autocomplete="name"
+                placeholder="Su nombre"
+              />
+            </div>
+            <div class="form-group">
+              <label for="vp-empresa">
+                Empresa <span aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="vp-empresa"
+                name="empresa"
+                required
+                autocomplete="organization"
+                placeholder="Nombre de tu negocio"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vp-correo">
+                Correo electrónico <span aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="vp-correo"
+                name="correo"
+                required
+                autocomplete="email"
+                placeholder="nombre@tuempresa.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="vp-telefono">Teléfono / WhatsApp</label>
+              <input
+                type="tel"
+                id="vp-telefono"
+                name="telefono"
+                autocomplete="tel"
+                placeholder="+57 300 000 0000"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vp-negocio">Tipo de negocio</label>
+            <select id="vp-negocio" name="negocio">
+              <option value="">Seleccione una opción</option>
+              <option value="Retail / Tienda">Retail / Tienda</option>
+              <option value="Restaurante">Restaurante</option>
+              <option value="Farmacia">Farmacia</option>
+              <option value="Inmobiliaria">Inmobiliaria</option>
+              <option value="Salud / Clínica">Salud / Clínica</option>
+              <option value="Educación">Educación</option>
+              <option value="Manufactura">Manufactura</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="vp-mensaje">
+              Mensaje <span aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="vp-mensaje"
+              name="mensaje"
+              rows="4"
+              required
+              placeholder="Cuéntanos sobre tu operación y necesidades"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="vp-submit" class="btn-primary form-submit">
+            Solicitar demo
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M6 12l4-4-4-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <p id="vp-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

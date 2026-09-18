@@ -1,0 +1,123 @@
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-stats {
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+
+  .hero-stat + .hero-stat {
+    padding-left: var(--space-xl);
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .news-card {
+    flex: 0 0 calc(50% - var(--space-xl) / 2);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 120px 0 var(--space-4xl);
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 100%;
+    padding: var(--space-xl);
+  }
+
+  .hero-stat + .hero-stat {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 0;
+    padding-top: var(--space-lg);
+  }
+
+  .hero-indicators {
+    bottom: 24px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .news-card {
+    flex: 0 0 calc(100% - var(--space-md));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+}

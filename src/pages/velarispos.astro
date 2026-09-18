@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import VpHero from '../components/VpHero.astro';
+import VpSolucion from '../components/VpSolucion.astro';
+import VpPilares from '../components/VpPilares.astro';
+import VpFuncionalidades from '../components/VpFuncionalidades.astro';
+import VpIndustrias from '../components/VpIndustrias.astro';
+import VpTecnologia from '../components/VpTecnologia.astro';
+import VpReportes from '../components/VpReportes.astro';
+import VpCta from '../components/VpCta.astro';
+import Faq from '../components/Faq.astro';
+import VpContacto from '../components/VpContacto.astro';
+import Footer from '../components/Footer.astro';
+import Floating from '../components/Floating.astro';
+import { velarisFaqs } from '../data/faq';
+import { velarisJsonLd } from '../data/jsonld';
+import { VP_WHATSAPP_MESSAGE } from '../data/site';
+
+const title = 'VelarisPOS | Punto de Venta y ERP todo-en-uno | ZentroSoft';
+const description =
+  'VelarisPOS es un sistema de punto de venta (POS) y gestión empresarial (ERP) todo-en-uno: vende en tienda y online, gestiona inventario, facturación, contabilidad, equipo y reportes en tiempo real desde una sola plataforma.';
+const keywords =
+  'VelarisPOS, punto de venta, POS, ERP, inventario, facturación, tienda online, e-commerce, Bogotá, Colombia, ZentroSoft';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="https://zentrosoft.vercel.app/velarispos.html"
+  ogUrl="https://zentrosoft.vercel.app/velarispos.html"
+  ogImage="https://zentrosoft.vercel.app/img/product-velarispos.svg"
+  keywords={keywords}
+  jsonLd={velarisJsonLd}
+>
+  <Header variant="velarispos" />
+  <VpHero />
+  <main id="contenido">
+    <VpSolucion />
+    <VpPilares />
+    <VpFuncionalidades />
+    <VpIndustrias />
+    <VpTecnologia />
+    <VpReportes />
+    <VpCta />
+    <Faq
+      faqs={velarisFaqs}
+      subtitle="Todo lo que necesitas saber antes de implementar VelarisPOS en tu negocio."
+      ariaLabel="Preguntas frecuentes VelarisPOS"
+    />
+  </main>
+  <VpContacto />
+  <Footer variant="velarispos" />
+  <Floating label="¿Quieres una demo?" message={VP_WHATSAPP_MESSAGE} />
+
+  <script>
+    import {
+      initHeaderScroll,
+      initSmoothScroll,
+      initMobileMenu,
+      initCountUp,
+      initScrollAnimations,
+      initToTop,
+    } from '../scripts/ui';
+    import { initBackLink, initVpForm } from '../scripts/velaris';
+
+    initHeaderScroll();
+    initSmoothScroll();
+    initCountUp();
+    initScrollAnimations(
+      '.value-card, .vp-pillar, .vp-feature, .vp-tech-item, .vp-industry-chip, .vp-reports-list li',
+      [
+        '.value-grid',
+        '.vp-pillar-grid',
+        '.vp-feature-grid',
+        '.vp-tech-list',
+        '.vp-industry-chips',
+        '.vp-reports-list',
+      ],
+    );
+    initMobileMenu();
+    initBackLink();
+    initVpForm();
+    initToTop();
+  </script>
+</BaseLayout>

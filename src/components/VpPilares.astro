@@ -1,0 +1,29 @@
+---
+import { pilares } from '../data/velaris';
+---
+
+<section class="vp-pillars" id="pilares">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <div class="section-label">Cómo funciona</div>
+        <h2 class="section-title">4 pilares para controlar tu negocio</h2>
+        <p class="section-subtitle">
+          Todo integrado nativamente, en una misma base de datos y una misma interfaz.
+        </p>
+      </div>
+    </div>
+
+    <div class="vp-pillar-grid">
+      {pilares.map((pilar) => (
+        <div class="vp-pillar">
+          <div class="vp-pillar-ico">
+            <img src={pilar.img} alt={pilar.alt} loading="lazy" width="88" height="88" />
+          </div>
+          <h3>{pilar.title}</h3>
+          <p>{pilar.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

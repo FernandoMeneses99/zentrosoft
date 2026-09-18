@@ -1,0 +1,73 @@
+---
+interface Props {
+  variant?: 'home' | 'velarispos';
+}
+
+const { variant = 'home' } = Astro.props;
+---
+
+{variant === 'home' ? (
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="ZentroSoft - Inicio">
+        <img
+          src="/img/logo-280w.avif"
+          srcset="/img/logo-140w.avif 140w, /img/logo-280w.avif 280w"
+          sizes="110px"
+          alt="ZentroSoft - Empresa de desarrollo de software en Bogotá"
+          width="140"
+          height="40"
+        />
+      </a>
+      <nav class="nav-links" id="mobile-menu" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto" class="nav-cta">
+          Solicitar asesoría
+        </a>
+      </nav>
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+    </div>
+  </header>
+) : (
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/velarispos.html" class="logo" aria-label="VelarisPOS - Inicio">
+        <span class="vp-logo-mark">
+          Velaris<span class="vp-logo-accent">POS</span>
+        </span>
+      </a>
+      <nav class="nav-links" id="mobile-menu" aria-label="Navegación principal VelarisPOS">
+        <a href="#inicio">Inicio</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#pilares">Cómo funciona</a>
+        <a href="#reportes">Reportes</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#contacto" class="nav-cta">
+          Solicita tu demo
+        </a>
+      </nav>
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+    </div>
+  </header>
+)}

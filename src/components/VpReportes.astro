@@ -1,0 +1,47 @@
+---
+import { vpReports } from '../data/velaris';
+---
+
+<section class="vp-reports" id="reportes">
+  <div class="container">
+    <div class="vp-reports-grid">
+      <div class="vp-reports-visual">
+        <img
+          src="/img/velarispos/dashboard-reportes.svg"
+          alt="Panel de reportes y métricas en tiempo real de VelarisPOS"
+          loading="lazy"
+          width="760"
+          height="440"
+        />
+      </div>
+      <div class="vp-reports-copy">
+        <div class="section-label">Reportes e inteligencia de negocio</div>
+        <h2 class="vp-tech-title">Toda tu operación en un solo panel</h2>
+        <p>
+          VelarisPOS convierte los datos de cada venta, producto y cliente en reportes claros y en tiempo
+          real. Deja de decidir &laquo;a ojo&raquo; y toma el control con indicadores accionables.
+        </p>
+        <ul class="vp-reports-list">
+          {vpReports.map((report) => (
+            <li>
+              <strong>{report.strong}</strong>
+              <span>{report.span}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="#contacto" class="btn-primary">
+          Ver reportes en tu demo
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M6 12l4-4-4-4"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

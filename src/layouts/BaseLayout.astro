@@ -1,0 +1,124 @@
+---
+import '../styles/main.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogUrl: string;
+  ogImage?: string;
+  keywords?: string;
+  robots?: string;
+  jsonLd?: Record<string, unknown>;
+  preloadHero?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogUrl,
+  ogImage = 'https://zentrosoft.vercel.app/img/og-cover.png',
+  keywords,
+  robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+  jsonLd,
+  preloadHero = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="facebook-domain-verification" content="0f23u3mz40vrx9k4swtl7swm3j415b" />
+
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0A1628" />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="author" content="ZentroSoft" />
+    <meta name="geo.region" content="CO-DC" />
+    <meta name="geo.placename" content="Bogotá D.C." />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="ZentroSoft" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={ogUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      />
+    </noscript>
+
+    {preloadHero && (
+      <link
+        rel="preload"
+        as="image"
+        href="/img/Hero-1.avif"
+        imagesrcset="/img/Hero-1-960.avif 960w, /img/Hero-1-1440.avif 1440w, /img/Hero-1.avif 1920w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
+    )}
+
+    <!--
+      Analítica (GA4 / GTM): NO declarar scripts aquí.
+      El cargador consent-aware está en src/scripts/cookie-consent.ts (constante GTM_ID)
+      y solo inyecta el script de GTM cuando el usuario otorga su consentimiento (Ley 1581 de 2012).
+    -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args) {
+        window.dataLayer.push(args);
+      }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+    </script>
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>}
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido principal
+    </a>
+    <slot />
+  </body>
+</html>
