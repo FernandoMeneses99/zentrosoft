@@ -1,7 +1,7 @@
 export const WHATSAPP_NUMBER = '573009047298';
 export const WHATSAPP_MESSAGE = 'Hola ZentroSoft, quiero cotizar mi página web.';
 export const VP_WHATSAPP_MESSAGE = 'Hola ZentroSoft, quiero una demo de VelarisPOS para mi negocio.';
-export const CONTACT_EMAIL = 'contacto@zentrosoft.com';
+export const CONTACT_EMAIL = 'zentrosoft.co@gmail.com';
 export const PHONE_DISPLAY = '+57 300 904 7298';
 export const SITE_URL = 'https://zentrosoft.vercel.app';
 

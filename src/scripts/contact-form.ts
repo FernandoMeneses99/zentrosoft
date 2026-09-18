@@ -7,7 +7,7 @@ import { trackEvent } from './cookie-consent';
 const EMAILJS_PUBLIC_KEY = 'v9Gg4_hoWSHtFF_yI';
 const EMAILJS_SERVICE_ID = 'service_mp1yyv8';
 const EMAILJS_TEMPLATE_ID = 'template_tp6gkjb';
-const CONTACT_EMAIL = 'contacto@zentrosoft.com';
+const CONTACT_EMAIL = 'zentrosoft.co@gmail.com';
 
 type StatusType = 'success' | 'error' | 'info';
 

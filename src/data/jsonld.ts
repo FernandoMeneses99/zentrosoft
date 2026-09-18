@@ -46,7 +46,7 @@ export const homeJsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        email: 'contacto@zentrosoft.com',
+        email: 'zentrosoft.co@gmail.com',
         availableLanguage: 'Spanish',
       },
     },
