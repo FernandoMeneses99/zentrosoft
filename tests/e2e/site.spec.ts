@@ -68,6 +68,7 @@ test('página /gracias funciona y es noindex', async ({ page }) => {
   await expect(page.getByRole('heading', { name: '¡Gracias por escribirnos!' })).toBeVisible();
   const robots = await page.getAttribute('meta[name="robots"]', 'content');
   expect(robots).toContain('noindex');
+  await expect(page.locator('#gracias-countdown')).toHaveText('5');
   await page.getByRole('link', { name: 'Volver al inicio' }).click();
   await expect(page).toHaveURL(/\/$/);
 });

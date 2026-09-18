@@ -19,7 +19,7 @@ const description =
 >
   <Header />
   <main id="contenido">
-    <section class="cta-band" aria-label="Confirmación de mensaje recibido">
+    <section class="cta-band page-top-pad" aria-label="Confirmación de mensaje recibido">
       <div class="container">
         <div class="cta-band-inner">
           <div class="cta-band-text">
@@ -29,6 +29,17 @@ const description =
               Recibimos tu mensaje correctamente. Un experto de <strong>ZentroSoft</strong> se pondrá en
               contacto contigo en <strong>menos de 24 horas hábiles</strong> con una propuesta clara para tu
               proyecto.
+            </p>
+            <p>
+              Serás redirigido al inicio en{' '}
+              <strong>
+                <span id="gracias-countdown">5</span> segundos
+              </strong>
+              . Si prefieres,{' '}
+              <a href="/" style="color: var(--color-secondary); font-weight: 600;">
+                vuelve ahora
+              </a>
+              .
             </p>
           </div>
         </div>
@@ -95,5 +106,18 @@ const description =
     initSmoothScroll();
     initMobileMenu();
     initToTop();
+
+    // Red de seguridad: si alguien aterriza aquí, volver al inicio en 5 s.
+    const countdownEl = document.getElementById('gracias-countdown');
+    let remaining = 5;
+    const countdownTimer = window.setInterval(() => {
+      remaining -= 1;
+      if (remaining <= 0) {
+        window.clearInterval(countdownTimer);
+        window.location.href = '/';
+        return;
+      }
+      if (countdownEl) countdownEl.textContent = String(remaining);
+    }, 1000);
   </script>
 </BaseLayout>

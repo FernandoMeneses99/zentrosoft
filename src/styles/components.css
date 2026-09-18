@@ -1224,3 +1224,135 @@
   justify-content: center;
   margin-top: var(--space-2xl);
 }
+
+/* --- Compensación del header fijo en páginas sin hero (p. ej. /gracias) --- */
+.page-top-pad {
+  padding-top: calc(72px + var(--space-3xl));
+}
+
+/* ============================================
+   TOAST estilo Dynamic Island (éxito formulario)
+   ============================================ */
+.toast {
+  position: fixed;
+  top: calc(72px + var(--space-md));
+  left: 50%;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: min(420px, calc(100vw - 2rem));
+  padding: 0.85rem 1rem 1rem;
+  background: rgba(10, 22, 40, 0.92);
+  border: 1px solid rgba(79, 210, 144, 0.35);
+  border-radius: 20px;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  opacity: 0;
+  transform: translateX(-50%) translateY(-18px) scale(0.96);
+  transition:
+    opacity 0.35s var(--ease-out),
+    transform 0.35s var(--ease-out);
+  overflow: hidden;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(79, 210, 144, 0.15);
+  border: 1px solid rgba(79, 210, 144, 0.45);
+  color: var(--color-secondary);
+}
+
+.toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.toast-text strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+.toast-text span {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--color-text-on-dark);
+}
+
+.toast-close {
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.toast-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: 0 0 0 20px;
+  transform-origin: left center;
+}
+
+.toast.show .toast-progress {
+  animation: toast-countdown 5s linear forwards;
+}
+
+@keyframes toast-countdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    transition: none;
+  }
+
+  .toast.show .toast-progress {
+    animation: none;
+    display: none;
+  }
+}
