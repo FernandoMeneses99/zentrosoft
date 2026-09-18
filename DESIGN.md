@@ -18,16 +18,9 @@ ZentroSoft is a Colombian web development agency founded in 2025, based in Bogot
 
 **Primary Background:**
 - `canvas` — `#ffffff` (light sections)
-- `bone` — `#faf6f0` (warm off-white alternating sections)
 - `canvas-dark` — `#0a1628` (hero, footer, dark sections)
 - `surface` — `#f8fafc` (alternating light sections)
 - `surface-dark` — `#132238` (cards on dark backgrounds)
-
-**Section Rhythm (home):** strict dark/light alternation —
-hero `canvas-dark` → servicios `bone` → planes `canvas-dark` → nosotros `surface` →
-clientes `canvas-dark` → productos `bone` → proceso `canvas-dark` → CTA band `surface` →
-FAQ `canvas-dark` → contacto `surface` → footer `canvas-dark`.
-Cards stay white on any background; only section headers adapt (see `SECTION THEMES` in `sections.css`).
 
 **Brand Colors:**
 - `primary` — `#4B82C3` (corporate blue — headers, CTAs, links)
