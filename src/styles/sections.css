@@ -918,7 +918,7 @@
   top: var(--space-md);
   left: var(--space-md);
   padding: 4px 12px;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: var(--color-white);
   border-radius: var(--radius-full);
   font-size: 0.7rem;

@@ -120,7 +120,7 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   margin-bottom: var(--space-lg);
 }
 
@@ -129,7 +129,7 @@ h6 {
   display: inline-block;
   width: 24px;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   border-radius: 1px;
 }
 
