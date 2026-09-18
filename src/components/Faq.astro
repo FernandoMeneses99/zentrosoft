@@ -8,6 +8,7 @@ interface Props {
   subtitle?: string;
   ariaLabel?: string;
   id?: string;
+  theme?: 'light' | 'dark';
 }
 
 const {
@@ -17,10 +18,15 @@ const {
   subtitle = 'Todo lo que necesitas saber antes de iniciar tu proyecto con nosotros.',
   ariaLabel = 'Preguntas frecuentes',
   id = 'faq',
+  theme = 'light',
 } = Astro.props;
 ---
 
-<section class="faq-section" id={id} aria-label={ariaLabel}>
+<section
+  class:list={['faq-section', { 'faq-section--dark': theme === 'dark' }]}
+  id={id}
+  aria-label={ariaLabel}
+>
   <div class="container">
     <div class="value-prop-header">
       <div class="section-label">{sectionLabel}</div>

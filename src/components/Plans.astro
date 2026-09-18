@@ -1,0 +1,44 @@
+---
+import { plans, plansNote } from '../data/plans';
+import { whatsappLink } from '../data/site';
+---
+
+<section class="value-prop value-prop--dark plans" id="planes" aria-labelledby="planes-title">
+  <div class="container">
+    <div class="value-prop-header">
+      <div class="section-label">Planes</div>
+      <h2 class="section-title" id="planes-title">
+        Planes y soluciones
+      </h2>
+      <p class="section-subtitle">Soluciones digitales adaptadas a las necesidades de tu negocio.</p>
+    </div>
+
+    <div class="value-grid">
+      {plans.map((plan) => (
+        <article class:list={['value-card', 'plan-card', { 'plan-card--featured': plan.featured }]}>
+          {plan.featured && <span class="plan-badge">Más solicitado</span>}
+          <p class="plan-category">{plan.category}</p>
+          <h3 class="plan-name">{plan.name}</h3>
+          <p class="plan-desc">{plan.description}</p>
+          <p class="plan-price">{plan.price}</p>
+          <ul class="plan-features">
+            {plan.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          <a
+            href={whatsappLink(plan.message)}
+            class="btn-primary plan-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${plan.cta} sobre el plan ${plan.name} por WhatsApp`}
+          >
+            {plan.cta}
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <p class="plans-note">{plansNote}</p>
+  </div>
+</section>

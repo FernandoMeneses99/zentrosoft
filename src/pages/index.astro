@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
+import Plans from '../components/Plans.astro';
 import About from '../components/About.astro';
 import Clients from '../components/Clients.astro';
 import Products from '../components/Products.astro';
@@ -35,12 +36,13 @@ const keywords =
   <Hero />
   <main id="contenido">
     <Services />
+    <Plans />
     <About />
     <Clients />
     <Products />
     <Process />
     <CtaBand />
-    <Faq faqs={homeFaqs} />
+    <Faq faqs={homeFaqs} theme="dark" />
   </main>
   <Contact />
   <Footer />
