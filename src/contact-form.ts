@@ -1,11 +1,10 @@
-import emailjs from '@emailjs/browser'
 import { trackEvent } from './cookie-consent'
 
 // Credenciales de EmailJS de ZentroSoft (las claves públicas son visibles en el bundle por diseño)
 const EMAILJS_PUBLIC_KEY = 'v9Gg4_hoWSHtFF_yI'
 const EMAILJS_SERVICE_ID = 'service_mp1yyv8'
 const EMAILJS_TEMPLATE_ID = 'template_tp6gkjb'
-const CONTACT_EMAIL = 'fernandomenesesda@gmail.com'
+const CONTACT_EMAIL = 'contacto@zentrosoft.com'
 
 type StatusType = 'success' | 'error' | 'info'
 
@@ -41,15 +40,17 @@ export function initContactForm(): void {
     }
 
     const submitBtn = form.querySelector<HTMLButtonElement>('#form-submit')
-    const originalLabel = submitBtn?.textContent ?? ''
+    const originalHTML = submitBtn?.innerHTML ?? ''
     if (submitBtn) {
       submitBtn.disabled = true
-      submitBtn.textContent = 'Enviando...'
+      submitBtn.setAttribute('aria-busy', 'true')
+      submitBtn.textContent = 'Enviando…'
     }
 
     const data = new FormData(form)
 
     try {
+      const { default: emailjs } = await import('@emailjs/browser')
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -78,7 +79,8 @@ export function initContactForm(): void {
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false
-        submitBtn.textContent = originalLabel
+        submitBtn.removeAttribute('aria-busy')
+        submitBtn.innerHTML = originalHTML
       }
     }
   })

@@ -11,55 +11,57 @@ const WHATSAPP_NUMBER = '573009047298'
 const WHATSAPP_MESSAGE = 'Hola ZentroSoft, quiero cotizar mi página web.'
 
 app.innerHTML = `
+<!-- ===== SKIP LINK ===== -->
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 <!-- ===== HEADER ===== -->
 <header class="header" role="banner">
   <div class="container header-inner">
-    <a href="#" class="logo" aria-label="ZentroSoft - Inicio">
-      <img src="/img/logo-280w.avif" srcset="/img/logo-140w.avif 140w, /img/logo-280w.avif 280w" sizes="110px" alt="ZentroSoft - Agencia de Desarrollo Web en Bogotá" width="140" height="40" />
+    <a href="#inicio" class="logo" aria-label="ZentroSoft - Inicio">
+      <img src="/img/logo-280w.avif" srcset="/img/logo-140w.avif 140w, /img/logo-280w.avif 280w" sizes="110px" alt="ZentroSoft - Empresa de desarrollo de software en Bogotá" width="140" height="40" />
     </a>
-    <nav class="nav-links" aria-label="Navegación principal">
+    <nav class="nav-links" id="nav-principal" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
       <a href="#productos">Productos</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#clientes">Clientes</a>
-      <a href="#contacto" class="nav-cta">Cotiza tu proyecto</a>
+      <a href="#contacto" class="nav-cta">Solicitar asesoría</a>
     </nav>
-    <button class="menu-toggle" aria-label="Abrir menú de navegación">
+    <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-principal">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="inicio" aria-label="Bienvenida a ZentroSoft - Desarrollo Web">
-    <div class="hero-slides">
+<section class="hero" id="inicio" aria-label="ZentroSoft: empresa de desarrollo de software">
+    <div class="hero-slides" aria-hidden="true">
     <div class="hero-slide active">
-      <img src="/img/Hero-1.avif" srcset="/img/Hero-1-960.avif 960w, /img/Hero-1-1440.avif 1440w, /img/Hero-1.avif 1920w" sizes="100vw" alt="Interfaces y landing pages desarrolladas por ZentroSoft" loading="eager" fetchpriority="high" width="1920" height="1080" />
+      <img src="/img/Hero-1.avif" srcset="/img/Hero-1-960.avif 960w, /img/Hero-1-1440.avif 1440w, /img/Hero-1.avif 1920w" sizes="100vw" alt="" loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080" />
     </div>
     <div class="hero-slide">
-      <img src="/img/Hero-2.avif" srcset="/img/Hero-2-960.avif 960w, /img/Hero-2-1440.avif 1440w, /img/Hero-2.avif 1920w" sizes="100vw" alt="Equipo de desarrollo web de ZentroSoft trabajando en soluciones digitales" loading="eager" width="1920" height="1080" />
+      <img src="/img/Hero-2.avif" srcset="/img/Hero-2-960.avif 960w, /img/Hero-2-1440.avif 1440w, /img/Hero-2.avif 1920w" sizes="100vw" alt="" loading="lazy" fetchpriority="low" decoding="async" width="1920" height="1080" />
     </div>
   </div>
 
   <div class="container hero-content">
-    <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
-      Agencia de desarrollo web en Bogotá
-    </div>
+    <p class="hero-badge">
+      <span class="hero-badge-dot" aria-hidden="true"></span>
+      Empresa de desarrollo de software · Bogotá
+    </p>
     <h1>
-      Desarrollo de Software y<br/>
-      <span class="highlight"><span id="rotating-word">Desarrollo Web a Medida</span><span class="type-caret" aria-hidden="true"></span></span>
+      Software a medida que<br/>
+      <span class="highlight"><span id="rotating-word">centraliza tu operación</span><span class="type-caret" aria-hidden="true"></span></span>
     </h1>
     <p class="hero-text">
-      Somos una empresa de desarrollo de software y agencia de desarrollo web en Bogotá. Creamos software a medida, desarrollo de aplicaciones web, plataformas digitales, landing pages y optimización SEO que convierten visitas en clientes, y acompañamos toda tu transformación digital con soporte técnico especializado. Tecnología moderna para pymes y emprendedores.
+      Diseñamos y desarrollamos aplicaciones web, plataformas SaaS y sitios de alto rendimiento para pymes en Colombia. Centraliza. Automatiza. Crece.
     </p>
     <div class="hero-actions">
-      <a href="#servicios" class="btn-primary">
-        Ver Servicios
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="#contacto" class="btn-primary">
+        Solicitar asesoría
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="#contacto" class="btn-outline">
-        Cotiza tu proyecto
+      <a href="#servicios" class="btn-outline">
+        Ver servicios
       </a>
     </div>
     <div class="hero-stats">
@@ -78,21 +80,21 @@ app.innerHTML = `
     </div>
   </div>
 
-  <div class="hero-indicators">
-    <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
-    <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
+  <div class="hero-indicators" role="tablist" aria-label="Presentación">
+    <button class="hero-indicator active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+    <button class="hero-indicator" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
   </div>
 </section>
 
 <!-- ===== SERVICES ===== -->
-<main>
+<main id="contenido">
 <section class="value-prop" id="servicios">
   <div class="container">
     <div class="value-prop-header">
       <div class="section-label">Nuestros Servicios</div>
-      <h2 class="section-title">Todo lo que tu negocio necesita para triunfar en internet</h2>
+      <h2 class="section-title">Software y web para operar, vender y crecer</h2>
       <p class="section-subtitle">
-        De la idea al lanzamiento y más allá: somos tu empresa tecnológica de confianza. Cubrimos el desarrollo de software a medida, desarrollo de aplicaciones web, desarrollo SaaS, creación de páginas web y toda tu transformación digital con servicios especializados.
+        Desarrollo de software a medida, aplicaciones web, plataformas SaaS y sitios optimizados para conversión. Un solo equipo para todo tu ciclo digital.
       </p>
     </div>
 
@@ -180,7 +182,7 @@ app.innerHTML = `
     <div class="about-header">
       <div class="about-header-text">
         <div class="section-label">Nuestra Organización</div>
-        <h2 class="section-title">Tu aliado tecnológico en Bogotá</h2>
+        <h2 class="section-title">Tu equipo de software en Bogotá</h2>
       </div>
     </div>
 
@@ -531,7 +533,7 @@ app.innerHTML = `
         <div class="section-label">Contacto</div>
         <h2 class="section-title">Hablemos de tu proyecto</h2>
         <p class="section-subtitle">
-          Completa el formulario y recibe una propuesta clara y personalizada para tu sitio web o producto digital.
+          Cuéntanos tu objetivo y recibe una propuesta clara: alcance, plazos y precio cerrado.
         </p>
 
         <ul class="contact-details">
@@ -726,28 +728,48 @@ app.innerHTML = `
 function initHeroCarousel() {
   const slides = document.querySelectorAll<HTMLDivElement>('.hero-slide')
   const indicators = document.querySelectorAll<HTMLButtonElement>('.hero-indicator')
+  if (slides.length < 2) return
   let currentSlide = 0
+  let timer: number | undefined
 
   function goToSlide(index: number) {
     slides[currentSlide].classList.remove('active')
     indicators[currentSlide].classList.remove('active')
+    indicators[currentSlide].setAttribute('aria-selected', 'false')
     currentSlide = index
     slides[currentSlide].classList.add('active')
     indicators[currentSlide].classList.add('active')
+    indicators[currentSlide].setAttribute('aria-selected', 'true')
   }
 
   function nextSlide() {
     goToSlide((currentSlide + 1) % slides.length)
   }
 
-  if (!PREFERS_REDUCED_MOTION) {
-    setInterval(nextSlide, 3000)
+  function startAutoplay() {
+    if (PREFERS_REDUCED_MOTION) return
+    stopAutoplay()
+    timer = window.setTimeout(function tick() {
+      if (document.hidden) {
+        timer = window.setTimeout(tick, 3000)
+        return
+      }
+      nextSlide()
+      timer = window.setTimeout(tick, 5000)
+    }, 5000)
   }
+
+  function stopAutoplay() {
+    if (timer !== undefined) window.clearTimeout(timer)
+  }
+
+  startAutoplay()
 
   indicators.forEach((indicator) => {
     indicator.addEventListener('click', () => {
-      const slideIndex = parseInt(indicator.dataset.slide || '0')
+      const slideIndex = parseInt(indicator.dataset.slide || '0', 10)
       goToSlide(slideIndex)
+      startAutoplay()
     })
   })
 }
@@ -777,31 +799,30 @@ function initNewsCarousel() {
    HEADER SCROLL EFFECT
    ============================================ */
 function initHeaderScroll() {
-  const header = document.querySelector<HTMLDivElement>('.header')
+  const header = document.querySelector<HTMLElement>('.header')
   if (!header) return
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.style.background = 'rgba(10, 22, 40, 0.95)'
-    } else {
-      header.style.background = 'rgba(10, 22, 40, 0.85)'
-    }
-  })
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 50)
+  }
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
 }
 
 /* ============================================
-   SMOOTH SCROLL for anchor links
+   SMOOTH SCROLL for anchor links (a11y: mueve foco)
    ============================================ */
 function initSmoothScroll() {
   document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href')
       if (!href || href === '#') return
+      const target = document.querySelector<HTMLElement>(href)
+      if (!target) return
       e.preventDefault()
-      const target = document.querySelector(href)
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
+      target.scrollIntoView({ behavior: PREFERS_REDUCED_MOTION ? 'auto' : 'smooth', block: 'start' })
+      if (target.tabIndex < 0) target.tabIndex = -1
+      window.setTimeout(() => target.focus({ preventScroll: true }), PREFERS_REDUCED_MOTION ? 0 : 500)
     })
   })
 }
@@ -853,7 +874,7 @@ function initRotatingWord() {
   const wordEl = document.getElementById('rotating-word')
   if (!wordEl || PREFERS_REDUCED_MOTION) return
 
-  const words = ['Desarrollo Web a Medida', 'Software a Medida', 'Aplicaciones Web', 'Soluciones SaaS', 'Plataformas Digitales', 'Optimización SEO']
+  const words = ['centraliza tu operación', 'automatiza tus procesos', 'impulsa tu crecimiento', 'software a medida', 'aplicaciones web', 'plataformas SaaS']
   let wordIndex = 0
   let charIndex = words[0].length
   let isDeleting = false
@@ -891,7 +912,7 @@ function initRotatingWord() {
    ============================================ */
 function initScrollAnimations() {
   const targets = document.querySelectorAll<HTMLElement>(
-    '.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card, .faq-item'
+    '.value-card, .about-mission-card, .about-value-item, .about-highlight, .news-card, .faq-item, .process-card'
   )
   if (!targets.length || PREFERS_REDUCED_MOTION) return
 
@@ -901,15 +922,15 @@ function initScrollAnimations() {
     '.about-values-grid',
     '.about-highlights',
     '.news-carousel',
-    '.faq-list'
+    '.faq-list',
+    '.process-grid'
   ]
-  const delayMap = new Map<HTMLElement, number>()
 
   staggerContainers.forEach((selector) => {
     const container = document.querySelector(selector)
     if (!container) return
     Array.from(container.children).forEach((child, index) => {
-      delayMap.set(child as HTMLElement, Math.min(index * 90, 450))
+      ;(child as HTMLElement).style.setProperty('--reveal-delay', `${Math.min(index * 80, 400)}ms`)
     })
   })
 
@@ -917,76 +938,52 @@ function initScrollAnimations() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
-        const el = entry.target as HTMLElement
-        el.classList.add('visible')
-        const delay = delayMap.get(el) ?? 0
-        window.setTimeout(() => {
-          el.style.transitionDelay = '0ms'
-        }, delay + 650)
-        observer.unobserve(el)
+        entry.target.classList.add('visible')
+        observer.unobserve(entry.target)
       })
     },
-    { threshold: 0.1 }
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
   )
 
   targets.forEach((el) => {
-    const delay = delayMap.get(el) ?? 0
-    el.style.opacity = '0'
-    el.style.transform = 'translateY(24px)'
-    el.style.transition = `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`
+    el.classList.add('reveal')
     observer.observe(el)
   })
 }
-
-/* Add visible state */
-const style = document.createElement('style')
-style.textContent = `
-  .visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-`
-document.head.appendChild(style)
 
 /* ============================================
    MOBILE MENU
    ============================================ */
 function initMobileMenu() {
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')
-  const nav = document.querySelector<HTMLDivElement>('.nav-links')
+  const nav = document.querySelector<HTMLElement>('.nav-links')
   if (!toggle || !nav) return
 
+  const setOpen = (open: boolean) => {
+    nav.classList.toggle('nav-open', open)
+    toggle.classList.toggle('menu-open', open)
+    toggle.setAttribute('aria-expanded', String(open))
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación')
+  }
+
   toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('nav-open')
-    toggle.classList.toggle('menu-open', isOpen)
-    toggle.setAttribute('aria-expanded', String(isOpen))
+    setOpen(!nav.classList.contains('nav-open'))
   })
 
   nav.addEventListener('click', (e) => {
-    if ((e.target as HTMLElement).tagName === 'A') {
-      nav.classList.remove('nav-open')
-      toggle.classList.remove('menu-open')
-      toggle.setAttribute('aria-expanded', 'false')
+    if ((e.target as HTMLElement).closest('a')) setOpen(false)
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+      setOpen(false)
+      toggle.focus()
     }
   })
 }
 
 /* ============================================
    INIT
-   ============================================ */
-document.addEventListener('DOMContentLoaded', () => {
-  initHeroCarousel()
-  initCountUp()
-  initRotatingWord()
-  initNewsCarousel()
-  initHeaderScroll()
-  initSmoothScroll()
-  initScrollAnimations()
-  initMobileMenu()
-  initDiagnosticCTA()
-  injectDynamicJSONLD()
-/* ============================================
-   DIAGNOSTIC CTA - Preselects form service
    ============================================ */
 function initDiagnosticCTA() {
   const ctaBandBtn = document.querySelector<HTMLAnchorElement>('.js-diagnostic-cta')
@@ -1081,185 +1078,25 @@ function initToTop() {
   if (!btn) return
   const toggle = () => btn.classList.toggle('show', window.scrollY > 400)
   window.addEventListener('scroll', toggle, { passive: true })
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: PREFERS_REDUCED_MOTION ? 'auto' : 'smooth' }))
   toggle()
 }
 
-initCookieConsent()
-initContactForm()
-initConversionTracking()
-initToTop()
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroCarousel()
+  initCountUp()
+  initRotatingWord()
+  initNewsCarousel()
+  initHeaderScroll()
+  initSmoothScroll()
+  initScrollAnimations()
+  initMobileMenu()
+  initDiagnosticCTA()
+  initCookieConsent()
+  initContactForm()
+  initConversionTracking()
+  initToTop()
 })
 
-/* ============================================
-   DYNAMIC JSON-LD - Services & FAQ
-   ============================================ */
-function injectDynamicJSONLD() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Desarrollo de Software y Desarrollo Web a Medida",
-    "provider": {
-      "@type": "Organization",
-      "name": "ZentroSoft",
-      "url": "https://zentrosoft.vercel.app/"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Colombia"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de ZentroSoft",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Creación de Landing Pages",
-            "description": "Diseño, desarrollo e implementación de páginas de aterrizaje enfocadas en la conversión y CTAs efectivas."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Optimización SEO",
-            "description": "Implementación de prácticas SEO on-page, etiquetas meta, estructuras de encabezados, optimización de imágenes y contenido."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Consultoría y Capacitación",
-            "description": "Asesoramiento para pequeñas empresas y emprendedores sobre presencia web y herramientas como WordPress."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Soporte Técnico",
-            "description": "Resolución de problemas en sitios web, configuración de dominios, hosting y correos electrónicos."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo Frontend",
-            "description": "Creación de interfaces con Bootstrap e implementación de componentes interactivos con JavaScript."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mantenimiento Web",
-            "description": "Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo de Software a Medida",
-            "description": "Desarrollo de software personalizado y sistemas web adaptados a la operación del cliente, con automatización de procesos."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo de Aplicaciones Web",
-            "description": "Creación de aplicaciones web escalables, aplicaciones empresariales y plataformas digitales seguras."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo SaaS y Plataformas Digitales",
-            "description": "Construcción de soluciones SaaS multi-usuario y software empresarial en la nube para transformación digital."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "SoftwareApplication",
-            "name": "VelarisPOS",
-            "url": "https://zentrosoft.vercel.app/velarispos.html",
-            "description": "Sistema de punto de venta ágil e intuitivo para gestionar ventas, inventario y reportes del negocio."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "SoftwareApplication",
-            "name": "Zentro Inmobiliaria",
-            "url": "https://zentro.com.co",
-            "description": "Plataforma integral para administrar propiedades, contratos y clientes inmobiliarios."
-          }
-        }
-      ]
-    }
-  }
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué servicios ofrece ZentroSoft?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ofrecemos creación de landing pages enfocadas en conversión, optimización SEO on-page, consultoría y capacitación en presencia web y WordPress, soporte técnico de dominios, hosting y correos, desarrollo frontend con Bootstrap y JavaScript, y mantenimiento web."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué tecnologías utiliza ZentroSoft?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Trabajamos con JavaScript, Next.js, Tailwind CSS, Laravel, PHP, Bootstrap, MySQL y PostgreSQL, además de herramientas como WordPress según las necesidades del proyecto."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto cuesta desarrollar una landing page?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El valor depende del alcance del proyecto: número de secciones, funcionalidades, integraciones y contenido. Contáctanos y recibirás una propuesta clara adaptada a tus necesidades y presupuesto."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué productos propios ofrece ZentroSoft?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Contamos con VelarisPOS, sistema de punto de venta para gestionar ventas, inventario y reportes; y Zentro Inmobiliaria, plataforma integral para administrar propiedades, contratos y clientes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿En dónde opera ZentroSoft?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nuestra sede está en Bogotá D.C., Colombia, y acompañamos a pymes y emprendedores de todo el país tanto de forma presencial como remota."
-        }
-      }
-    ]
-  }
-
-  const serviceScript = document.createElement('script')
-  serviceScript.type = 'application/ld+json'
-  serviceScript.text = JSON.stringify(serviceSchema)
-  document.head.appendChild(serviceScript)
-
-  const faqScript = document.createElement('script')
-  faqScript.type = 'application/ld+json'
-  faqScript.text = JSON.stringify(faqSchema)
-  document.head.appendChild(faqScript)
-}
+/* JSON-LD estático en index.html (fuente única de verdad SEO).
+   No se inyecta JSON-LD dinámico para evitar duplicados Service/FAQ. */
