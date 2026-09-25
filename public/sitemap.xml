@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zentrosoft.vercel.app/</loc>
+    <loc>https://zentrosoft.dev/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zentrosoft.vercel.app/velarispos.html</loc>
+    <loc>https://zentrosoft.dev/velarispos.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zentrosoft.vercel.app/politica-privacidad.html</loc>
+    <loc>https://zentrosoft.dev/politica-privacidad.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://zentrosoft.vercel.app/politica-cookies.html</loc>
+    <loc>https://zentrosoft.dev/politica-cookies.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://zentrosoft.vercel.app/terminos-servicio.html</loc>
+    <loc>https://zentrosoft.dev/terminos-servicio.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

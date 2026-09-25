@@ -7,15 +7,15 @@ export const homeJsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://zentrosoft.vercel.app/#organization',
+      '@id': 'https://zentrosoft.dev/#organization',
       name: 'ZentroSoft',
       alternateName: 'ZentroSoft - Agencia de Desarrollo Web y Software a Medida',
-      url: 'https://zentrosoft.vercel.app/',
+      url: 'https://zentrosoft.dev/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://zentrosoft.vercel.app/img/Logo.png',
-        width: 600,
-        height: 200,
+        url: 'https://zentrosoft.dev/img/logo-280w.avif',
+        width: 280,
+        height: 80,
       },
       description:
         'ZentroSoft es una empresa de desarrollo de software y agencia de desarrollo web en Bogotá, especializada en software a medida, desarrollo de aplicaciones web, desarrollo SaaS, landing pages, optimización SEO, desarrollo frontend, consultoría, soporte técnico y mantenimiento web para pymes y emprendedores.',
@@ -52,13 +52,13 @@ export const homeJsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://zentrosoft.vercel.app/#website',
-      url: 'https://zentrosoft.vercel.app/',
+      '@id': 'https://zentrosoft.dev/#website',
+      url: 'https://zentrosoft.dev/',
       name: 'ZentroSoft - Agencia de Desarrollo Web y Software a Medida',
       description:
         'Desarrollo de software, desarrollo de aplicaciones web, desarrollo SaaS, desarrollo web y SEO en Bogotá, Colombia',
       publisher: {
-        '@id': 'https://zentrosoft.vercel.app/#organization',
+        '@id': 'https://zentrosoft.dev/#organization',
       },
       inLanguage: 'es',
     },
@@ -68,7 +68,7 @@ export const homeJsonLd = {
       description:
         'Desarrollo de software a medida, desarrollo de aplicaciones web, desarrollo SaaS, creación de landing pages, optimización SEO, consultoría y capacitación, soporte técnico, desarrollo frontend y mantenimiento web para pymes y emprendedores.',
       provider: {
-        '@id': 'https://zentrosoft.vercel.app/#organization',
+        '@id': 'https://zentrosoft.dev/#organization',
       },
       areaServed: {
         '@type': 'Country',
@@ -273,7 +273,7 @@ export const velarisJsonLd = {
       name: 'VelarisPOS',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      url: 'https://zentrosoft.vercel.app/velarispos.html',
+      url: 'https://zentrosoft.dev/velarispos.html',
       offers: {
         '@type': 'Offer',
         price: '0',
@@ -295,7 +295,7 @@ export const velarisJsonLd = {
       publisher: {
         '@type': 'Organization',
         name: 'ZentroSoft',
-        url: 'https://zentrosoft.vercel.app/',
+        url: 'https://zentrosoft.dev/',
       },
       inLanguage: 'es',
     },

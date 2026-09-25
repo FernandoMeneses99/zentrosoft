@@ -16,7 +16,7 @@ import { industries } from '../data/velaris';
     <div class="vp-industry-chips">
       {industries.map((industry) => (
         <span class="vp-industry-chip">
-          <img src={industry.img} alt="" loading="lazy" width="24" height="24" />
+          <img src={industry.img} alt="" aria-hidden="true" loading="lazy" width="24" height="24" />
           {industry.label}
         </span>
       ))}

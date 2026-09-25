@@ -6,6 +6,7 @@ const PRIVACY_POLICY_URL = '/politica-privacidad.html';
 const COOKIES_POLICY_URL = '/politica-cookies.html';
 
 const GTM_ID = 'GTM-55JS53W4';
+const GA_ID = 'G-LFL9V4WZTL';
 
 interface StoredConsent {
   version: number;
@@ -22,6 +23,24 @@ declare global {
 }
 
 let gtmInjected = false;
+let gaInjected = false;
+
+function injectGa(): void {
+  if (gaInjected) return;
+  gaInjected = true;
+  window.dataLayer = window.dataLayer || [];
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(script);
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtag(...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+  }
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID);
+}
 
 function injectGtm(): void {
   if (gtmInjected) return;
@@ -96,6 +115,7 @@ function applyDecision(analitica: boolean, marketing: boolean): void {
     marketing,
   });
   if (analitica || marketing) injectGtm();
+  if (analitica) injectGa();
   updateGoogleConsent(analitica, marketing);
 }
 
@@ -191,6 +211,13 @@ export function initCookieConsent(): void {
 
   if (stored) {
     if (stored.analitica || stored.marketing) scheduleGtm();
+    if (stored.analitica) {
+      if (document.readyState === 'complete') {
+        deferIdle(injectGa);
+      } else {
+        window.addEventListener('load', () => deferIdle(injectGa), { once: true });
+      }
+    }
     updateGoogleConsent(stored.analitica, stored.marketing);
   }
 

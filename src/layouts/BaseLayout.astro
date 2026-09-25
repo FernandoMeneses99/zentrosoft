@@ -13,12 +13,13 @@ interface Props {
   preloadHero?: boolean;
 }
 
+import { SITE_URL } from '../data/site';
 const {
   title,
   description,
   canonical,
   ogUrl,
-  ogImage = 'https://zentrosoft.vercel.app/img/og-cover.png',
+  ogImage = `${SITE_URL}/img/og-cover.png`,
   keywords,
   robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   jsonLd,
@@ -32,6 +33,7 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="facebook-domain-verification" content="0f23u3mz40vrx9k4swtl7swm3j415b" />
+    <meta name="google-site-verification" content="NbbTWJOigdsv4jUC5xH2BHzY6PKukiklQ-xyWvpkx7E" />
 
     <title>{title}</title>
     <meta name="title" content={title} />
@@ -94,9 +96,9 @@ const {
     )}
 
     <!--
-      Analítica (GA4 / GTM): NO declarar scripts aquí.
-      El cargador consent-aware está en src/scripts/cookie-consent.ts (constante GTM_ID)
-      y solo inyecta el script de GTM cuando el usuario otorga su consentimiento (Ley 1581 de 2012).
+      Analítica (GA4 G-LFL9V4WZTL / GTM GTM-55JS53W4): NO declarar scripts aquí.
+      El cargador consent-aware está en src/scripts/cookie-consent.ts (constantes GTM_ID y GA_ID)
+      y solo inyecta los scripts cuando el usuario otorga su consentimiento (Ley 1581 de 2012).
     -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
