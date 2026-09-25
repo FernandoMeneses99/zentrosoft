@@ -28,5 +28,5 @@
   <!-- Pastilla -->
   <rect x="120" y="492" width="330" height="56" rx="28" fill="none" stroke="#4FD290" stroke-width="2" opacity="0.8"/>
   <circle cx="158" cy="520" r="7" fill="#4FD290"/>
-  <text x="176" y="530" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#E2E8F0">zentrosoft.dev</text>
+  <text x="176" y="530" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#E2E8F0">zentrosoft.vercel.app</text>
 </svg>

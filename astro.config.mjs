@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 // `build.format: 'file'` preserva las URLs públicas actuales:
 // src/pages/index.astro -> /index.html, src/pages/velarispos.astro -> /velarispos.html
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://zentrosoft.dev/',
+  site: process.env.PUBLIC_SITE_URL || 'https://zentrosoft.vercel.app/',
   output: 'static',
   build: {
     format: 'file',

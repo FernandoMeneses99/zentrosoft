@@ -7,13 +7,13 @@ export const homeJsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://zentrosoft.dev/#organization',
+      '@id': 'https://zentrosoft.vercel.app/#organization',
       name: 'ZentroSoft',
       alternateName: 'ZentroSoft - Agencia de Desarrollo Web y Software a Medida',
-      url: 'https://zentrosoft.dev/',
+      url: 'https://zentrosoft.vercel.app/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://zentrosoft.dev/img/logo-280w.avif',
+        url: 'https://zentrosoft.vercel.app/img/logo-280w.avif',
         width: 280,
         height: 80,
       },
@@ -52,13 +52,13 @@ export const homeJsonLd = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://zentrosoft.dev/#website',
-      url: 'https://zentrosoft.dev/',
+      '@id': 'https://zentrosoft.vercel.app/#website',
+      url: 'https://zentrosoft.vercel.app/',
       name: 'ZentroSoft - Agencia de Desarrollo Web y Software a Medida',
       description:
         'Desarrollo de software, desarrollo de aplicaciones web, desarrollo SaaS, desarrollo web y SEO en Bogotá, Colombia',
       publisher: {
-        '@id': 'https://zentrosoft.dev/#organization',
+        '@id': 'https://zentrosoft.vercel.app/#organization',
       },
       inLanguage: 'es',
     },
@@ -68,7 +68,7 @@ export const homeJsonLd = {
       description:
         'Desarrollo de software a medida, desarrollo de aplicaciones web, desarrollo SaaS, creación de landing pages, optimización SEO, consultoría y capacitación, soporte técnico, desarrollo frontend y mantenimiento web para pymes y emprendedores.',
       provider: {
-        '@id': 'https://zentrosoft.dev/#organization',
+        '@id': 'https://zentrosoft.vercel.app/#organization',
       },
       areaServed: {
         '@type': 'Country',
@@ -273,7 +273,7 @@ export const velarisJsonLd = {
       name: 'VelarisPOS',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      url: 'https://zentrosoft.dev/velarispos.html',
+      url: 'https://zentrosoft.vercel.app/velarispos.html',
       offers: {
         '@type': 'Offer',
         price: '0',
@@ -295,7 +295,7 @@ export const velarisJsonLd = {
       publisher: {
         '@type': 'Organization',
         name: 'ZentroSoft',
-        url: 'https://zentrosoft.dev/',
+        url: 'https://zentrosoft.vercel.app/',
       },
       inLanguage: 'es',
     },

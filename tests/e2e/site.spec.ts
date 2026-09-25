@@ -21,7 +21,7 @@ test('homepage carga: title, description, H1 y secciones', async ({ page }) => {
     await expect(page.locator(id)).toBeVisible();
   }
   const canonical = await page.getAttribute('link[rel="canonical"]', 'href');
-  expect(canonical).toBe('https://zentrosoft.dev/');
+  expect(canonical).toBe('https://zentrosoft.vercel.app/');
   const jsonLdCount = await page.locator('script[type="application/ld+json"]').count();
   expect(jsonLdCount).toBe(1);
 });

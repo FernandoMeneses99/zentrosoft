@@ -6,7 +6,7 @@ export const PHONE_DISPLAY = '+57 300 904 7298';
 // Cambia el dominio en un solo lugar: variable PUBLIC_SITE_URL o aquí.
 // Fase 1: apunta a tu dominio propio cuando lo compres (ej. https://zentrosoft.co)
 export const SITE_URL =
-  import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://zentrosoft.dev';
+  import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://zentrosoft.vercel.app';
 
 export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
